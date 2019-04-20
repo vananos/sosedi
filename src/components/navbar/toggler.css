@@ -1,0 +1,39 @@
+.toggler-icon::before,
+.toggler-icon::after,
+.toggler-icon {
+    display: block;
+    height: 5px;
+    width: 50px;
+    background: #367A7A;
+    transition: 0.5s ease-in-out;
+}
+
+.toggler-icon::before,
+.toggler-icon::after {
+    content: "";
+}
+
+.toggler-icon::before {
+    transform: translateY(-10px);
+}
+
+.toggler-icon::after {
+    transform: translateY(5px);
+}
+
+.toggler-icon-open {
+    transform: rotate(180deg);
+}
+
+.toggler-icon-open:before,
+.toggler-icon-open:after {
+    width: 50%;
+}
+
+.toggler-icon-open:before {
+    transform: translate(26px, -10px) rotate(45deg);
+}
+
+.toggler-icon-open:after {
+    transform: translate(26px, 5px) rotate(-45deg);    
+}
