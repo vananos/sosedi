@@ -1,3 +1,7 @@
+.toggler {
+    float: right;
+}
+
 .toggler-icon::before,
 .toggler-icon::after,
 .toggler-icon {
@@ -35,5 +39,5 @@
 }
 
 .toggler-icon-open:after {
-    transform: translate(26px, 5px) rotate(-45deg);    
+    transform: translate(26px, 5px) rotate(-45deg);
 }

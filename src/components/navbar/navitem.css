@@ -1,0 +1,17 @@
+.nav-item {
+    padding: 22px 0;
+    border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.nav-icon {
+    margin-right: 10px;
+}
+
+.nav-link,
+.nav-link:active,
+.nav-link:hover {
+    text-decoration: none !important;
+    font-size: 19px;
+    color: rgb(0, 0, 0); 
+    vertical-align: middle;
+}

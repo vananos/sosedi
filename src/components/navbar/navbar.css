@@ -10,14 +10,31 @@
 }
 
 .nav-container {
+    cursor: pointer;
     padding-top: 33px;
     padding-left: 23px;
     padding-right: 23px;
+    transition: 1s ease-in-out;
+}
+
+.nav-container::after {
+    display: block;
+    content: ""
 }
 
 .nav-container-expanded {
     display: inline-block;
-    transition: 1s ease-in-out;
+    transition: width 1s ease-in-out, height 1s ease-in-out;
+    width: auto;
     height: 100%;
     background: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: none;
+    padding-top: 35px;
+}
+
+.navbar-expanded {
+    display: block;
 }

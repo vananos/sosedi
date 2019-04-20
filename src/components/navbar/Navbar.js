@@ -1,5 +1,11 @@
 import React, { Component } from "react";
 import Toggler from "./Toggler";
+import NavItem from "./NavItem";
+import plusIcon from "../../assets/navbar/plus-solid.svg";
+import cogsIcon from "../../assets/navbar/cogs-solid.svg";
+import commentIcon from "../../assets/navbar/comment-solid.svg";
+import userIcon from "../../assets/navbar/user-solid.svg";
+import scrollIcon from "../../assets/navbar/scroll-solid.svg";
 import "./navbar.css";
 
 export default class Navbar extends Component {
@@ -26,6 +32,23 @@ export default class Navbar extends Component {
           }`}
         >
           <Toggler clickHandler={this.toggleNavbar} isExpanded={isExpanded} />
+          <nav className={`navbar ${isExpanded ? "navbar-expanded" : ""}`}>
+            <NavItem href="/" icon={plusIcon}>
+              Создать объявление
+            </NavItem>
+            <NavItem href="/" icon={commentIcon}>
+              Сообщения
+            </NavItem>
+            <NavItem href="/" icon={scrollIcon}>
+              Мои объявления
+            </NavItem>
+            <NavItem href="/" icon={userIcon}>
+              Мой профиль
+            </NavItem>
+            <NavItem href="/" icon={cogsIcon}>
+              Настройки
+            </NavItem>
+          </nav>
         </div>
       </div>
     );
