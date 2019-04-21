@@ -1,5 +1,5 @@
 .modal {
-    position: absolute;
+    position: fixed;
 }
 
 .modal-expanded {
@@ -14,7 +14,6 @@
     padding-top: 33px;
     padding-left: 23px;
     padding-right: 23px;
-    transition: 1s ease-in-out;
 }
 
 .nav-container::after {
@@ -24,17 +23,20 @@
 
 .nav-container-expanded {
     display: inline-block;
-    transition: width 1s ease-in-out, height 1s ease-in-out;
+    transition: 1s ease-in-out;
     width: auto;
     height: 100%;
     background: rgb(255, 255, 255);
 }
 
 .navbar {
-    display: none;
     padding-top: 35px;
+    transition: 1s ease-in-out;
+    width: 0;
+    overflow: hidden;
 }
 
 .navbar-expanded {
-    display: block;
+    padding-top: 35px;
+    width: auto;
 }

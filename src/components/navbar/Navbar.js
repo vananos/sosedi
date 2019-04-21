@@ -25,14 +25,18 @@ export default class Navbar extends Component {
   render() {
     const isExpanded = this.state.isExpanded;
     return (
-      <div className={`modal ${isExpanded ? "modal-expanded" : ""}`}>
+      <div
+        className={`modal ${isExpanded ? "modal-expanded" : ""}`}
+        onClick={this.toggleNavbar}
+      >
         <div
           className={`nav-container ${
             isExpanded ? "nav-container-expanded" : ""
           }`}
+          onClick={e => {console.log("hello"); e.preventDefault();}}
         >
           <Toggler clickHandler={this.toggleNavbar} isExpanded={isExpanded} />
-          <nav className={`navbar ${isExpanded ? "navbar-expanded" : ""}`}>
+          <nav className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
             <NavItem href="/" icon={plusIcon}>
               Создать объявление
             </NavItem>
