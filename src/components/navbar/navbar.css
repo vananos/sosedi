@@ -5,7 +5,7 @@
 .modal-expanded {
     transition: 1s ease-in-out;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -33,7 +33,7 @@
     padding-top: 35px;
     transition: 1s ease-in-out;
     width: 0;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .navbar-expanded {
