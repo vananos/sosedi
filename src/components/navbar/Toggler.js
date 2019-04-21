@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import "./toggler.css";
 
 export default function Toggler(props) {
-  const { clickHandler, isExpanded } = props;
+  const { isExpanded, clickHandler } = props;
   return (
-    <div onClick={clickHandler} className="toggler">
+    <div className="toggler" onClick={clickHandler}>
       <span
-        className={`toggler-icon ${isExpanded ? "toggler-icon-open" : ""}`}
+        className={`toggler-icon ${isExpanded ? "toggler-icon-expanded" : ""}`}
       />
     </div>
   );

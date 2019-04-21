@@ -33,9 +33,14 @@ export default class Navbar extends Component {
           className={`nav-container ${
             isExpanded ? "nav-container-expanded" : ""
           }`}
-          onClick={e => {console.log("hello"); e.preventDefault();}}
+          onClick={e => e.stopPropagation()}
         >
-          <Toggler clickHandler={this.toggleNavbar} isExpanded={isExpanded} />
+          <Toggler
+            clickHandler={e => {
+              this.toggleNavbar();
+            }}
+            isExpanded={isExpanded}
+          />
           <nav className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
             <NavItem href="/" icon={plusIcon}>
               Создать объявление

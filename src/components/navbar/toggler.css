@@ -1,5 +1,8 @@
 .toggler {
     float: right;
+    width: 50px;
+    height: 20px;
+    padding-top: 15px;
 }
 
 .toggler-icon::before,
@@ -25,19 +28,19 @@
     transform: translateY(5px);
 }
 
-.toggler-icon-open {
+.toggler-icon-expanded {
     transform: rotate(180deg);
 }
 
-.toggler-icon-open:before,
-.toggler-icon-open:after {
+.toggler-icon-expanded:before,
+.toggler-icon-expanded:after {
     width: 50%;
 }
 
-.toggler-icon-open:before {
+.toggler-icon-expanded:before {
     transform: translate(26px, -10px) rotate(45deg);
 }
 
-.toggler-icon-open:after {
+.toggler-icon-expanded:after {
     transform: translate(26px, 5px) rotate(-45deg);
 }
