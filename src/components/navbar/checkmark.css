@@ -1,0 +1,16 @@
+.checkmark:before,
+.checkmark:after {
+    display: inline-block;
+    content: "";
+    height: 2px;
+    width: 10px;
+    background-color: rgb(175, 175, 175);
+}
+
+.checkmark:before {
+    transform: translate(10px, -5px) rotate(60deg);
+}
+
+.checkmark:after {
+    transform: translateY(3px) rotate(-60deg);
+}
