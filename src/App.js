@@ -12,9 +12,6 @@ export default class App extends Component {
       <React.Fragment>
         <header className="main-header">
           <Navbar />
-          <div className="main-header-logo">
-            <Logo />
-          </div>
         </header>
         <section className="main-content">
           <Switch>
