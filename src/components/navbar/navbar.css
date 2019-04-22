@@ -1,8 +1,9 @@
 .modal {
-    position: fixed;
+    float: left;
 }
 
 .modal-expanded {
+    position: fixed;
     transition: 0.3s ease-in-out;
     width: 100%;
     height: 100%;
@@ -15,6 +16,16 @@
     padding-top: 33px;
     padding-left: 23px;
     padding-right: 13px;
+}
+
+.nav-hidding-area {
+    display: none;
+}
+
+.modal-expanded .nav-hidding-area {
+    display: block;
+    padding-top: 35px;
+    margin-right: 15px;
 }
 
 .nav-container::after {
@@ -36,8 +47,6 @@
 }
 
 .navbar {
-    padding-top: 35px;
-    margin-right: 15px;
     transition: 0.3s ease-in-out;
     width: 0;
     overflow-x: hidden;

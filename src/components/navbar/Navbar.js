@@ -38,32 +38,58 @@ export default class Navbar extends Component {
           }`}
           onClick={e => e.stopPropagation()}
         >
-          <Toggler
-            clickHandler={e => {
-              this.toggleNavbar();
-            }}
-            isExpanded={isExpanded}
-            className="nav-toggler"
-          />
-          <div className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
-          <Logo className="nav-logo"/>
-            <nav>
-              <NavItem href="/create-ad" icon={plusIcon}>
-                Создать объявление
-              </NavItem>
-              <NavItem href="/messages" icon={commentIcon}>
-                Сообщения
-              </NavItem>
-              <NavItem href="/my-ads" icon={scrollIcon}>
-                Мои объявления
-              </NavItem>
-              <NavItem href="/profile" icon={userIcon}>
-                Мой профиль
-              </NavItem>
-              <NavItem href="/settings" icon={cogsIcon}>
-                Настройки
-              </NavItem>
-            </nav>
+          <div className="nav-header">
+            <Toggler
+              clickHandler={e => {
+                this.toggleNavbar();
+              }}
+              isExpanded={isExpanded}
+              className="nav-toggler"
+            />
+            <div className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
+              <Logo className="nav-logo" />
+            </div>
+          </div>
+          <div className="nav-hidding-area">
+            <div className="nav-content">
+              <nav>
+                <NavItem
+                  href="/create-ad"
+                  onClick={this.toggleNavbar}
+                  icon={plusIcon}
+                >
+                  Создать объявление
+                </NavItem>
+                <NavItem
+                  href="/messages"
+                  onClick={this.toggleNavbar}
+                  icon={commentIcon}
+                >
+                  Сообщения
+                </NavItem>
+                <NavItem
+                  href="/my-ads"
+                  onClick={this.toggleNavbar}
+                  icon={scrollIcon}
+                >
+                  Мои объявления
+                </NavItem>
+                <NavItem
+                  href="/profile"
+                  onClick={this.toggleNavbar}
+                  icon={userIcon}
+                >
+                  Мой профиль
+                </NavItem>
+                <NavItem
+                  href="/settings"
+                  onClick={this.toggleNavbar}
+                  icon={cogsIcon}
+                >
+                  Настройки
+                </NavItem>
+              </nav>
+            </div>
             <div className="nav-footer">
               <div>
                 <span>Нужна помощь?</span>

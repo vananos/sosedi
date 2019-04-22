@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import Checkmark from "./Checkmark";
 
 export default function NavItem(props) {
-  const { icon, href, children } = props;
+  const { icon, href, children, onClick } = props;
   return (
     <div className="nav-item">
-      <Link to={href} onClick={() => console.log("link was clicked  g")} className="nav-link">
+      <Link to={href} onClick={() => onClick && onClick()} className="nav-link">
         <img src={icon} alt="icon" className="nav-icon" />
         {children}
         <Checkmark className="proceed"/>
