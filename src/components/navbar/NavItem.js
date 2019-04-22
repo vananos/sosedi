@@ -1,17 +1,17 @@
 import React from "react";
 import "./Navitem.css";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Checkmark from "./Checkmark";
 
 export default function NavItem(props) {
   const { icon, href, children, onClick } = props;
   return (
     <div className="nav-item">
-      <Link to={href} onClick={() => onClick && onClick()} className="nav-link">
+      <NavLink to={href} onClick={() => onClick && onClick()} className="nav-link" activeClassName="nav-link-active">
         <img src={icon} alt="icon" className="nav-icon" />
         {children}
         <Checkmark className="proceed"/>
-      </Link>
+      </NavLink>
     </div>
   );
 }

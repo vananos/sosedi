@@ -10,5 +10,7 @@
 
 .main-content {
     margin-top: 25px;
+    padding: 15px;
     clear: both;
+    display: flex;
 }
