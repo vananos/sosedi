@@ -1,5 +1,6 @@
 .modal {
     float: left;
+    z-index: 10000;
 }
 
 .modal-expanded {
@@ -18,8 +19,30 @@
     padding-right: 13px;
 }
 
+.nav-container::after {
+    display: block;
+    content: ""
+}
+
+.nav-container-expanded {
+    display: flex;
+    flex-flow: column;
+    transition: 0.3s ease-in-out;
+    width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    background: rgb(255, 255, 255);
+}
+
+.nav-header {}
+
+.nav-toggler {
+    float: right;
+}
+
 .nav-hidding-area {
     display: none;
+    flex-grow: 1;
 }
 
 .modal-expanded .nav-hidding-area {
@@ -28,23 +51,6 @@
     margin-right: 15px;
 }
 
-.nav-container::after {
-    display: block;
-    content: ""
-}
-
-.nav-toggler {
-    float: right;
-}
-
-.nav-container-expanded {
-    display: inline-block;
-    transition: 0.3s ease-in-out;
-    width: auto;
-    height: 100%;
-    box-sizing: border-box;
-    background: rgb(255, 255, 255);
-}
 
 .navbar {
     transition: 0.3s ease-in-out;
@@ -58,24 +64,18 @@
 }
 
 .nav-footer {
-    bottom: 46px;
+    position: absolute;
+    bottom: 26px;
     color: rgb(175, 175, 175);
     font-size: 14px;
     text-align: center;
-}
-
-.navbar-expanded .nav-footer {
-    position: absolute;
-    left: 0px;
-    bottom: 46px;
-    width: 100%;
 }
 
 .navbar-expanded .nav-logo {
     position: absolute;
     top: 37px;
     left: 20px;
-} 
+}
 
 .nav-footer div {
     margin-top: 14px;

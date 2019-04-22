@@ -1,5 +1,5 @@
 import React from "react";
-import "./navitem.css";
+import "./Navitem.css";
 import { Link } from "react-router-dom";
 import Checkmark from "./Checkmark";
 

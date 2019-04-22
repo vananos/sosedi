@@ -9,7 +9,7 @@ import userIcon from "../../assets/navbar/user-solid.svg";
 import scrollIcon from "../../assets/navbar/scroll-solid.svg";
 import headset from "../../assets/navbar/headset-solid.svg";
 import question from "../../assets/navbar/question-circle-solid.svg";
-import "./navbar.css";
+import "./Navbar.css";
 
 export default class Navbar extends Component {
   constructor(props) {
