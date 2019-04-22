@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Toggler from "./Toggler";
 import NavItem from "./NavItem";
+import Logo from "../common/Logo";
 import plusIcon from "../../assets/navbar/plus-solid.svg";
 import cogsIcon from "../../assets/navbar/cogs-solid.svg";
 import commentIcon from "../../assets/navbar/comment-solid.svg";
@@ -45,31 +46,44 @@ export default class Navbar extends Component {
             className="nav-toggler"
           />
           <div className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
+          <Logo className="nav-logo"/>
             <nav>
-              <NavItem href="/" icon={plusIcon}>
+              <NavItem href="/create-ad" icon={plusIcon}>
                 Создать объявление
               </NavItem>
-              <NavItem href="/" icon={commentIcon}>
+              <NavItem href="/messages" icon={commentIcon}>
                 Сообщения
               </NavItem>
-              <NavItem href="/" icon={scrollIcon}>
+              <NavItem href="/my-ads" icon={scrollIcon}>
                 Мои объявления
               </NavItem>
-              <NavItem href="/" icon={userIcon}>
+              <NavItem href="/profile" icon={userIcon}>
                 Мой профиль
               </NavItem>
-              <NavItem href="/" icon={cogsIcon}>
+              <NavItem href="/settings" icon={cogsIcon}>
                 Настройки
               </NavItem>
             </nav>
             <div className="nav-footer">
               <div>
                 <span>Нужна помощь?</span>
-                <img src={question} width="14px" height="14px" alt="помощь" className="nav-footer-icon"/>
+                <img
+                  src={question}
+                  width="14px"
+                  height="14px"
+                  alt="помощь"
+                  className="nav-footer-icon"
+                />
               </div>
               <div>
                 <span>Есть предложения по улучшению?</span>
-                <img src={headset} width="14px" height="14px" alt="предложения" className="nav-footer-icon"/>
+                <img
+                  src={headset}
+                  width="14px"
+                  height="14px"
+                  alt="предложения"
+                  className="nav-footer-icon"
+                />
               </div>
             </div>
           </div>

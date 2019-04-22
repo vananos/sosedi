@@ -62,6 +62,12 @@
     width: 100%;
 }
 
+.navbar-expanded .nav-logo {
+    position: absolute;
+    top: 37px;
+    left: 20px;
+} 
+
 .nav-footer div {
     margin-top: 14px;
 }
