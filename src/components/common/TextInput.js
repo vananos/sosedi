@@ -7,7 +7,8 @@ export default class TextInput extends Component {
     super(props);
     this.state = {
       isEmpty: this.isEmpty(props.value),
-      value: props.value
+      value: props.value,
+      changeHandler: props.onChange
     };
   }
 
@@ -23,6 +24,7 @@ export default class TextInput extends Component {
         isEmpty: isEmpty
       });
     }
+    this.state.changeHandler && this.state.changeHandler(e);
   };
 
   render() {

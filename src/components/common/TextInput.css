@@ -23,6 +23,7 @@
     right: 0;
     top: 1.25em;
     transition: 0.3s linear;
+    text-transform: capitalize;
 }
 
 .text-input:focus ~ .label-info,

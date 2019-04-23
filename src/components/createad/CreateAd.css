@@ -5,23 +5,19 @@
     font-size: 20px;
 }
 
+.create-ad-header {
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(234, 234, 234, 1);
+    margin-bottom: 15px;
+}
+
 .create-ad-toggler {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.grey-dash {
-    display: block;
-    content: "";
-    padding-top: 15px;
-    padding-bottom: 15px;
-    width: 95%;
-    margin: 0 auto;
-    height: 1px;
-    background-color: rgba(234, 234, 234, 1);
-}
-
 .create-ad-toggler>div {
     flex-grow: 1;
 }
+

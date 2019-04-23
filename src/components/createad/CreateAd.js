@@ -16,19 +16,22 @@ export default class CreateAd extends Component {
     const isNeighbor = this.state.activeTab === "neighbor";
     return (
       <div className="create-ad">
-        <div className="create-ad-header">
-          <div className="create-ad-toggler">
-            <Button color={`${isNeighbor ? "btn-yellow" : ""}`}>Снимаю</Button>
-            <Button color={`${!isNeighbor ? "btn-yellow" : ""}`}>Сдаю</Button>
+        <div >
+          <div className="create-ad-header">
+            <div className="create-ad-toggler">
+              <Button color={`${isNeighbor ? "btn-yellow" : ""}`}>
+                Снимаю
+              </Button>
+              <Button color={`${!isNeighbor ? "btn-yellow" : ""}`}>Сдаю</Button>
+            </div>
           </div>
-          <span className="grey-dash" />
         </div>
+        {this.state.activeTab === "neighbor" ? (
+          <CreateNeighborAd />
+        ) : (
+          <CreateTenantAd />
+        )}
       </div>
-      // {this.state.activeTab === "neighbor" ? (
-      //   <CreateNeighborAd />
-      // ) : (
-      //   <CreateTenantAd />
-      // )}
     );
   }
 }
