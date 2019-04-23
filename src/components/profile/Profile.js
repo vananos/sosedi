@@ -96,7 +96,7 @@ class InterestCheckbox extends Component {
       <div className="profile-interest-wrapper">
         <div
           className={`profile-interest-checkbox ${className ? className : ""} ${
-            this.state.selected ? "profile-interes-selected" : ""
+            this.state.selected ? "profile-interest-selected" : ""
           }`}
           onClick={this.changeState}
         >
