@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import "./Toggler.css";
 
 export default function Toggler(props) {

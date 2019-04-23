@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Profile.css";
 import TextInput from "../common/TextInput";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
-import infoCircle from "../../assets/common/info-circle-solid.svg";
+// import infoCircle from "../../assets/common/info-circle-solid.svg";
 import Button from "../common/Button";
 
 export default class Profile extends Component {

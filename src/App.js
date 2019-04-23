@@ -3,7 +3,6 @@ import { Switch, Route } from "react-router-dom";
 import Main from "./components/main/Main";
 import Profile from "./components/profile/Profile";
 import Navbar from "./components/navbar/Navbar";
-import Logo from "./components/common/Logo";
 import "./App.css";
 
 export default class App extends Component {
