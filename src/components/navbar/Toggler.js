@@ -1,4 +1,5 @@
 import "./Toggler.css";
+import React from 'react'
 
 export default function Toggler(props) {
   const { isExpanded, clickHandler, className } = props;
