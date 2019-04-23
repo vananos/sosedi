@@ -9,7 +9,7 @@ script:
 
 deploy:
   provider: pages
-  repo: origin https://github.com/vananos/sosedi-site.git
+  repo: https://github.com/vananos/sosedi-site.git
   skip_cleanup: true
   github_token: $github_token
   local_dir: build
