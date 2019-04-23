@@ -6,7 +6,8 @@ export default class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isEmpty: this.isEmpty(props.value)
+      isEmpty: this.isEmpty(props.value),
+      value: props.value
     };
   }
 
@@ -14,6 +15,9 @@ export default class TextInput extends Component {
 
   handleChange = e => {
     const isEmpty = this.isEmpty(e.target.value);
+    this.setState({
+      value: e.target.value
+    });
     if (isEmpty ^ this.state.isEmpty) {
       this.setState({
         isEmpty: isEmpty
@@ -22,7 +26,7 @@ export default class TextInput extends Component {
   };
 
   render() {
-    const { placeholder, name, id, value, label, info, className } = this.props;
+    const { placeholder, name, id, label, info, className } = this.props;
     return (
       <div className={className}>
         <div className="text-input-wrapper">
@@ -32,12 +36,14 @@ export default class TextInput extends Component {
             placeholder={placeholder}
             name={name}
             id={id}
-            value={value}
+            value={this.state.value}
             onChange={this.handleChange}
           />
           <div className={`label-info ${this.state.isEmpty ? "" : "filled"}`}>
             {label && <span className="label">{label}</span>}
-            {info && <img src={infoCircle} alt="info" width="10px" height="10px"/>}
+            {info && (
+              <img src={infoCircle} alt="info" width="10px" height="10px" />
+            )}
           </div>
         </div>
       </div>
