@@ -13,7 +13,6 @@
     cursor: pointer;
     display: block;
     text-transform: uppercase;
-    background-color: rgba(67, 164, 174, 1);
     padding: 0.75em 0;
     width: 100%;
     color: white;
@@ -30,4 +29,12 @@
 
 .btn-disabled {
     background-color: rgba(234, 234, 234, 1) !important;
+}
+
+.btn-green {
+    background-color: rgba(67, 164, 174, 1);
+}
+
+.btn-yellow {
+    background-color: rgba(222, 170, 93, 1);
 }

@@ -2,7 +2,14 @@ import React from "react";
 import "./Button.css";
 
 export default function Button(props) {
-  const { children, className, customHandler, disabled } = props;
+  const {
+    children,
+    className,
+    customHandler,
+    disabled,
+    bordered,
+    color
+  } = props;
 
   const clickHandler = e => {
     if (!disabled) {
@@ -15,9 +22,9 @@ export default function Button(props) {
       className={`btn-wrapper ${className ? className : ""}`}
       onClick={clickHandler}
     >
-      <div className="btn-border">
+      <div className={`${bordered ? "btn-border" : ""}`}>
         <button
-          className={`btn ${disabled ? "btn-disabled" : ""}`}
+          className={`btn ${disabled ? "btn-disabled" : ""} ${color}`}
           onClick={e => e.preventDefault()}
         >
           {children}

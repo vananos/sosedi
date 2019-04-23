@@ -1,0 +1,27 @@
+.create-ad {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    flex-grow: 1;
+    font-size: 20px;
+}
+
+.create-ad-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grey-dash {
+    display: block;
+    content: "";
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 95%;
+    margin: 0 auto;
+    height: 1px;
+    background-color: rgba(234, 234, 234, 1);
+}
+
+.create-ad-toggler>div {
+    flex-grow: 1;
+}
