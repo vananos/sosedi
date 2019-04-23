@@ -69,7 +69,7 @@ export default class Profile extends Component {
             <span>Хочешь рассказать о себе больше?</span>
             <textarea className="profile-about-itself" />
           </div>
-          <Button disabled>сохранить</Button>
+          <Button>сохранить</Button>
         </form>
       </div>
     );
