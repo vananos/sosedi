@@ -10,13 +10,12 @@ export default class Thumbler extends Component {
   }
 
   updateState = (e, state) => {
-    console.log('ups');
     this.setState({ targetState: state });
     e.stopPropagation();
   };
 
   render() {
-    const { value1, value2, name } = this.props;
+    const { children } = this.props;
     const targetState = this.state.targetState;
     return (
       <div className="thumbler" onClick={e => this.updateState(e, "default")}>
@@ -27,7 +26,7 @@ export default class Thumbler extends Component {
         />
         <div
           className={`target ${targetState}`}>
-          Сиги
+        {children}
         </div>
         <div
           className="yes-btn"

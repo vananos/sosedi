@@ -8,6 +8,8 @@ import Checkbox from "../common/Checkbox";
 import Slider from "../common/Slider";
 import Thumbler from "../common/Thumbler";
 import Button from "../common/Button";
+import pawIcon from "../../assets/ad/paw-solid.svg";
+import smokingIcon from "../../assets/ad/smoking-solid.svg";
 
 export default class CreateNeighborAd extends Component {
   constructor(props) {
@@ -93,16 +95,24 @@ export default class CreateNeighborAd extends Component {
           <Checkbox value="female">Ж</Checkbox>
           <Checkbox value="male">М</Checkbox>
         </div>
-        <GreyDash />
-        <Thumbler />
+        <div style={{ margin: "20px 0" }}>
+          <Thumbler>
+            <img src={smokingIcon} alt="smoking" width="50px" height="50px" />
+          </Thumbler>
+        </div>
+        <div style={{ margin: "20px 0" }}>
+          <Thumbler>
+            <img src={pawIcon} alt="smoking" width="50px" height="50px" />
+          </Thumbler>
+        </div>
         <GreyDash />
         <label className="hint">Человека какого возраста ты ищешь?</label>
         <Slider currentMin="0" currentMax="10" min="0" max="100" double />
         <GreyDash />
         <span className="hint">Количество людей в квартире</span>
-        <Slider currentMin="0" currentMax="3" min="1" max="15" double />
+        <Slider currentMin="1" currentMax="3" min="1" max="15" double />
         <span className="hint">Хочу платить за аренду</span>
-        <Slider currentMin="0" currentMax="3" min="1" max="50" double />
+        <Slider currentMin="1" currentMax="3" min="1" max="50" double />
         <Button bordered color="btn-green">
           Сохранить
         </Button>
