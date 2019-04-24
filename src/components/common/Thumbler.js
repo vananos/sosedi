@@ -27,7 +27,7 @@ export default class Thumbler extends Component {
         />
         <div
           className={`target ${targetState}`}>
-          Сигареты
+          Сиги
         </div>
         <div
           className="yes-btn"

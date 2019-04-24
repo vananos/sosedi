@@ -6,7 +6,8 @@ import Checkmark from "../navbar/Checkmark";
 import GreyDash from "../common/GreyDash";
 import Checkbox from "../common/Checkbox";
 import Slider from "../common/Slider";
-import Thumbler from "../common/Thumbler";  
+import Thumbler from "../common/Thumbler";
+import Button from "../common/Button";
 
 export default class CreateNeighborAd extends Component {
   constructor(props) {
@@ -93,10 +94,18 @@ export default class CreateNeighborAd extends Component {
           <Checkbox value="male">М</Checkbox>
         </div>
         <GreyDash />
+        <div style={{ margin: "5px" }}>
+          <Thumbler />
+        </div>
+        <GreyDash />
         <label className="hint">Человека какого возраста ты ищешь?</label>
         <Slider currentMin="0" currentMax="10" min="0" max="100" double />
         <GreyDash />
-        <Thumbler />
+        <span className="hint">Количество людей в квартире</span>
+        <Slider currentMin="0" currentMax="3" min="1" max="15" double />
+        <span className="hint">Хочу платить за аренду</span>
+        <Slider currentMin="0" currentMax="3" min="1" max="50" double />
+        <Button bordered color="btn-green">Сохранить</Button>
       </form>
     );
   }
