@@ -94,9 +94,7 @@ export default class CreateNeighborAd extends Component {
           <Checkbox value="male">М</Checkbox>
         </div>
         <GreyDash />
-        <div style={{ margin: "5px" }}>
-          <Thumbler />
-        </div>
+        <Thumbler />
         <GreyDash />
         <label className="hint">Человека какого возраста ты ищешь?</label>
         <Slider currentMin="0" currentMax="10" min="0" max="100" double />
@@ -105,7 +103,9 @@ export default class CreateNeighborAd extends Component {
         <Slider currentMin="0" currentMax="3" min="1" max="15" double />
         <span className="hint">Хочу платить за аренду</span>
         <Slider currentMin="0" currentMax="3" min="1" max="50" double />
-        <Button bordered color="btn-green">Сохранить</Button>
+        <Button bordered color="btn-green">
+          Сохранить
+        </Button>
       </form>
     );
   }

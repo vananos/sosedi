@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Toggler from "./Toggler";
 import NavItem from "./NavItem";
 import Logo from "../common/Logo";
-import plusIcon from "../../assets/navbar/plus-solid.svg";
 import cogsIcon from "../../assets/navbar/cogs-solid.svg";
 import commentIcon from "../../assets/navbar/comment-solid.svg";
 import userIcon from "../../assets/navbar/user-solid.svg";
@@ -56,7 +55,7 @@ export default class Navbar extends Component {
                 <NavItem
                   href="/create-ad"
                   onClick={this.toggleNavbar}
-                  icon={plusIcon}
+                  icon={scrollIcon}
                 >
                   Мое объявление
                 </NavItem>
