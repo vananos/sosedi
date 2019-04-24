@@ -1,0 +1,41 @@
+.multi-range input[type=range] {
+    box-sizing: border-box;
+    appearance: none;
+    width: 100%;
+    margin: 0;
+    padding: 0 2px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 1px;
+    outline: none;
+    background: linear-gradient(rgba(222, 170, 93, 1), rgba(222, 170, 93, 1)) no-repeat center;
+    background-size: 100% 2px;
+    pointer-events: none;
+}
+
+.multi-range input[type=range]:active,
+.multi-range input[type=range]:focus {
+    outline: none;
+}
+
+.multi-range input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: rgba(222, 170, 93, 1);
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+    appearance: none;
+    pointer-events: all;
+    box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.multi-range {
+    position: relative;
+    height: 50px;
+}
+
+.multi-range input[type=range] {
+    position: absolute;
+}

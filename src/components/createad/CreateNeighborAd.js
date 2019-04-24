@@ -5,6 +5,7 @@ import GoogleMapReact from "google-map-react";
 import Checkmark from "../navbar/Checkmark";
 import GreyDash from "../common/GreyDash";
 import Checkbox from "../common/Checkbox";
+import Slider from "../common/Slider";
 
 export default class CreateNeighborAd extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ export default class CreateNeighborAd extends Component {
 
   render() {
     return (
-      <div>
+      <form>
         <TextInput
           value={this.state.geoSuggestion}
           label="город"
@@ -68,7 +69,7 @@ export default class CreateNeighborAd extends Component {
         />
         <div className="map-expander" onClick={this.toggleMap}>
           Выбрать на карте
-          <div className={this.state.isMapExpanded && "expander-expanded"}>
+          <div className={this.state.isMapExpanded ? "expander-expanded" : ""}>
             <Checkmark />
           </div>
         </div>
@@ -87,12 +88,15 @@ export default class CreateNeighborAd extends Component {
         </div>
         <GreyDash />
         <div className="create-ad-preferences">
-            <Checkbox value="female">Ж</Checkbox>
-            <Checkbox value="male">М</Checkbox>
+          <Checkbox value="female">Ж</Checkbox>
+          <Checkbox value="male">М</Checkbox>
         </div>
         <GreyDash />
-        <span className="hint">Человека какого возраста ты ищешь?</span>
-      </div>
+        <label className="hint">
+          Человека какого возраста ты ищешь?
+        </label>
+        <Slider currentMin="0" currentMax="10" min="0" max="100" />
+      </form>
     );
   }
 }
