@@ -1,0 +1,53 @@
+@import "../../base.scss";
+
+.multi-range {
+    height: calc(0.75em + 18px);
+    padding: 0 1.4em 1em 1.4em;
+
+    div {
+        position: relative;
+
+        ::after {
+            display: block;
+            content: "";
+        }
+    }
+
+    input[type=range] {
+        position: absolute;
+        appearance: none;
+        display: block;
+        width: 100%;
+        overflow: hidden;
+        border: none;
+        outline: none;
+        background: linear-gradient($light-brown, $light-brown) no-repeat center;
+        background-size: 100% 2px;
+        pointer-events: none;
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+
+        &::-webkit-slider-thumb {
+            position: relative;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            background-color: $light-brown;
+            margin: 5px 0;
+            cursor: pointer;
+            appearance: none;
+            pointer-events: all;
+            z-index: 100;
+        }
+    }
+
+    .slider-hint {
+        position: absolute;
+        top: 25px;
+        font-size: 0.75em;
+        color: rgba(222, 170, 93, 1);
+    }
+}
