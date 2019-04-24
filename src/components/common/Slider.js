@@ -11,13 +11,15 @@ export default class Slider extends Component {
   }
 
   render() {
-    const { min, max } = this.props;
+    const { min, max, double } = this.props;
     const { currentMin, currentMax } = this.state;
     const rangeSize = max - min;
-
+    const minOffset = ((currentMin - min) / rangeSize) * 100;
+    const maxOffset = ((currentMax - min) / rangeSize) * 100;
     return (
       <div className="multi-range">
         <div>
+          <span className="unselected" style={{ width: `${minOffset}%` }} />
           <input
             type="range"
             min={min}
@@ -28,9 +30,9 @@ export default class Slider extends Component {
             onChange={e => {
               const newValue = +e.target.value;
               const newState = {
-                currentMin: newValue >= max ? max - 1 : newValue
+                currentMin: double && newValue >= max ? max - 1 : newValue
               };
-              if (newValue >= this.state.currentMax) {
+              if (double && newValue >= this.state.currentMax) {
                 newState.currentMax = newState.currentMin + 1;
               }
               this.setState(newState);
@@ -39,35 +41,40 @@ export default class Slider extends Component {
           <output
             className="slider-hint"
             style={{
-              left: `calc(${((currentMin - min) / rangeSize) * 100}% - 0.8em)`
+              left: `calc(${minOffset}% - 0.8em)`
             }}
           >
             {currentMin}
           </output>
-          <input
-            type="range"
-            min={min}
-            max={max}
-            value={currentMax}
-            onChange={e => {
-              const newValue = +e.target.value;
-              const newState = {
-                currentMax: newValue <= min ? +min + 1 : newValue
-              };
-              if (newValue <= this.state.currentMin) {
-                newState.currentMin = newState.currentMax - 1;
-              }
-              this.setState(newState);
-            }}
-          />
-          <output
-            className="slider-hint"
-            style={{
-              left: `calc(${((currentMax - min) / rangeSize) * 100}% + 4px)`
-            }}
-          >
-            {currentMax}
-          </output>
+          {double ? (
+            <React.Fragment>
+              <span className="unselected" style={{ width: `calc(100% - ${maxOffset}%)`, right: '0' }} />
+              <input
+                type="range"
+                min={min}
+                max={max}
+                value={currentMax}
+                onChange={e => {
+                  const newValue = +e.target.value;
+                  const newState = {
+                    currentMax: newValue <= min ? +min + 1 : newValue
+                  };
+                  if (newValue <= this.state.currentMin) {
+                    newState.currentMin = newState.currentMax - 1;
+                  }
+                  this.setState(newState);
+                }}
+              />
+              <output
+                className="slider-hint"
+                style={{
+                  left: `calc(${maxOffset}% + 4px)`
+                }}
+              >
+                {currentMax}
+              </output>
+            </React.Fragment>
+          ) : null}
         </div>
       </div>
     );

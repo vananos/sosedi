@@ -6,6 +6,8 @@
 
     div {
         position: relative;
+        height: 100%;
+        width: 100%;
 
         ::after {
             display: block;
@@ -13,17 +15,29 @@
         }
     }
 
+    .unselected {
+        position: absolute;
+        height: 1em;
+        background-color: white;
+        background: linear-gradient(rgb(0, 0, 0), rgb(0, 0, 0)) no-repeat center;
+        background-size: 100% 2px;
+        z-index: 100;
+    }
+
     input[type=range] {
         position: absolute;
         appearance: none;
         display: block;
         width: 100%;
+        margin: 0;
+        height: 1em;
         overflow: hidden;
         border: none;
         outline: none;
         background: linear-gradient($light-brown, $light-brown) no-repeat center;
         background-size: 100% 2px;
         pointer-events: none;
+        font: inherit;
 
         &:active,
         &:focus {
@@ -40,7 +54,7 @@
             cursor: pointer;
             appearance: none;
             pointer-events: all;
-            z-index: 100;
+            z-index: 110;
         }
     }
 

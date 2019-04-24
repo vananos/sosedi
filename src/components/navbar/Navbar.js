@@ -58,7 +58,7 @@ export default class Navbar extends Component {
                   onClick={this.toggleNavbar}
                   icon={plusIcon}
                 >
-                  Создать объявление
+                  Мое объявление
                 </NavItem>
                 <NavItem
                   href="/messages"
@@ -66,13 +66,6 @@ export default class Navbar extends Component {
                   icon={commentIcon}
                 >
                   Сообщения
-                </NavItem>
-                <NavItem
-                  href="/my-ads"
-                  onClick={this.toggleNavbar}
-                  icon={scrollIcon}
-                >
-                  Мои объявления
                 </NavItem>
                 <NavItem
                   href="/profile"
