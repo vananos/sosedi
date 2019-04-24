@@ -12,15 +12,18 @@ export default class Slider extends Component {
 
   render() {
     const { min, max } = this.props;
+    const { currentMin, currentMax } = this.state;
     return (
       <div className="multi-range">
         <input
           type="range"
           min={min}
           max={max}
-          value={this.state.currentMin}
+          name="min-value"
+          value={currentMin}
           onChange={e => {
             const newValue = +e.target.value;
+            console.log(newValue);
             if (newValue < this.state.currentMax) {
               this.setState({
                 currentMin: newValue
@@ -28,11 +31,12 @@ export default class Slider extends Component {
             }
           }}
         />
+        <output className="slider-hint" style={{left: ((currentMin - min )/ max) * 100 + '%'}}>{currentMin}</output>
         <input
           type="range"
           min={min}
           max={max}
-          value={this.state.currentMax}
+          value={currentMax}
           onChange={e => {
             const newValue = +e.target.value;
             if (newValue > this.state.currentMin) {
@@ -42,6 +46,7 @@ export default class Slider extends Component {
             }
           }}
         />
+        <output className="slider-hint" style={{left: ((currentMax - min )/ max) * 100 - 2 + '%', top: "-15px"}}>{currentMax}</output>
       </div>
     );
   }
