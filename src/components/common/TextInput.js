@@ -28,12 +28,11 @@ export default class TextInput extends Component {
   };
 
   setValue = value => {
-    this.setState({value});
-  }
+    this.setState({ value });
+  };
 
   render() {
     const { placeholder, name, id, label, info, className } = this.props;
-    console.log(this.state.value);
     return (
       <div className={className}>
         <div className="text-input-wrapper">
