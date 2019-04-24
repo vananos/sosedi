@@ -9,15 +9,23 @@ export default class CreateNeighborAd extends Component {
       geoSuggestion: "",
       suggestions: [],
       suggestionListFull: [
-            { value: "Питер", id: 0 },
-            { value: "Пивер", id: 1 },
-            { value: "Пикер", id: 2 }
-          ]
+        { value: "Питер", id: 0 },
+        { value: "Пивер", id: 1 },
+        { value: "Пикер", id: 2 }
+      ]
     };
   }
 
+  geoSuggestionClickHandler = (e, suggestionId) => {
+    this.setState({
+      geoSuggestion: this.state.suggestionListFull.filter(
+        item => item.id === suggestionId
+      )[0].value,
+      suggestions: []
+    });
+  };
+
   render() {
-    console.log(this.state.suggestions);
     return (
       <div>
         <TextInput
@@ -27,12 +35,20 @@ export default class CreateNeighborAd extends Component {
             const newValue = e.target.value;
             this.setState({
               geoSuggestion: newValue,
-              suggestions: newValue === '' ? [] :  this.state.suggestionListFull.filter(suggestion => suggestion.value.toLowerCase().includes(newValue.toLowerCase()))
+              suggestions:
+                newValue === ""
+                  ? []
+                  : this.state.suggestionListFull.filter(suggestion =>
+                      suggestion.value
+                        .toLowerCase()
+                        .includes(newValue.toLowerCase())
+                    )
             });
           }}
         />
         <GeoSuggest
           suggestions={this.state.suggestions}
+          clickHandler={this.geoSuggestionClickHandler}
         />
       </div>
     );
