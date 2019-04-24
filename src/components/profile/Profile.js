@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./Profile.css";
 import TextInput from "../common/TextInput";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
-// import infoCircle from "../../assets/common/info-circle-solid.svg";
 import Button from "../common/Button";
+import Checkbox from "../common/Checkbox";
 
 export default class Profile extends Component {
   render() {
@@ -52,63 +52,27 @@ export default class Profile extends Component {
           <div className="profile-about-itself-input">
             <span>О себе</span>
             <div className="profile-interests-select">
-              <InterestCheckbox value="sport">Спорт</InterestCheckbox>
+              <Checkbox value="sport">Спорт</Checkbox>
 
-              <InterestCheckbox value="games">Игры</InterestCheckbox>
+              <Checkbox value="games">Игры</Checkbox>
 
-              <InterestCheckbox value="music">Музыка</InterestCheckbox>
+              <Checkbox value="music">Музыка</Checkbox>
 
-              <InterestCheckbox value="books">книги</InterestCheckbox>
+              <Checkbox value="books">книги</Checkbox>
 
-              <InterestCheckbox value="dance">танцы</InterestCheckbox>
+              <Checkbox value="dance">танцы</Checkbox>
 
-              <InterestCheckbox value="tv">TV</InterestCheckbox>
+              <Checkbox value="tv">TV</Checkbox>
             </div>
           </div>
           <div>
             <span>Хочешь рассказать о себе больше?</span>
             <textarea className="profile-about-itself" />
           </div>
-          <Button bordered color="btn-green">сохранить</Button>
+          <Button bordered color="btn-green">
+            сохранить
+          </Button>
         </form>
-      </div>
-    );
-  }
-}
-
-class InterestCheckbox extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selected: props.checked
-    };
-  }
-
-  changeState = () => {
-    this.setState({
-      selected: !this.state.selected
-    });
-  };
-
-  render() {
-    const { value, id, name, className, children } = this.props;
-    return (
-      <div className="profile-interest-wrapper">
-        <div
-          className={`profile-interest-checkbox ${className ? className : ""} ${
-            this.state.selected ? "profile-interest-selected" : ""
-          }`}
-          onClick={this.changeState}
-        >
-          <input
-            type="checkbox"
-            id={id}
-            name={name}
-            value={value}
-            checked={this.state.checked}
-          />
-          <span>{children}</span>
-        </div>
       </div>
     );
   }

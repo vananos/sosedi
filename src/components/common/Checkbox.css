@@ -1,0 +1,33 @@
+.checkbox-wrapper {
+    display: inline-block;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    font-size: 1em;
+    background-color: rgba(234, 234, 234, 1);
+    color: rgba(175, 175, 175, 0.5);
+    border: 10px solid rgba(234, 234, 234, 1);    
+}
+
+.checkbox input {
+    display: none;
+}
+
+.checkbox span {
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.checkbox-selected {
+    background: url("../../assets/profile/check-solid.svg") rgba(222, 170, 93, 1);
+    color: rgb(255, 255, 255);
+    border: 10px solid rgba(244, 197, 127, 1);    
+}
