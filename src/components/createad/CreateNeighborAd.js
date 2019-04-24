@@ -14,15 +14,18 @@ export default class CreateNeighborAd extends Component {
         { value: "Пикер", id: 2 }
       ]
     };
+    this.geoInputRef = React.createRef();
   }
 
   geoSuggestionClickHandler = (e, suggestionId) => {
+    const newValue = this.state.suggestionListFull.filter(
+      item => item.id === suggestionId
+    )[0].value;
     this.setState({
-      geoSuggestion: this.state.suggestionListFull.filter(
-        item => item.id === suggestionId
-      )[0].value,
+      geoSuggestion: newValue,
       suggestions: []
     });
+    this.geoInputRef.current.setValue(newValue);
   };
 
   render() {
@@ -31,6 +34,7 @@ export default class CreateNeighborAd extends Component {
         <TextInput
           value={this.state.geoSuggestion}
           label="город"
+          ref={this.geoInputRef}
           onChange={e => {
             const newValue = e.target.value;
             this.setState({
