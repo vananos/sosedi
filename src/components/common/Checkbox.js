@@ -16,11 +16,11 @@ export default class Checkbox extends Component {
   };
 
   render() {
-    const { value, id, name, className, children } = this.props;
+    const { value, id, name, className, children, style } = this.props;
     return (
-      <div className="checkbox-wrapper">
+      <div className={`checkbox-wrapper ${className ? className : ""}`} style={style}>
         <div
-          className={`checkbox ${className ? className : ""} ${
+          className={`checkbox ${
             this.state.selected ? "checkbox-selected" : ""
           }`}
           onClick={this.changeState}

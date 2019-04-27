@@ -49,6 +49,13 @@
     padding-bottom: 45px;
     text-align: center;
     border-bottom: 1px solid rgba(234, 234, 234, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.profile-interest-item {
+    margin: 5px;
 }
 
 .profile-about-itself {

@@ -52,17 +52,17 @@ export default class Profile extends Component {
           <div className="profile-about-itself-input">
             <span>О себе</span>
             <div className="profile-interests-select">
-              <Checkbox value="sport">Спорт</Checkbox>
+              <Checkbox value="sport" className="profile-interest-item">Спорт</Checkbox>
 
-              <Checkbox value="games">Игры</Checkbox>
+              <Checkbox value="games" className="profile-interest-item">Игры</Checkbox>
 
-              <Checkbox value="music">Музыка</Checkbox>
+              <Checkbox value="music" className="profile-interest-item">Музыка</Checkbox>
 
-              <Checkbox value="books">книги</Checkbox>
+              <Checkbox value="books" className="profile-interest-item">книги</Checkbox>
 
-              <Checkbox value="dance">танцы</Checkbox>
+              <Checkbox value="dance" className="profile-interest-item">танцы</Checkbox>
 
-              <Checkbox value="tv">TV</Checkbox>
+              <Checkbox value="tv" className="profile-interest-item">TV</Checkbox>
             </div>
           </div>
           <div>
