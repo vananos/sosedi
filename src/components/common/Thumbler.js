@@ -20,18 +20,13 @@ export default class Thumbler extends Component {
     return (
       <div className="thumbler" onClick={e => this.updateState(e, "default")}>
         <div
-          className="no-btn"
-          style={{ opacity: targetState === "no" ? "0.7" : null }}
+          className={`no-btn ${targetState === "no" ? "no" : ""}`}
           onClick={e => this.updateState(e, "no")}
         />
+        <div className={`target ${targetState}`}>{children}</div>
         <div
-          className={`target ${targetState}`}>
-        {children}
-        </div>
-        <div
-          className="yes-btn"
+          className={`yes-btn ${targetState === "yes" ? "yes" : ""}`}
           onClick={e => this.updateState(e, "yes")}
-          style={{ opacity: targetState === "yes" ? "0.9" : null }}
         />
       </div>
     );

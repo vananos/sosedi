@@ -13,32 +13,31 @@
     .no-btn {
         position: absolute;
         background-image: url("../../assets/common/thumb-up.svg");
-        background-size: 25px;
+        background-size: 50%;
         background-repeat: no-repeat;
+        background-position: center;
         width: 33%;
         height: 100%;
         padding: 0;
         margin: 0;
         border: none;
+        transition: 0.5s ease-in;
     }
 
     .no-btn {
         top: 0;
         left: 0;
-        background-position: right 10px top 10px;
         transform: rotate(180deg);
     }
 
     .yes-btn {
         top: 0;
         right: 0;
-        background-position: right 10px bottom 10px;
     }
 
     .target {
         background-color: $light-brown;
         box-sizing: border-box;
-        border: 10px solid $light-brown;
         background: $brown;
         width: 33%;
         height: 100%;
@@ -49,17 +48,11 @@
         align-items: center;
     }
 
-    .target.yes {
-        margin-right: 0;
-        border: 10px solid $green-yes;
-        background: $green-yes;
-        transition: 0.5s ease-in;
+    .yes {
+        background-color: $green-yes;
     }
 
-    .target.no {
-        margin-left: 0;
-        border: 10px solid $red-no;
-        background: $red-no;
-        transition: 0.5s ease-in;
+    .no {
+        background-color: $red-no;
     }
 }
