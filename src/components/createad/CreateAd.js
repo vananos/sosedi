@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import CreateNeighborAd from "./CreateNeighborAd";
 import CreateTenantAd from "./CreateTenantAd";
 import Button from "../common/Button";
-import GreyDash from "../common/GreyDash";
-import "./CreateAd.css";
+import "./CreateAd.scss";
 
 export default class CreateAd extends Component {
   constructor(props) {
@@ -26,7 +25,7 @@ export default class CreateAd extends Component {
               <Button color={`${!isNeighbor ? "btn-yellow" : ""}`}>Сдаю</Button>
             </div>
           </div>
-          <GreyDash />
+          <hr/>
         </div>
         {this.state.activeTab === "neighbor" ? (
           <CreateNeighborAd />

@@ -1,19 +1,12 @@
 import React from "react";
-import "./Button.css";
+import "./Button.scss";
 
 export default function Button(props) {
-  const {
-    children,
-    className,
-    customHandler,
-    disabled,
-    bordered,
-    color
-  } = props;
+  const { children, className, onClick, disabled, bordered, color } = props;
 
   const clickHandler = e => {
-    if (!disabled) {
-      customHandler(e);
+    if (!disabled && onClick) {
+      onClick(e);
     }
   };
 

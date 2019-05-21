@@ -1,0 +1,68 @@
+.create-ad {
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    flex-grow: 1;
+    font-size: 20px;
+
+    &-header {
+        padding-bottom: 15px;
+    }
+
+    &-toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        >div {
+            flex-grow: 1;
+        }
+    }
+
+    &-google-map-wrapper {
+        display: none;
+        width: 100%;
+        height: 50vh;
+        margin-top: 15px;
+    }
+
+    &-preferences {
+        display: flex;
+        justify-content: space-between;
+        font-size: 48px;
+        margin-bottom: 20px;
+    }
+}
+
+
+.geo-region-input {
+    margin: 25px 0;
+}
+
+.map-expanded {
+    display: block;
+}
+
+.map-expander {
+    margin: 20px 0;
+    text-align: center;
+    font-size: 0.5em;
+    cursor: pointer;
+    vertical-align: text-bottom;
+
+    >div {
+        display: inline-block;
+        margin-left: 10px;
+        transition: 0.3s linear;
+    }
+}
+
+.expander-expanded {
+    transform: rotate(90deg) translateX(-5px);
+}
+
+.hint {
+    display: block;
+    font-size: 14px;
+    text-align: center;
+    margin: 14px 0;
+}

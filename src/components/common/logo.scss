@@ -1,0 +1,35 @@
+@import "../../base.scss";
+
+.logo {
+    position: relative;
+    width: 180px;
+    height: 24px;
+    text-align: center;
+
+    &-dash {
+        position: absolute;
+        bottom: 13px;
+        display: block;
+        width: 21px;
+        height: 1px;
+        background-color: rgba(54, 122, 122, 1);
+    }
+
+    &-dash-left {
+        left: 0;
+    }
+
+    &-dash-right {
+        right: 0;
+    }
+
+    &-text {
+        text-transform: uppercase;
+        font-size: 18px;
+        color: rgb(255, 255, 255);
+        text-shadow: -1px -1px 0 rgba(54, 122, 122, 1),
+            1px -1px 0 rgba(54, 122, 122, 1),
+            -1px 1px 0 rgba(54, 122, 122, 1),
+            1px 1px 0 rgba(54, 122, 122, 1);
+    }
+}

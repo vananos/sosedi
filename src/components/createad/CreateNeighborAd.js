@@ -3,7 +3,6 @@ import TextInput from "../common/TextInput";
 import GeoSuggest from "./GeoSuggest";
 import GoogleMapReact from "google-map-react";
 import Checkmark from "../navbar/Checkmark";
-import GreyDash from "../common/GreyDash";
 import Checkbox from "../common/Checkbox";
 import Slider from "../common/Slider";
 import Thumbler from "../common/Thumbler";
@@ -90,7 +89,7 @@ export default class CreateNeighborAd extends Component {
             defaultZoom={this.state.zoom}
           />
         </div>
-        <GreyDash />
+        <hr />
         <div className="create-ad-preferences">
           <Checkbox value="female">Ж</Checkbox>
           <Checkbox value="male">М</Checkbox>
@@ -105,10 +104,10 @@ export default class CreateNeighborAd extends Component {
             <img src={pawIcon} alt="smoking" width="50px" height="50px" />
           </Thumbler>
         </div>
-        <GreyDash />
+        <hr />
         <label className="hint">Человека какого возраста ты ищешь?</label>
         <Slider currentMin="0" currentMax="10" min="0" max="100" double />
-        <GreyDash />
+        <hr />
         <span className="hint">Количество людей в квартире</span>
         <Slider currentMin="1" currentMax="3" min="1" max="15" double />
         <span className="hint">Хочу платить за аренду</span>

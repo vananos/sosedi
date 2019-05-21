@@ -1,9 +1,4 @@
-.text-input-wrapper {
-    display: inline-block;
-    position: relative;
-    padding: 0;
-    padding-top: 1em;
-}
+@import "../../base.scss";
 
 .text-input {
     display: block;
@@ -11,12 +6,20 @@
     outline: none;
     padding: 10 0;
     font-size: 1em;
-    border-bottom: 1px solid rgba(234, 234, 234, 1);
+    border-bottom: 1px solid $light-grey;
+
+    &-wrapper {
+        display: inline-block;
+        position: relative;
+        padding: 0;
+        padding-top: 1em;
+    }
+
+    &:focus {
+        border-color: $brown;
+    }
 }
 
-.text-input:focus {
-    border-color: rgba(222, 170, 93, 1); 
-}
 
 .label-info {
     position: absolute;
@@ -26,7 +29,7 @@
     text-transform: capitalize;
 }
 
-.text-input:focus ~ .label-info,
+.text-input:focus~.label-info,
 .filled {
     top: 0;
     font-size: 0.75em;

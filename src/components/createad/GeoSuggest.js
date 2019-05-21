@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./GeoSuggest.css";
+import "./GeoSuggest.scss";
 
 export default class GeoSuggest extends Component {
   render() {
