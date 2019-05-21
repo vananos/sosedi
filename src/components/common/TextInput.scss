@@ -23,15 +23,18 @@
 
 .label-info {
     position: absolute;
-    right: 0;
+    left: 0;
     top: 1.25em;
     transition: 0.3s linear;
     text-transform: capitalize;
+    color: $light-grey;
 }
 
 .text-input:focus~.label-info,
 .filled {
     top: 0;
+    right: 0;
+    left: auto;
     font-size: 0.75em;
     color: rgba(222, 170, 93, 1);
 }

@@ -1,0 +1,20 @@
+.registation-form {
+    &-wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 1);
+        padding: 0.5rem;
+        padding-bottom: 3rem;
+    }
+
+    &-submit-btn {
+        position: absolute;
+        bottom: -5px;
+        right: -5px;
+        width: auto;
+        padding: 10px;
+    }
+}

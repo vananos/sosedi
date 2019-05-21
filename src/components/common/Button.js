@@ -2,7 +2,7 @@ import React from "react";
 import "./Button.scss";
 
 export default function Button(props) {
-  const { children, className, onClick, disabled, bordered, color } = props;
+  const { children, className, onClick, disabled, color } = props;
 
   const clickHandler = e => {
     if (!disabled && onClick) {
@@ -11,18 +11,11 @@ export default function Button(props) {
   };
 
   return (
-    <div
-      className={`btn-wrapper ${className ? className : ""}`}
+    <button
+      className={`btn ${disabled ? "btn-disabled" : ""} ${color} ${className ? className : ""}`}
       onClick={clickHandler}
     >
-      <div className={`${bordered ? "btn-border" : ""}`}>
-        <button
-          className={`btn ${disabled ? "btn-disabled" : ""} ${color}`}
-          onClick={e => e.preventDefault()}
-        >
-          {children}
-        </button>
-      </div>
-    </div>
+      {children}
+    </button>
   );
 }

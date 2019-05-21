@@ -10,6 +10,7 @@ export default class TextInput extends Component {
       value: props.value,
       changeHandler: props.onChange
     };
+    this.inputRef = React.createRef();
   }
 
   isEmpty = str => Boolean(!str || str === "");
@@ -32,12 +33,13 @@ export default class TextInput extends Component {
   };
 
   render() {
-    const { placeholder, name, id, label, info, className } = this.props;
+    const { placeholder, type, name, id, label, info, className } = this.props;
     return (
       <div className={className}>
-        <div className="text-input-wrapper">
+        <div className="text-input-wrapper" onClick={e => this.inputRef.current.focus()}>
           <input
-            type="text"
+          ref={this.inputRef}
+            type={type ? type : "text"}
             className="text-input"
             placeholder={placeholder}
             name={name}

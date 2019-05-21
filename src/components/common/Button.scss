@@ -12,23 +12,6 @@
     text-align: center;
     transform: translate(2px, 2px);
 
-
-    &-wrapper {
-        cursor: pointer;
-        padding: 0 2px 2px 0;
-    }
-
-    &-border {
-        position: relative;
-        background: transparent;
-        border: 1px solid $grey;
-    }
-
-    &-wrapper:active .btn,
-    :active {
-        background-color: rgba(175, 223, 228, 1);
-    }
-
     &-disabled {
         background-color: $light-grey !important;
     }
