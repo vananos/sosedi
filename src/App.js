@@ -5,6 +5,7 @@ import Profile from "./components/profile/Profile";
 import Navbar from "./components/navbar/Navbar";
 import CreateAd from "./components/createad/CreateAd";
 import RegistartionForm from "./components/registration/RegistrationForm";
+import LoginForm from "./components/login/LoginForm";
 import Spinner from "./components/common/Spinner";
 import { ApplicationContextConsumer } from "./context";
 import "./App.css";
@@ -23,6 +24,11 @@ export default class App extends Component {
                 <Route
                   exact
                   path="/"
+                  render={() => <LoginForm ctx={value} />}
+                />
+                <Route
+                  exact
+                  path="/registration"
                   render={() => <RegistartionForm ctx={value} />}
                 />
                 <Route exact path="/create-ad" component={CreateAd} />

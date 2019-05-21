@@ -16,10 +16,14 @@ export default class TextInput extends Component {
   isEmpty = str => Boolean(!str || str === "");
 
   handleChange = e => {
-    const isEmpty = this.isEmpty(e.target.value);
-    this.setState({
-      value: e.target.value
-    });
+    const newValue = e.target.value;
+    const isEmpty = this.isEmpty(newValue);
+    const newState = {
+      value: newValue
+    };
+
+    this.setState(newState);
+
     if (isEmpty ^ this.state.isEmpty) {
       this.setState({
         isEmpty: isEmpty
@@ -33,18 +37,31 @@ export default class TextInput extends Component {
   };
 
   render() {
-    const { placeholder, type, name, id, label, info, className } = this.props;
+    const {
+      type,
+      name,
+      id,
+      label,
+      info,
+      className,
+      error: { error: errorMsg, value: wrongValue } = {}
+    } = this.props;
+    const currentValue = this.state.value;
+    const shouldShowError = errorMsg && this.state.value === wrongValue;
+
     return (
       <div className={className}>
-        <div className="text-input-wrapper" onClick={e => this.inputRef.current.focus()}>
+        <div
+          className={`text-input-wrapper ${shouldShowError ? "error" : ""}`}
+          onClick={e => this.inputRef.current.focus()}
+        >
           <input
-          ref={this.inputRef}
+            ref={this.inputRef}
             type={type ? type : "text"}
-            className="text-input"
-            placeholder={placeholder}
+            className={`text-input`}
             name={name}
             id={id}
-            value={this.state.value}
+            value={currentValue}
             onChange={this.handleChange}
           />
           <div className={`label-info ${this.state.isEmpty ? "" : "filled"}`}>
@@ -54,6 +71,9 @@ export default class TextInput extends Component {
             )}
           </div>
         </div>
+        {shouldShowError && (
+          <span className="error-description">{errorMsg}</span>
+        )}
       </div>
     );
   }
