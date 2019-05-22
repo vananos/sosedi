@@ -14,5 +14,6 @@ export const makePost = (
     method: "POST",
     mode: "cors",
     headers,
+    credentials: "include",
     body: data
   });

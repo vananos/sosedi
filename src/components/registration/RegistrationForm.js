@@ -2,7 +2,13 @@ import React, { Component } from "react";
 import TextInput from "../common/TextInput";
 import "./RegistrationForm.scss";
 import Button from "../common/Button";
+import { NavLink } from "react-router-dom";
 import { REGISTRATION_ENDPOINT, makePost } from "../../api.js";
+import {
+  formDataToObject,
+  validateForm,
+  registrationFormValidator
+} from "../../utils/utils";
 
 export default class RegistrationForm extends Component {
   constructor(props) {
@@ -15,51 +21,82 @@ export default class RegistrationForm extends Component {
         password: "",
         passwordConfirmation: ""
       },
-      fieldErrors: {}
+      fieldErrors: {},
+      registrationSuccess: false,
+      registeredName: ""
     };
   }
 
   handleSubmit = e => {
     e.preventDefault();
-    const formData = new FormData(e.target);
-    var formDataObject = {};
+    var formData = formDataToObject(new FormData(e.target));
     const { ctx } = this.props;
 
-    formData.forEach((value, key) => {
-      formDataObject[key] = value;
-    });
+    const errors = validateForm(formData, registrationFormValidator);
 
-    const errors = {};
-
-    for (const key in formDataObject) {
-      if (registrationFormValidator[key]) {
-        const fieldValidator = registrationFormValidator[key];
-        const error = fieldValidator(formDataObject);
-        if (error) {
-          errors[key] = { error, value: formDataObject[key] };
-        }
-      }
-    }
     if (Object.entries(errors).length) {
       this.setState({
         fieldErrors: errors
       });
       return;
     }
-    makePost(REGISTRATION_ENDPOINT, JSON.stringify(formDataObject))
-      .then(res => res.json())
-      .then(ctx.hideSpinner)
-      .catch(() => console.log("error"));
 
     ctx.showSpinner();
+
+    makePost(REGISTRATION_ENDPOINT, JSON.stringify(formData))
+      .then(async response => {
+        const responseJson = await response.json();
+        if (response.status === 200 && responseJson.status === "SUCCESS") {
+          this.setState({
+            registrationSuccess: true,
+            registeredName: formData.name
+          });
+          return;
+        }
+        if (response.status === 400 && responseJson.status === "FAIL") {
+          for (const error of responseJson.errors) {
+            console.log("error");
+            if (!error.id) {
+              this.setState({
+                formError: (
+                  <div>
+                    Пользователь с указанным email уже существует, попробуйте{" "}
+                    <NavLink to="/">войти</NavLink>
+                  </div>
+                )
+              });
+              return;
+            }
+          }
+        }
+      })
+      .catch(() => console.log("error"))
+      .finally(ctx.hideSpinner);
   };
 
   render() {
-    const { fieldValues, fieldErrors } = this.state;
+    const {
+      fieldValues,
+      fieldErrors,
+      registrationSuccess,
+      registeredName,
+      formError
+    } = this.state;
     return (
-      <React.Fragment>
-        <div className="registation-form-wrapper">
-          <form  onSubmit={this.handleSubmit}>
+      <div className="registration-form-wrapper">
+        {(registrationSuccess && (
+          <div className="registration-form-success-msg">
+            <div>
+              {registeredName}, регистрация прошла успешно, мы выслали тебе на
+              почту письмо с подтверждением.
+            </div>
+            <div>
+              После подтверждения ты можешь <NavLink to="/">войти</NavLink> в
+              систему.
+            </div>
+          </div>
+        )) || (
+          <form onSubmit={this.handleSubmit}>
             <TextInput
               label="Имя"
               name="name"
@@ -93,49 +130,15 @@ export default class RegistrationForm extends Component {
               value={fieldValues.passwordConfirmation}
               error={fieldErrors.passwordConfirmation}
             />
-            <Button color="btn-green" className="registation-form-submit-btn">
+            {formError && (
+              <div className="error">{formError}</div>
+            )}
+            <Button color="btn-green" className="registration-form-submit-btn">
               Начать
             </Button>
           </form>
-        </div>
-      </React.Fragment>
+        )}
+      </div>
     );
   }
 }
-
-const emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-const passwordError =
-  "Пароль должен быть от 6 до 25 символов, включать в себя прописные, строчные буквы, цифры и спецсмиволы";
-
-const registrationFormValidator = {
-  name: formValues => {
-    const name = formValues.name;
-    if (!name || name.length < 2 || name.length > 15) {
-      return "имя должно быть от 2 до 15 символов";
-    }
-  },
-  surname: formValues => {
-    const surname = formValues.surname;
-    if (!surname || surname.length < 2 || surname.length > 15) {
-      return "Фамилия должна быть от 2 до 15 символов";
-    }
-  },
-  email: formValues => {
-    const email = formValues.email;
-    if (!emailRegex.test(email)) {
-      return "Введите корректный email";
-    }
-  },
-  password: formValues => {
-    const password = formValues.password;
-    if (!password || (password.length < 6 && password.length > 25)) {
-      return passwordError;
-    }
-  },
-  passwordConfirmation: formValues => {
-    const passwordConfirmation = formValues.passwordConfirmation;
-    if (passwordConfirmation !== formValues.password) {
-      return "Потверждение пароля должно совпадать с паролем";
-    }
-  }
-};

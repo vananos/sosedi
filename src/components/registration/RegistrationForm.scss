@@ -1,6 +1,6 @@
-.registation-form {
+@import "../../base.scss";
 
-
+.registration-form {
     &-wrapper {
         position: relative;
         display: flex;
@@ -12,8 +12,12 @@
 
         form {
             margin: 0 auto;
-            width: 250px; 
+            width: 250px;
         }
+    }
+
+    &-success-msg {
+        padding: 1em;
     }
 
     &-submit-btn {
