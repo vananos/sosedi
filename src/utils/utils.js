@@ -63,7 +63,7 @@ export const validateForm = (formDataObject, validator) => {
 
 export const formDataToObject = formData => {
   const formDataObject = {};
-  formData.forEach((value, key) => {
+  new FormData(formData).forEach((value, key) => {
     formDataObject[key] = value;
   });
   return formDataObject;

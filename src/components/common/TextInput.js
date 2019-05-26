@@ -48,7 +48,7 @@ export default class TextInput extends Component {
     } = this.props;
     const currentValue = this.state.value;
     const shouldShowError = errorMsg && this.state.value === wrongValue;
-
+    const isDateInput = type === "date";
     return (
       <div className={className}>
         <div
@@ -57,12 +57,16 @@ export default class TextInput extends Component {
         >
           <input
             ref={this.inputRef}
-            type={type ? type : "text"}
+            type={type && !isDateInput ? type : "text"}
             className={`text-input`}
             name={name}
             id={id}
-            value={currentValue}
-            onChange={this.handleChange}
+            value={currentValue || ""}
+            onChange={e => this.handleChange(e)}
+            onFocus={
+              isDateInput && (e => (this.inputRef.current.type = "date"))
+            }
+            onBlur={isDateInput && (e => (this.inputRef.current.type = "text"))}
           />
           <div className={`label-info ${this.state.isEmpty ? "" : "filled"}`}>
             {label && <span className="label">{label}</span>}

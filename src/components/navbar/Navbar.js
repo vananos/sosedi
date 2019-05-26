@@ -28,7 +28,7 @@ export default class Navbar extends Component {
     const isExpanded = this.state.isExpanded;
     return (
       <div
-        className={`modal ${isExpanded ? "modal-expanded" : ""}`}
+        className={`modal-nav ${isExpanded ? "modal-expanded" : ""}`}
         onClick={this.toggleNavbar}
       >
         <div

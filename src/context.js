@@ -1,35 +1,36 @@
-import React, { Component } from "react";
+import React from "react";
 
-const ApplicationContext = React.createContext();
+export const ApplicationContext = React.createContext({ hello: "blia" });
 
-class ApplicationContextProvider extends Component {
-  showSpinner = () => {
-    this.setState({
-      spinnerDisplayed: true
-    });
-  };
+const state = {
+  userId: undefined,
+  shouldShowSpinner: false,
 
-  hideSpinner = () => {
-    this.setState({
-      spinnerDisplayed: false
-    });
-  };
-
-  render() {
-    return (
-      <ApplicationContext.Provider
-        value={{
-          ...this.state,
-          hideSpinner: this.hideSpinner,
-          showSpinner: this.showSpinner
-        }}
-      >
-        {this.props.children}
-      </ApplicationContext.Provider>
-    );
+  updateUserId: userId => {
+    state.userId = userId;
+    if (localStorage) {
+      localStorage.setItem("userId", userId);
+    }
+  },
+  showSpinner: () => {
+    state.shouldShowSpinner = true;
+  },
+  hideSpinner: () => {
+    state.shouldShowSpinner = false;
+  },
+  getUserId: () => {
+    if (state.userId) {
+      return state.userId;
+    }
+    if (localStorage && localStorage.getItem("userId")) {
+      return localStorage.getItem("userId");
+    }
+    throw "user id not defined";
   }
-}
+};
 
-const ApplicationContextConsumer = ApplicationContext.Consumer;
-
-export { ApplicationContextProvider, ApplicationContextConsumer };
+export const ApplicationStateProvider = ({ children }) => (
+  <ApplicationContext.Provider value={state}>
+    {children}
+  </ApplicationContext.Provider>
+);

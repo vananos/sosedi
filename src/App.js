@@ -7,41 +7,38 @@ import CreateAd from "./components/createad/CreateAd";
 import RegistartionForm from "./components/registration/RegistrationForm";
 import LoginForm from "./components/login/LoginForm";
 import Spinner from "./components/common/Spinner";
-import { ApplicationContextConsumer } from "./context";
+import { ApplicationStateProvider, ApplicationContext } from "./context";
 import "./App.css";
+import Modal from "./components/common/Modal";
 
 export default class App extends Component {
   render() {
     return (
-      <ApplicationContextConsumer>
-        {value => (
-          <React.Fragment>
-            <header className="main-header">
-              <Navbar />
-            </header>
-            <section className="main-content">
-              <Switch>
-                <Route
-                  exact
-                  path="/"
-                  render={() => <LoginForm ctx={value} />}
-                />
-                <Route
-                  exact
-                  path="/registration"
-                  render={() => <RegistartionForm ctx={value} />}
-                />
-                <Route exact path="/create-ad" component={CreateAd} />
-                <Route exact path="/messages" component={Main} />
-                <Route exact path="/my-ads" component={Main} />
-                <Route exact path="/profile" component={Profile} />
-                <Route exact path="/settings" component={Main} />
-              </Switch>
-            </section>
-            <Spinner display={value.spinnerDisplayed} />
-          </React.Fragment>
-        )}
-      </ApplicationContextConsumer>
+      <ApplicationStateProvider>
+        <React.Fragment>
+          <header className="main-header">
+            <Navbar />
+          </header>
+          <section className="main-content">
+            <Switch>
+              <Route exact path="/" component={LoginForm} />
+              <Route exact path="/registration" component={RegistartionForm} />
+              <Route exact path="/create-ad" component={CreateAd} />
+              <Route exact path="/messages" component={Main} />
+              <Route exact path="/my-ads" component={Main} />
+              <Route exact path="/profile" component={Profile} />
+              <Route exact path="/settings" component={Main} />
+            </Switch>
+          </section>
+          <ApplicationContext.Consumer>
+            {value => (
+              <Modal display={value.shouldShowSpinner}>
+                <Spinner />
+              </Modal>
+            )}
+          </ApplicationContext.Consumer>
+        </React.Fragment>
+      </ApplicationStateProvider>
     );
   }
 }

@@ -1,0 +1,9 @@
+.popup {
+
+    background: white;
+    padding: 20px;
+
+    &-visible {
+        display: flex;
+    }
+}

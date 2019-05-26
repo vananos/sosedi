@@ -23,14 +23,14 @@ export default class RegistrationForm extends Component {
       },
       fieldErrors: {},
       registrationSuccess: false,
-      registeredName: ""
+      registeredName: "",
+      inProgress: false
     };
   }
 
   handleSubmit = e => {
     e.preventDefault();
-    var formData = formDataToObject(new FormData(e.target));
-    const { ctx } = this.props;
+    var formData = formDataToObject(e.target);
 
     const errors = validateForm(formData, registrationFormValidator);
 
@@ -41,7 +41,9 @@ export default class RegistrationForm extends Component {
       return;
     }
 
-    ctx.showSpinner();
+    this.setState({
+      inProgress: true
+    });
 
     makePost(REGISTRATION_ENDPOINT, JSON.stringify(formData))
       .then(async response => {
@@ -71,7 +73,11 @@ export default class RegistrationForm extends Component {
         }
       })
       .catch(() => console.log("error"))
-      .finally(ctx.hideSpinner);
+      .finally(() => {
+        this.setState({
+          inProgress: false
+        });
+      });
   };
 
   render() {
@@ -80,7 +86,8 @@ export default class RegistrationForm extends Component {
       fieldErrors,
       registrationSuccess,
       registeredName,
-      formError
+      formError,
+      inProgress
     } = this.state;
     return (
       <div className="registration-form-wrapper">
@@ -130,10 +137,13 @@ export default class RegistrationForm extends Component {
               value={fieldValues.passwordConfirmation}
               error={fieldErrors.passwordConfirmation}
             />
-            {formError && (
-              <div className="error">{formError}</div>
-            )}
-            <Button color="btn-green" className="registration-form-submit-btn">
+            {formError && <div className="error">{formError}</div>}
+            <Button
+              color="btn-green"
+              className="registration-form-submit-btn"
+              disabled={inProgress}
+              progress={inProgress}
+            >
               Начать
             </Button>
           </form>

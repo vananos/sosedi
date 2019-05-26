@@ -5,7 +5,7 @@ export default class Checkbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: props.checked
+      selected: !!props.checked
     };
   }
 
@@ -17,21 +17,20 @@ export default class Checkbox extends Component {
 
   render() {
     const { value, id, name, className, children, style } = this.props;
+    const { selected } = this.state;
     return (
       <div className={className}>
         <div className={`checkbox-wrapper`} style={style}>
           <div
-            className={`checkbox ${
-              this.state.selected ? "checkbox-selected" : ""
-            }`}
+            className={`checkbox ${selected ? "checkbox-selected" : ""}`}
             onClick={this.changeState}
           >
             <input
               type="checkbox"
               id={id}
               name={name}
-              value={value}
-              checked={this.state.checked}
+              checked={selected}
+              onChange={() => {}}
             />
             <span>{children}</span>
           </div>
