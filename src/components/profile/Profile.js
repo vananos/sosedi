@@ -4,10 +4,9 @@ import Input from "../common/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button";
 import Checkbox from "../common/Checkbox";
-import Popup from "../common/Popup";
 import { extractFormData } from "../../utils/utils";
-import Spinner from "../common/Spinner";
 import { ApplicationContext } from "../../context";
+import NotificationManager from "../common/NotificationManager";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -98,7 +97,21 @@ export default class Profile extends Component {
 
     serialaizedProfileData.userId = this.context.getUserId();
 
-    this.context.api.updateProfile(serialaizedProfileData);
+    this.setState({ inProgress: true });
+
+    this.context.api
+      .updateProfile(serialaizedProfileData)
+      .then(res => {
+        NotificationManager.notify(
+          <span style={{ textAlign: "center" }}>
+            Данные успешно обновлены!
+          </span>,
+          {
+            duration: 1000
+          }
+        );
+      })
+      .finally(() => this.setState({ inProgress: false }));
     e.preventDefault();
   };
 

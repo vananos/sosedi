@@ -10,6 +10,7 @@ import {
 } from "../../utils/utils";
 import "./LoginForm.scss";
 import { ApplicationContext } from "../../context";
+import NotificationManager from "../common/NotificationManager";
 
 export default class LoginForm extends Component {
   static contextType = ApplicationContext;
@@ -38,26 +39,24 @@ export default class LoginForm extends Component {
       inProgress: true
     });
 
-    this.context.app.showSpinner();
-
     this.context.api
-      .login(loginInfo, () => {
-        this.setState({
-          formError: "Невеная пара логин/пароль",
-          inProgress: false
-        });
-      })
-      .then(response => {
-        if (!response) return;
+      .login(loginInfo)
+      .ifSuccess(response => {
         this.context.updateUserId(response.userId);
         if (response.isNewUser) {
           this.props.history.push("/profile");
           return;
         }
+      })
+      .ifWrongCredentials(() => {
         this.setState({
+          formError: "Невеная пара логин/пароль",
           inProgress: false
         });
-      });
+        return false;
+      })
+      .execute()
+      .finally(() => this.setState({ inProgress: false }));
   };
 
   render() {

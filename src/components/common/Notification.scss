@@ -1,0 +1,16 @@
+@import "../../base.scss";
+
+.notification {
+    width: 280px;
+    margin: 5px auto;
+    color: white;
+    padding: 15px;
+
+    &-success {
+        background: $green;
+    }
+
+    &-error {
+        background: $red;
+    }
+}

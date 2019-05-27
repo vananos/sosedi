@@ -2,6 +2,6 @@ import React, { Component } from "react";
 import "./Popup.scss";
 
 export default function Popup(props) {
-  const { content, closeHandler } = props;
-  return <div className="popup">{content}</div>;
+  const { children, closeHandler } = props;
+  return <div className="popup">{children}</div>;
 }
