@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Notification from "./Notification";
+import Notification from "../Notification/Notification";
 import "./NotificationManager.scss";
 
 export default class NotificationManager extends Component {

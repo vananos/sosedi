@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import Input from "../common/Input";
-import Button from "../common/Button";
+import Input from "../common/Input/Input";
+import Button from "../common/Button/Button";
 import {
   registrationFormValidator,
   validateFormData,
@@ -10,7 +10,7 @@ import {
 } from "../../utils/utils";
 import "./LoginForm.scss";
 import { ApplicationContext } from "../../context";
-import NotificationManager from "../common/NotificationManager";
+import NotificationManager from "../common/NotificationManager/NotificationManager";
 
 export default class LoginForm extends Component {
   static contextType = ApplicationContext;

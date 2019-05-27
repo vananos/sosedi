@@ -2,17 +2,17 @@ import React, { Component } from "react";
 import { Switch, Route } from "react-router-dom";
 import Main from "./components/main/Main";
 import Profile from "./components/profile/Profile";
-import Navbar from "./components/navbar/Navbar";
-import CreateAd from "./components/createad/CreateAd";
+import Navbar from "./components/navbar/Navbar/Navbar";
+import CreateAd from "./components/createad/CreateAd/CreateAd";
 import RegistartionForm from "./components/registration/RegistrationForm";
 import LoginForm from "./components/login/LoginForm";
-import Spinner from "./components/common/Spinner";
+import Spinner from "./components/common/Spinner/Spinner";
 import { ApplicationStateProvider, ApplicationContext } from "./context";
 import ApiClient from "./api";
 import "./App.css";
-import Modal from "./components/common/Modal";
+import Modal from "./components/common/Modal/Modal";
 import ErrorHandler from "./ErrorHandler";
-import Popup from "./components/common/Popup";
+import Popup from "./components/common/Popup/Popup";
 
 export default class App extends Component {
   constructor(props) {

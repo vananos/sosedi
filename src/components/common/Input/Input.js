@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import infoCircle from "../../assets/common/info-circle-solid.svg";
+import infoCircle from "../../../assets/common/info-circle-solid.svg";
 import "./Input.scss";
 
 export default class TextInput extends Component {

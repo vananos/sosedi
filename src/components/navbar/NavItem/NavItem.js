@@ -1,7 +1,7 @@
 import React from "react";
-import "./Navitem.css";
+import "./NavItem.css";
 import { NavLink } from "react-router-dom";
-import Checkmark from "./Checkmark";
+import Checkmark from "../Checkmark/Checkmark";
 
 export default function NavItem(props) {
   const { icon, href, children, onClick } = props;

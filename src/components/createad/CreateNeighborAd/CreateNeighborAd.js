@@ -1,14 +1,14 @@
 import React, { Component } from "react";
-import TextInput from "../common/Input";
-import GeoSuggest from "./GeoSuggest";
+import TextInput from "../../common/Input/Input";
+import GeoSuggest from "../GeoSuggest/GeoSuggest";
 import GoogleMapReact from "google-map-react";
-import Checkmark from "../navbar/Checkmark";
-import Checkbox from "../common/Checkbox";
-import Slider from "../common/Slider";
-import Thumbler from "../common/Thumbler";
-import Button from "../common/Button";
-import pawIcon from "../../assets/ad/paw-solid.svg";
-import smokingIcon from "../../assets/ad/smoking-solid.svg";
+import Checkmark from "../../navbar/Checkmark/Checkmark";
+import Checkbox from "../../common/Checkbox/Checkbox";
+import Slider from "../../common/Slider/Slider";
+import Thumbler from "../../common/Thumbler/Thumbler";
+import Button from "../../common/Button/Button";
+import pawIcon from "../../../assets/ad/paw-solid.svg";
+import smokingIcon from "../../../assets/ad/smoking-solid.svg";
 
 export default class CreateNeighborAd extends Component {
   constructor(props) {

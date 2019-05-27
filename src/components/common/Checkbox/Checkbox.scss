@@ -1,4 +1,4 @@
-@import "../../base.scss";
+@import "../../../base.scss";
 
 .checkbox {
     display: flex;
@@ -27,7 +27,7 @@
     }
 
     &-selected {
-        background: url("../../assets/profile/check-solid.svg") $brown;
+        background: url("../../../assets/profile/check-solid.svg") $brown;
         color: rgb(255, 255, 255);
         border: 10px solid $light-brown;
     }

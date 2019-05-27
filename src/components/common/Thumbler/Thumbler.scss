@@ -1,4 +1,4 @@
-@import "../../base.scss";
+@import "../../../base.scss";
 
 .thumbler {
     position: relative;
@@ -12,7 +12,7 @@
     .yes-btn,
     .no-btn {
         position: absolute;
-        background-image: url("../../assets/common/thumb-up.svg");
+        background-image: url("../../../assets/common/thumb-up.svg");
         background-size: 50%;
         background-repeat: no-repeat;
         background-position: center;

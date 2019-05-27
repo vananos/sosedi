@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import Input from "../common/Input";
+import Input from "../common/Input/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
-import Button from "../common/Button";
-import Checkbox from "../common/Checkbox";
+import Button from "../common/Button/Button";
+import Checkbox from "../common/Checkbox/Checkbox";
 import { extractFormData } from "../../utils/utils";
 import { ApplicationContext } from "../../context";
-import NotificationManager from "../common/NotificationManager";
+import NotificationManager from "../common/NotificationManager/NotificationManager";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;

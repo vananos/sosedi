@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import TextInput from "../common/Input";
+import TextInput from "../common/Input/Input";
 import "./RegistrationForm.scss";
-import Button from "../common/Button";
+import Button from "../common/Button/Button";
 import { NavLink } from "react-router-dom";
 import { ApplicationContext } from "../../context";
 import {
@@ -10,9 +10,9 @@ import {
   registrationFormValidator,
   has
 } from "../../utils/utils";
-import Modal from "../common/Modal";
-import Popup from "../common/Popup";
-import NotificationManager from "../common/NotificationManager";
+import Modal from "../common/Modal/Modal";
+import Popup from "../common/Popup/Popup";
+import NotificationManager from "../common/NotificationManager/NotificationManager";
 
 export default class RegistrationForm extends Component {
   static contextType = ApplicationContext;
