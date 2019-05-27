@@ -1,16 +1,30 @@
 import "./Modal.scss";
 
-import React from "react";
+import React, { Component } from "react";
+import { connect } from "tls";
 
-export default function Modal(props) {
-  const { display, children, onClick } = { ...props };
-  return (
-    <div
-      className="modal"
-      onClick={onClick}
-      style={{ display: display ? "flex" : "none" }}
-    >
-      {children}
-    </div>
-  );
+export default class Modal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+    Modal._singletonRef = this;
+  }
+
+  static showModal = (content, onClick) =>
+    Modal._singletonRef.setState({ content, onClick });
+
+  static hideModal = () => Modal._singletonRef.setState({ content: null });
+
+  render() {
+    const { content, onClick } = this.state;
+    return (
+      <div
+        className="modal"
+        onClick={onClick}
+        style={{ display: !!content ? "flex" : "none" }}
+      >
+        {content}
+      </div>
+    );
+  }
 }

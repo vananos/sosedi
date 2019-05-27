@@ -1,16 +1,20 @@
 import React, { Component } from "react";
-import TextInput from "../common/TextInput";
+import TextInput from "../common/Input";
 import "./RegistrationForm.scss";
 import Button from "../common/Button";
 import { NavLink } from "react-router-dom";
+import { ApplicationContext } from "../../context";
 import { REGISTRATION_ENDPOINT, makePost } from "../../api.js";
 import {
-  formDataToObject,
-  validateForm,
-  registrationFormValidator
+  extractFormData,
+  validateFormData,
+  registrationFormValidator,
+  has
 } from "../../utils/utils";
 
 export default class RegistrationForm extends Component {
+  static contextType = ApplicationContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -30,11 +34,11 @@ export default class RegistrationForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    var formData = formDataToObject(e.target);
+    var formData = extractFormData(e.target);
 
-    const errors = validateForm(formData, registrationFormValidator);
+    const errors = validateFormData(formData, registrationFormValidator);
 
-    if (Object.entries(errors).length) {
+    if (has(errors)) {
       this.setState({
         fieldErrors: errors
       });
@@ -45,19 +49,19 @@ export default class RegistrationForm extends Component {
       inProgress: true
     });
 
-    makePost(REGISTRATION_ENDPOINT, JSON.stringify(formData))
+    this.context.api
+      .makePost(REGISTRATION_ENDPOINT, JSON.stringify(formData))
       .then(async response => {
         const responseJson = await response.json();
-        if (response.status === 200 && responseJson.status === "SUCCESS") {
+        if (response.status === 200) {
           this.setState({
             registrationSuccess: true,
             registeredName: formData.name
           });
           return;
         }
-        if (response.status === 400 && responseJson.status === "FAIL") {
+        if (response.status === 400) {
           for (const error of responseJson.errors) {
-            console.log("error");
             if (!error.id) {
               this.setState({
                 formError: (

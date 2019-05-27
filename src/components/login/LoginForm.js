@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
-import TextInput from "../common/TextInput";
+import Input from "../common/Input";
 import Button from "../common/Button";
-import { makePost, LOGIN_ENDPOINT } from "../../api";
 import {
   registrationFormValidator,
-  validateForm,
-  formDataToObject
+  validateFormData,
+  extractFormData,
+  has
 } from "../../utils/utils";
 import "./LoginForm.scss";
 import { ApplicationContext } from "../../context";
@@ -22,13 +22,12 @@ export default class LoginForm extends Component {
     };
   }
 
-  handleSubmit = async e => {
+  handleSubmit = e => {
     e.preventDefault();
-    const formData = formDataToObject(e.target);
+    const loginInfo = extractFormData(e.target);
 
-    const errors = validateForm(formData, registrationFormValidator);
-
-    if (Object.entries(errors).length) {
+    const errors = validateFormData(loginInfo, registrationFormValidator);
+    if (has(errors)) {
       this.setState({
         fieldErrors: errors
       });
@@ -39,26 +38,26 @@ export default class LoginForm extends Component {
       inProgress: true
     });
 
-    await makePost(
-      LOGIN_ENDPOINT,
-      `username=${formData.username}&password=${formData.password}`,
-      new Headers({ "Content-Type": "application/x-www-form-urlencoded" }),
-      () => {
+    this.context.app.showSpinner();
+
+    this.context.api
+      .login(loginInfo, () => {
         this.setState({
           formError: "Невеная пара логин/пароль",
           inProgress: false
         });
-      }
-    ).then(response => {
-      this.context.updateUserId(response.userId);
-      if (response.isNewUser) {
-        this.props.history.push("/profile");
-        return;
-      }
-      this.setState({
-        inProgress: false
+      })
+      .then(response => {
+        if (!response) return;
+        this.context.updateUserId(response.userId);
+        if (response.isNewUser) {
+          this.props.history.push("/profile");
+          return;
+        }
+        this.setState({
+          inProgress: false
+        });
       });
-    });
   };
 
   render() {
@@ -66,13 +65,13 @@ export default class LoginForm extends Component {
     return (
       <div className="login-form-wrapper" onSubmit={this.handleSubmit}>
         <form className="login-form">
-          <TextInput
+          <Input
             name="username"
             error={fieldErrors.username}
             value=""
             label="Email"
           />
-          <TextInput
+          <Input
             type="password"
             value=""
             name="password"

@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import infoCircle from "../../assets/common/info-circle-solid.svg";
-import "./TextInput.scss";
+import "./Input.scss";
 
 export default class TextInput extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isEmpty: this.isEmpty(props.value),
       value: props.value,
       changeHandler: props.onChange
     };
@@ -17,18 +16,10 @@ export default class TextInput extends Component {
 
   handleChange = e => {
     const newValue = e.target.value;
-    const isEmpty = this.isEmpty(newValue);
-    const newState = {
+    this.setState({
       value: newValue
-    };
+    });
 
-    this.setState(newState);
-
-    if (isEmpty ^ this.state.isEmpty) {
-      this.setState({
-        isEmpty: isEmpty
-      });
-    }
     this.state.changeHandler && this.state.changeHandler(e);
   };
 
@@ -64,11 +55,17 @@ export default class TextInput extends Component {
             value={currentValue || ""}
             onChange={e => this.handleChange(e)}
             onFocus={
-              isDateInput && (e => (this.inputRef.current.type = "date"))
+              isDateInput
+                ? e => (this.inputRef.current.type = "date")
+                : undefined
             }
-            onBlur={isDateInput && (e => (this.inputRef.current.type = "text"))}
+            onBlur={
+              isDateInput
+                ? e => (this.inputRef.current.type = "text")
+                : undefined
+            }
           />
-          <div className={`label-info ${this.state.isEmpty ? "" : "filled"}`}>
+          <div className={`label-info ${this.isEmpty(currentValue) ? "" : "filled"}`}>
             {label && <span className="label">{label}</span>}
             {info && (
               <img src={infoCircle} alt="info" width="10px" height="10px" />

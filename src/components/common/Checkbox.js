@@ -29,6 +29,7 @@ export default class Checkbox extends Component {
               type="checkbox"
               id={id}
               name={name}
+              value={value}
               checked={selected}
               onChange={() => {}}
             />

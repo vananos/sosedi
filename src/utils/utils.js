@@ -41,9 +41,9 @@ export const registrationFormValidator = {
   }
 };
 
-export const validateForm = (formDataObject, validator) => {
+export const validateFormData = (formDataObject, validator) => {
   if (formDataObject instanceof FormData) {
-    formDataObject = formDataToObject(formDataObject);
+    formDataObject = extractFormData(formDataObject);
   }
 
   const errors = {};
@@ -61,10 +61,12 @@ export const validateForm = (formDataObject, validator) => {
   return errors;
 };
 
-export const formDataToObject = formData => {
+export const extractFormData = formData => {
   const formDataObject = {};
   new FormData(formData).forEach((value, key) => {
     formDataObject[key] = value;
   });
   return formDataObject;
 };
+
+export const has = errors => !!Object.entries(errors).length;

@@ -1,14 +1,12 @@
 import React, { Component } from "react";
 import "./Profile.css";
-import TextInput from "../common/TextInput";
+import Input from "../common/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button";
 import Checkbox from "../common/Checkbox";
-import { makeGet, makePost, PROFILE_INFO } from "../../api";
 import Popup from "../common/Popup";
-import { formDataToObject } from "../../utils/utils";
+import { extractFormData } from "../../utils/utils";
 import Spinner from "../common/Spinner";
-import Modal from "../common/Modal";
 import { ApplicationContext } from "../../context";
 
 export default class Profile extends Component {
@@ -20,72 +18,105 @@ export default class Profile extends Component {
       userInfo: {},
       inProgress: false
     };
-    this.popup = React.createRef();
   }
 
+  availableInterests = () => [
+    {
+      name: "sport",
+      description: "Спорт",
+      selected: false
+    },
+    {
+      name: "music",
+      description: "Музыка",
+      selected: false
+    },
+    {
+      name: "games",
+      description: "Игры",
+      selected: false
+    },
+    {
+      name: "tv",
+      description: "TV",
+      selected: false
+    },
+    {
+      name: "books",
+      description: "Книги",
+      selected: false
+    },
+    {
+      name: "dance",
+      description: "Танцы",
+      selected: false
+    }
+  ];
+
   componentWillMount() {
-    console.error(this.context);
-    this.context.showSpinner();
+    this.context.app.showSpinner();
 
-    makeGet(`/profile?userid=${this.context.getUserId()}`).then(response => {
-      const { data: userInfo } = response;
-      this.setState({
-        userInfo
-      });
+    this.context.api
+      .makeGet(`/profile?userid=${this.context.getUserId()}`)
+      .then(response => {
+        const { data: userInfo } = response;
 
-      if (userInfo.isNewUser) {
-        const popup = this.popup.current;
-        popup.showPopup(
-          <div style={{ textAlign: "center" }}>
-            <span>
-              <strong>{userInfo.name}, </strong>
-              Давай заполним анкету, что бы мы смогли подобрать тебе подходящего
-              соседа.
-            </span>
-            <Button color="btn-green" onClick={() => popup.closePopup()}>
-              Приступить
-            </Button>
-          </div>
-        );
-      }
-    });
-    this.context.hideSpinner();
+        this.setState({
+          userInfo
+        });
+
+        if (userInfo.isNewUser) {
+          this.context.app.showPopup(
+            <div style={{ textAlign: "center" }}>
+              <span>
+                <strong>{userInfo.name}, </strong>
+                Давай заполним анкету, что бы мы смогли подобрать тебе
+                подходящего соседа.
+              </span>
+              <Button color="btn-green">Приступить</Button>
+            </div>
+          );
+        }
+      })
+      .finally(() => this.context.app.hideSpinner());
   }
 
   handleSubmit = e => {
-    const rawFormData = formDataToObject(e.target);
-    const dataForSending = {
+    const rawFormData = extractFormData(e.target);
+    const serialaizedProfileData = {
       interests: []
     };
 
     Object.keys(rawFormData).forEach(key => {
       if (~key.indexOf("like-")) {
-        //serialize to list
-        dataForSending.interests.push(key.substr(5));
+        //serialize interests to list
+        serialaizedProfileData.interests.push(rawFormData[key]);
       } else {
-        dataForSending[key] = rawFormData[key];
+        serialaizedProfileData[key] = rawFormData[key];
       }
     });
 
-    dataForSending.userId = this.context.getUserId();
+    serialaizedProfileData.userId = this.context.getUserId();
 
-    makePost(PROFILE_INFO, JSON.stringify(dataForSending));
+    this.context.api.updateProfile(serialaizedProfileData);
     e.preventDefault();
   };
 
   render() {
-    const { name, surname, birthday, phone, inProgress } = this.state.userInfo;
+    const {
+      userId,
+      name,
+      surname,
+      birthday,
+      phone,
+      description,
+      inProgress,
+      interests
+    } = this.state.userInfo;
 
-    const { newUser } = this.state;
-
-    if (!name) {
-      return (
-        <Modal display>
-          <Spinner />
-        </Modal>
-      );
+    if (!userId) {
+      return null;
     }
-
     return (
       <div className="profile">
         <div className="profile-greeting">
@@ -106,26 +137,26 @@ export default class Profile extends Component {
           <span className="profile-add-photo">Изменить фото</span>
         </div>
         <form onSubmit={this.handleSubmit}>
-          <TextInput
+          <Input
             label="Имя"
             value={name}
             name="name"
             className="profile-data-input"
           />
-          <TextInput
+          <Input
             label="Фамилия"
             value={surname}
             name="surname"
             className="profile-data-input"
           />
-          <TextInput
+          <Input
             label="Дата рождения"
             value={birthday}
             type="date"
             name="birthday"
             className="profile-data-input"
           />
-          <TextInput
+          <Input
             label="Телефон"
             value={phone}
             name="phone"
@@ -134,64 +165,30 @@ export default class Profile extends Component {
           <div className="profile-about-itself-input">
             <span>О себе</span>
             <div className="profile-interests-select">
-              <Checkbox
-                value="sport"
-                name="like-sport"
-                className="profile-interest-item"
-              >
-                Спорт
-              </Checkbox>
-
-              <Checkbox
-                value="games"
-                name="like-games"
-                className="profile-interest-item"
-              >
-                Игры
-              </Checkbox>
-
-              <Checkbox
-                value="music"
-                name="like-music"
-                className="profile-interest-item"
-              >
-                Музыка
-              </Checkbox>
-
-              <Checkbox
-                value="books"
-                name="like-books"
-                className="profile-interest-item"
-              >
-                книги
-              </Checkbox>
-
-              <Checkbox
-                value="dance"
-                name="like-dance"
-                className="profile-interest-item"
-              >
-                танцы
-              </Checkbox>
-
-              <Checkbox
-                value="tv"
-                name="like-tv"
-                className="profile-interest-item"
-              >
-                TV
-              </Checkbox>
+              {this.availableInterests().map(interest => (
+                <Checkbox
+                  value={interest.name}
+                  name={`like-${interest.name}`}
+                  className="profile-interest-item"
+                  checked={interests.includes(interest.name)}
+                >
+                  {interest.description}
+                </Checkbox>
+              ))}
             </div>
           </div>
           <div>
             <span>Хочешь рассказать о себе больше?</span>
-            <textarea name="description" className="profile-about-itself" />
+            <textarea
+              name="description"
+              className="profile-about-itself"
+              defaultValue={description}
+            />
           </div>
           <Button progress={inProgress} disabled={inProgress} color="btn-green">
             сохранить
           </Button>
         </form>
-        <Popup ref={this.popup} />
       </div>
     );
   }

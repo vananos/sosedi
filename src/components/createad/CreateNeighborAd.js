@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TextInput from "../common/TextInput";
+import TextInput from "../common/Input";
 import GeoSuggest from "./GeoSuggest";
 import GoogleMapReact from "google-map-react";
 import Checkmark from "../navbar/Checkmark";
