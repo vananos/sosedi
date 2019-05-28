@@ -4,7 +4,6 @@ import GeoSuggest from "../GeoSuggest/GeoSuggest";
 import GoogleMapReact from "google-map-react";
 import Checkmark from "../../navbar/Checkmark/Checkmark";
 import Checkbox from "../../common/Checkbox/Checkbox";
-import Slider from "../../common/Slider/Slider";
 import Thumbler from "../../common/Thumbler/Thumbler";
 import Button from "../../common/Button/Button";
 import pawIcon from "../../../assets/ad/paw-solid.svg";
@@ -106,12 +105,12 @@ export default class CreateNeighborAd extends Component {
         </div>
         <hr />
         <label className="hint">Человека какого возраста ты ищешь?</label>
-        <Slider currentMin="0" currentMax="10" min="0" max="100" double />
+        {/* <Slider currentMin="0" currentMax="10" min="0" max="100" double /> */}
         <hr />
         <span className="hint">Количество людей в квартире</span>
-        <Slider currentMin="1" currentMax="3" min="1" max="15" double />
+        {/* <Slider currentMin="1" currentMax="3" min="1" max="15" double /> */}
         <span className="hint">Хочу платить за аренду</span>
-        <Slider currentMin="1" currentMax="3" min="1" max="50" double />
+        {/* <Slider currentMin="1" currentMax="3" min="1" max="50" double /> */}
         <Button bordered color="btn-green">
           Сохранить
         </Button>

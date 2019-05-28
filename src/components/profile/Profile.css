@@ -34,8 +34,9 @@
     align-items: center;
 }
 
-.profile-add-photo {
+.profile-change-photo {
     font-size: 0.75em;
+    cursor: pointer;
 }
 
 .profile-data-input {

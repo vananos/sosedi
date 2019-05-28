@@ -7,11 +7,8 @@ import { ApplicationContext } from "../../context";
 import {
   extractFormData,
   validateFormData,
-  registrationFormValidator,
-  has
+  registrationFormValidator
 } from "../../utils/utils";
-import Modal from "../common/Modal/Modal";
-import Popup from "../common/Popup/Popup";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 
 export default class RegistrationForm extends Component {
@@ -37,14 +34,14 @@ export default class RegistrationForm extends Component {
     e.preventDefault();
     var registrationData = extractFormData(e.target);
 
-    const errors = validateFormData(
+    const validationResult = validateFormData(
       registrationData,
       registrationFormValidator
     );
 
-    if (has(errors)) {
+    if (validationResult.hasErrors()) {
       this.setState({
-        fieldErrors: errors
+        fieldErrors: validationResult.errors
       });
       return;
     }
@@ -72,10 +69,13 @@ export default class RegistrationForm extends Component {
         NotificationManager.notify(
           <div>
             <div>
-              {registrationData.name}, регистрация прошла успешно, мы выслали
-              тебе на почту письмо с подтверждением.
+              {registrationData.name}, мы выслали тебе на почту письмо с
+              подтверждением.
             </div>
-            <div>После подтверждения ты можешь войти в систему.</div>
+            <div>
+              После подтверждения регистрация будет завершена и ты можешь войти
+              в систему.
+            </div>
           </div>,
           { duration: 5000 }
         );
@@ -129,7 +129,7 @@ export default class RegistrationForm extends Component {
           />
           {formError && <div className="error">{formError}</div>}
           <Button
-            color="btn-green"
+            color="green"
             className="registration-form-submit-btn"
             disabled={inProgress}
             progress={inProgress}

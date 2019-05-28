@@ -1,9 +1,24 @@
+@import "../../../base.scss";
+
 .popup {
 
+    position: relative;
     background: white;
-    padding: 20px;
+    padding: 10px;
 
-    &-visible {
-        display: flex;
+    &-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+
+        &:hover .popup-close-line {
+            stroke: rgba(225, 225, 225, 1);
+        }
+
+        &-line {
+            stroke-width: 2px;
+            stroke: rgba(225, 225, 225, 0.5);
+        }
     }
 }

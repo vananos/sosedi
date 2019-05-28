@@ -5,12 +5,10 @@ import Button from "../common/Button/Button";
 import {
   registrationFormValidator,
   validateFormData,
-  extractFormData,
-  has
+  extractFormData
 } from "../../utils/utils";
 import "./LoginForm.scss";
 import { ApplicationContext } from "../../context";
-import NotificationManager from "../common/NotificationManager/NotificationManager";
 
 export default class LoginForm extends Component {
   static contextType = ApplicationContext;
@@ -27,10 +25,14 @@ export default class LoginForm extends Component {
     e.preventDefault();
     const loginInfo = extractFormData(e.target);
 
-    const errors = validateFormData(loginInfo, registrationFormValidator);
-    if (has(errors)) {
+    const validationResult = validateFormData(
+      loginInfo,
+      registrationFormValidator
+    );
+
+    if (validationResult.hasErrors()) {
       this.setState({
-        fieldErrors: errors
+        fieldErrors: validationResult.errors
       });
       return;
     }
@@ -50,14 +52,15 @@ export default class LoginForm extends Component {
       })
       .ifWrongCredentials(() => {
         this.setState({
-          formError: "Невеная пара логин/пароль",
-          inProgress: false
+          formError: "Невеная пара логин/пароль"
         });
         return false;
       })
       .execute()
       .finally(() => this.setState({ inProgress: false }));
   };
+
+
 
   render() {
     const { fieldErrors, formError, inProgress } = this.state;
@@ -83,7 +86,7 @@ export default class LoginForm extends Component {
               Забыл пароль?
             </NavLink>
             <NavLink to="/registration" className="login-form-link">
-              Еще не зарегестрирован?
+              Еще не зарегистрирован?
             </NavLink>
           </div>
           <Button

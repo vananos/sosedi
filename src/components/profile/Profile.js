@@ -7,6 +7,8 @@ import Checkbox from "../common/Checkbox/Checkbox";
 import { extractFormData } from "../../utils/utils";
 import { ApplicationContext } from "../../context";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
+import Modal from "../common/Modal/Modal";
+import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -53,47 +55,44 @@ export default class Profile extends Component {
   ];
 
   componentWillMount() {
-    this.context.app.showSpinner();
+    Modal.showSpinner();
 
     this.context.api
       .makeGet(`/profile?userid=${this.context.getUserId()}`)
       .then(response => {
         const { data: userInfo } = response;
 
-        this.setState({
-          userInfo
-        });
-
-        if (userInfo.isNewUser) {
-          this.context.app.showPopup(
-            <div style={{ textAlign: "center" }}>
-              <span>
-                <strong>{userInfo.name}, </strong>
-                Давай заполним анкету, что бы мы смогли подобрать тебе
-                подходящего соседа.
-              </span>
-              <Button>Приступить</Button>
-            </div>
-          );
-        }
+        this.setState(
+          {
+            userInfo
+          },
+          () => {
+            if (userInfo.isNewUser) {
+              this.showGreetingsForNewUser(userInfo.name);
+            }
+          }
+        );
       })
-      .finally(() => this.context.app.hideSpinner());
+      .finally(() => this.state.userInfo.isNewUser || Modal.hide());
   }
+
+  showGreetingsForNewUser = name => {
+    Modal.showPopup(
+      <div style={{ textAlign: "center" }}>
+        <span>
+          <strong>{name}, </strong>
+          Давай заполним анкету, что бы мы смогли подобрать тебе подходящего
+          соседа.
+        </span>
+        <Button>Приступить</Button>
+      </div>
+    );
+  };
 
   handleSubmit = e => {
     const rawFormData = extractFormData(e.target);
-    const serialaizedProfileData = {
-      interests: []
-    };
 
-    Object.keys(rawFormData).forEach(key => {
-      if (~key.indexOf("like-")) {
-        //serialize interests to list
-        serialaizedProfileData.interests.push(rawFormData[key]);
-      } else {
-        serialaizedProfileData[key] = rawFormData[key];
-      }
-    });
+    const serialaizedProfileData = this.serializeProfileFormData(rawFormData);
 
     serialaizedProfileData.userId = this.context.getUserId();
 
@@ -113,6 +112,22 @@ export default class Profile extends Component {
       })
       .finally(() => this.setState({ inProgress: false }));
     e.preventDefault();
+  };
+
+  serializeProfileFormData = rawFormData => {
+    const serialaizedProfileData = {
+      interests: []
+    };
+
+    Object.keys(rawFormData).forEach(key => {
+      if (~key.indexOf("like-")) {
+        //serialize interests to list
+        serialaizedProfileData.interests.push(rawFormData[key]);
+      } else {
+        serialaizedProfileData[key] = rawFormData[key];
+      }
+    });
+    return serialaizedProfileData;
   };
 
   render() {
@@ -147,7 +162,12 @@ export default class Profile extends Component {
               />
             </div>
           </div>
-          <span className="profile-add-photo">Изменить фото</span>
+          <span
+            className="profile-change-photo"
+            onClick={() => Modal.showPopup(<ChangePhotoDialog />)}
+          >
+            Изменить фото
+          </span>
         </div>
         <form onSubmit={this.handleSubmit}>
           <Input

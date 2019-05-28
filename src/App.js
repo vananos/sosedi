@@ -6,45 +6,34 @@ import Navbar from "./components/navbar/Navbar/Navbar";
 import CreateAd from "./components/createad/CreateAd/CreateAd";
 import RegistartionForm from "./components/registration/RegistrationForm";
 import LoginForm from "./components/login/LoginForm";
-import Spinner from "./components/common/Spinner/Spinner";
 import { ApplicationStateProvider, ApplicationContext } from "./context";
 import ApiClient from "./api";
-import "./App.css";
 import Modal from "./components/common/Modal/Modal";
+import NotificationManager from "./components/common/NotificationManager/NotificationManager";
+import browserHistory from "./browserHistory";
+import "./App.css";
 import ErrorHandler from "./ErrorHandler";
-import Popup from "./components/common/Popup/Popup";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
   }
 
-  unauthorizedDefaultHandler = () => {
-    console.log("unathorized exception...");
+  forceAuthorization = () => {
+    browserHistory.push("/");
+    NotificationManager.notify(
+      <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>
+    );
   };
-
-  forceAuthorization = () => {};
 
   initialAppState = {
     userId: null,
     authorizationRequired: false,
-
-    app: {
-      showSpinner: () => Modal.showModal(<Spinner />),
-      hideSpinner: () => Modal.hideModal(),
-      showPopup: (content, closeHandler) =>
-        Modal.showModal(
-          <Popup closeHandler={closeHandler}>{content}</Popup>,
-          closeHandler
-        ),
-      hidePopup: () => Modal.hideModal(),
-
-      forceAuthorization: this.forceAuthorization
-    },
     api: new ApiClient({
       apiErrorHandler: response => {
         if (response.status === 401) {
           this.forceAuthorization();
+          return;
         }
         throw "blia";
       }

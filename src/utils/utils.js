@@ -58,7 +58,10 @@ export const validateFormData = (formDataObject, validator) => {
     }
   }
 
-  return errors;
+  return {
+    hasErrors : () => !!Object.entries(errors).length,
+    errors
+  };
 };
 
 export const extractFormData = formData => {
@@ -68,5 +71,3 @@ export const extractFormData = formData => {
   });
   return formDataObject;
 };
-
-export const has = errors => !!Object.entries(errors).length;
