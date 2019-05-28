@@ -72,7 +72,7 @@ export default class Profile extends Component {
                 Давай заполним анкету, что бы мы смогли подобрать тебе
                 подходящего соседа.
               </span>
-              <Button color="btn-green">Приступить</Button>
+              <Button>Приступить</Button>
             </div>
           );
         }
@@ -179,14 +179,15 @@ export default class Profile extends Component {
             <span>О себе</span>
             <div className="profile-interests-select">
               {this.availableInterests().map(interest => (
-                <Checkbox
-                  value={interest.name}
-                  name={`like-${interest.name}`}
-                  className="profile-interest-item"
-                  checked={interests.includes(interest.name)}
-                >
-                  {interest.description}
-                </Checkbox>
+                <div className="profile-interest-item" key={interest.name}>
+                  <Checkbox
+                    value={interest.name}
+                    name={`like-${interest.name}`}
+                    checked={interests.includes(interest.name)}
+                  >
+                    {interest.description}
+                  </Checkbox>
+                </div>
               ))}
             </div>
           </div>
@@ -198,7 +199,7 @@ export default class Profile extends Component {
               defaultValue={description}
             />
           </div>
-          <Button progress={inProgress} disabled={inProgress} color="btn-green">
+          <Button progress={inProgress} disabled={inProgress}>
             сохранить
           </Button>
         </form>

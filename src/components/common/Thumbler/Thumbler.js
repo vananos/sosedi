@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Thumbler.scss";
+import PropTypes from "prop-types";
 
 export default class Thumbler extends Component {
   constructor(props) {
@@ -32,3 +33,7 @@ export default class Thumbler extends Component {
     );
   }
 }
+
+Thumbler.propTypes = {
+  children: PropTypes.node.isRequired
+};

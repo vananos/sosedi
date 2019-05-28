@@ -87,7 +87,7 @@ export default class LoginForm extends Component {
             </NavLink>
           </div>
           <Button
-            color="btn-yellow"
+            color="yellow"
             className="login-form-submit"
             disabled={inProgress}
             progress={inProgress}

@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import infoCircle from "../../../assets/common/info-circle-solid.svg";
+import PropTypes from "prop-types";
 import "./Input.scss";
 
-export default class TextInput extends Component {
+export default class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.value,
+      value: props.value || "",
       changeHandler: props.onChange
     };
     this.inputRef = React.createRef();
   }
-
-  isEmpty = str => Boolean(!str || str === "");
 
   handleChange = e => {
     const newValue = e.target.value;
@@ -21,10 +20,6 @@ export default class TextInput extends Component {
     });
 
     this.state.changeHandler && this.state.changeHandler(e);
-  };
-
-  setValue = value => {
-    this.setState({ value });
   };
 
   render() {
@@ -37,45 +32,57 @@ export default class TextInput extends Component {
       className,
       error: { error: errorMsg, value: wrongValue } = {}
     } = this.props;
+
     const currentValue = this.state.value;
-    const shouldShowError = errorMsg && this.state.value === wrongValue;
+
+    const mustShowError = errorMsg && this.state.value === wrongValue;
+
     const isDateInput = type === "date";
+
     return (
-      <div className={className}>
-        <div
-          className={`text-input-wrapper ${shouldShowError ? "error" : ""}`}
-          onClick={e => this.inputRef.current.focus()}
-        >
-          <input
-            ref={this.inputRef}
-            type={type && !isDateInput ? type : "text"}
-            className={`text-input`}
-            name={name}
-            id={id}
-            value={currentValue || ""}
-            onChange={e => this.handleChange(e)}
-            onFocus={
-              isDateInput
-                ? e => (this.inputRef.current.type = "date")
-                : undefined
-            }
-            onBlur={
-              isDateInput
-                ? e => (this.inputRef.current.type = "text")
-                : undefined
-            }
-          />
-          <div className={`label-info ${this.isEmpty(currentValue) ? "" : "filled"}`}>
-            {label && <span className="label">{label}</span>}
-            {info && (
-              <img src={infoCircle} alt="info" width="10px" height="10px" />
-            )}
-          </div>
+      <div
+        className={`input-wrapper ${mustShowError ? "error" : ""} ${className}`}
+        onClick={e => this.inputRef.current.focus()}
+      >
+        <input
+          ref={this.inputRef}
+          type={!isDateInput ? type : "text"}
+          className="input"
+          name={name}
+          id={id}
+          value={currentValue}
+          onChange={this.handleChange}
+          onFocus={
+            isDateInput ? _ => (this.inputRef.current.type = "date") : undefined
+          }
+          onBlur={
+            isDateInput ? _ => (this.inputRef.current.type = "text") : undefined
+          }
+        />
+        <div className={`label-info ${currentValue !== "" ? "filled" : ""}`}>
+          <span className="label">{label}</span>
+          {info && (
+            <img src={infoCircle} alt="info" width="10px" height="10px" />
+          )}
         </div>
-        {shouldShowError && (
-          <span className="error-description">{errorMsg}</span>
-        )}
+        {mustShowError && <span className="error-description">{errorMsg}</span>}
       </div>
     );
   }
 }
+
+Input.defaultProps = {
+  type: "text",
+  className: ""
+};
+
+Input.propTypes = {
+  type: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  id: PropTypes.string,
+  label: PropTypes.string.isRequired,
+  info: PropTypes.node,
+  className: PropTypes.string,
+  error: PropTypes.object
+};

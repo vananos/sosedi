@@ -1,6 +1,6 @@
 @import "../../../base.scss";
 
-.text-input {
+.input {
     display: block;
     border: none;
     outline: none;
@@ -22,7 +22,7 @@
     }
 }
 
-.error .text-input {
+.error .input {
     font-size: 1em;
     border-bottom-color: $red !important;
 }
@@ -42,7 +42,7 @@
     color: $light-grey;
 }
 
-.text-input:focus~.label-info,
+.input:focus~.label-info,
 .filled {
     top: 0;
     right: 0;
@@ -51,7 +51,7 @@
     color: rgba(222, 170, 93, 1);
 }
 
-.error .text-input:focus~.label-info,
+.error .input:focus~.label-info,
 .error .filled {
     color: $red;
 }

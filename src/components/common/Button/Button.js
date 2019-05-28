@@ -1,18 +1,47 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "./Button.scss";
 
-export default function Button(props) {
-  const { children, className, disabled, progress, color, onClick } = props;
+const Button = props => {
+  const {
+    children,
+    className,
+    disabled,
+    progress,
+    color,
+    onClick,
+    style
+  } = props;
 
+  const colorClass = `btn-${color}`;
+  const progressClass = progress ? "btn-blink" : "";
   return (
     <button
-      className={`btn ${color} ${className ? className : ""} ${
-        progress ? "btn-blink" : ""
-      }`}
+      className={`btn ${colorClass} ${className} ${progressClass}`}
       disabled={disabled}
       onClick={onClick}
+      style={style}
     >
       {children}
     </button>
   );
-}
+};
+
+Button.defaultProps = {
+  className: "",
+  disabled: false,
+  progress: false,
+  color: "green"
+};
+
+Button.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string,
+  disable: PropTypes.bool,
+  progress: PropTypes.bool,
+  color: PropTypes.oneOf(["green", "yellow"]),
+  onClick: PropTypes.func,
+  style: PropTypes.object
+};
+
+export default Button;

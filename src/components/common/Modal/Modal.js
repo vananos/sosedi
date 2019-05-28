@@ -1,7 +1,7 @@
 import "./Modal.scss";
 
 import React, { Component } from "react";
-import { connect } from "tls";
+import PropTypes from "prop-types";
 
 export default class Modal extends Component {
   constructor(props) {
@@ -17,6 +17,14 @@ export default class Modal extends Component {
 
   render() {
     const { content, onClick } = this.state;
+
+    if (!onClick) {
+      onClick = e => {
+        Modal.hideModal();
+        e.stopPropagation();
+      };
+    }
+
     return (
       <div
         className="modal"
@@ -28,3 +36,8 @@ export default class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = {
+  content: PropTypes.node,
+  onClick: PropTypes.func
+};

@@ -3,7 +3,7 @@ import Notification from "../Notification/Notification";
 import "./NotificationManager.scss";
 
 export default class NotificationManager extends Component {
-  static notificationIdCounter = Number.MAX_SAFE_INTEGER;
+  static notificationIdCounter = 0;
 
   constructor(props) {
     super(props);
@@ -13,20 +13,20 @@ export default class NotificationManager extends Component {
     NotificationManager._singletonRef = this;
   }
 
-  static notify = (msg, { duration = 3000, type = "success" }) => {
+  static notify = (msg, { duration = 3000, type = "success" } = {}) => {
     const notificationData = {
       type,
       msg,
-      key: NotificationManager.notificationIdCounter--
+      key: NotificationManager.notificationIdCounter++
     };
 
-    const callback = () =>
+    const hideFunction = () =>
       NotificationManager._singletonRef.deleteNotification(notificationData);
-    notificationData.callback = callback;
+    notificationData.onClick = hideFunction;
 
     NotificationManager._singletonRef.addNotification(notificationData);
 
-    setInterval(callback, duration);
+    setInterval(hideFunction, duration);
   };
 
   addNotification = notifcation =>
@@ -45,7 +45,7 @@ export default class NotificationManager extends Component {
     return (
       <div className="notification-area">
         {this.state.notifications.map(notifcation => (
-          <Notification {...notifcation} key={notifcation.key} />
+          <Notification {...notifcation} />
         ))}
       </div>
     );
