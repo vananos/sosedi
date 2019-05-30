@@ -15,9 +15,10 @@ const Button = props => {
 
   const colorClass = `btn-${color}`;
   const progressClass = progress ? "btn-blink" : "";
+  const disabledClass = disabled ? "btn-disabled" : "";
   return (
     <button
-      className={`btn ${colorClass} ${className} ${progressClass}`}
+      className={`btn ${colorClass} ${className} ${progressClass} ${disabledClass}`}
       disabled={disabled}
       onClick={onClick}
       style={style}

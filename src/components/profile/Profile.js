@@ -5,10 +5,11 @@ import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button/Button";
 import Checkbox from "../common/Checkbox/Checkbox";
 import { extractFormData } from "../../utils/utils";
-import { ApplicationContext } from "../../context";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 import Modal from "../common/Modal/Modal";
 import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
+import { ApplicationContext } from "../../context";
+import { API_HOST } from "../../api";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -130,6 +131,16 @@ export default class Profile extends Component {
     return serialaizedProfileData;
   };
 
+  newAvatarCallback = name => {
+    Modal.hide();
+    this.setState({
+      userInfo: {
+        ...this.state.userInfo,
+        avatar: name
+      }
+    });
+  };
+
   render() {
     const {
       userId,
@@ -137,6 +148,7 @@ export default class Profile extends Component {
       surname,
       birthday,
       phone,
+      avatar,
       description,
       inProgress,
       interests
@@ -153,18 +165,35 @@ export default class Profile extends Component {
         <div className="profile-logo">
           <div className="profile-logo-background">
             <div className="profile-logo-frame">
-              <img
-                src={emptyPhoto}
-                width="91"
-                height="104"
-                alt={`фотография ${name}`}
-                className="profile-logo-img"
-              />
+              {avatar ? (
+                <img
+                  src={`${API_HOST}/img/${avatar}`}
+                  width="180"
+                  height="180"
+                  alt={`фотография ${name}`}
+                  className="profile-logo-img"
+                />
+              ) : (
+                <img
+                  src={emptyPhoto}
+                  width="91"
+                  height="104"
+                  alt={`фотография ${name}`}
+                />
+              )}
             </div>
           </div>
           <span
             className="profile-change-photo"
-            onClick={() => Modal.showPopup(<ChangePhotoDialog />)}
+            onClick={() =>
+              Modal.showPopup(
+                <ChangePhotoDialog
+                  context={this.context}
+                  newAvatarCallback={this.newAvatarCallback}
+                  savedImage={this.state.userInfo.avatar}
+                />
+              )
+            }
           >
             Изменить фото
           </span>

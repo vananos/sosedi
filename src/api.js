@@ -1,7 +1,8 @@
-export const API_HOST = "http://localhost:8080"; //"api";
+export const API_HOST =  "http://localhost:8080"; //"api"; //
 export const REGISTRATION_ENDPOINT = "/register";
 export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";
+export const AVATAR_LOAD = "/photo";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -33,14 +34,9 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
-  makePost = (
-    url = "",
-    data = {},
-    headers = new Headers({
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    })
-  ) =>
+  loadAvatar = formData => new ApiRequest(this.makePost(AVATAR_LOAD, formData));
+
+  makePost = (url = "", data = {}, headers) =>
     fetch(`${API_HOST}${url}`, {
       method: "POST",
       mode: "cors",

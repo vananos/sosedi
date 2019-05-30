@@ -19,19 +19,23 @@
 .profile-logo-background {
     background-color: rgba(196, 235, 239, 0.3);
     text-align: center;
-    height: 175px;
+    height: 180px;
     margin-bottom: 20px;
 }
 
 .profile-logo-frame {
     background-color: rgba(175, 175, 175, 1);
     border-radius: 50%;
-    width: 175px;
-    height: 175px;
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.profile-logo-img {
+    border-radius: 50%;
 }
 
 .profile-change-photo {
