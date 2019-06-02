@@ -7,7 +7,7 @@ import { ApplicationContext } from "../../context";
 import {
   extractFormData,
   validateFormData,
-  registrationFormValidator
+  Validators
 } from "../../utils/utils";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 
@@ -36,7 +36,7 @@ export default class RegistrationForm extends Component {
 
     const validationResult = validateFormData(
       registrationData,
-      registrationFormValidator
+      Validators
     );
 
     if (validationResult.hasErrors()) {
@@ -93,7 +93,9 @@ export default class RegistrationForm extends Component {
     const { fieldValues, fieldErrors, formError, inProgress } = this.state;
     return (
       <div className="registration-form-wrapper">
+
         <form onSubmit={this.handleSubmit}>
+          
           <TextInput
             label="Имя"
             name="name"

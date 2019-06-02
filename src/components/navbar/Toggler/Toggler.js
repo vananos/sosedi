@@ -1,5 +1,6 @@
 import "./Toggler.css";
-import React from 'react'
+import React from "react";
+import PropTypes from "prop-types";
 
 export default function Toggler(props) {
   const { isExpanded, clickHandler, className } = props;
@@ -11,3 +12,11 @@ export default function Toggler(props) {
     </div>
   );
 }
+
+Toggler.defaultProps = {
+  isExpanded: false
+};
+
+Toggler.propTypes = {
+  isExpanded: PropTypes.bool
+};

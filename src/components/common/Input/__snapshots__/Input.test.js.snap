@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Input,  when error is provideed -> shoud see error message 1`] = `
+exports[`Input,  when error is provideed -> should see error message 1`] = `
 initialize {
   "0": Object {
     "attribs": Object {
@@ -242,7 +242,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -260,6 +260,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -273,6 +274,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -296,7 +298,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -399,7 +401,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -411,7 +413,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -493,7 +495,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -625,7 +627,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -643,6 +645,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -656,6 +659,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -679,7 +683,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -782,7 +786,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -794,7 +798,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -876,7 +880,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -1182,7 +1186,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -1200,6 +1204,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -1213,6 +1218,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -1236,7 +1242,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -1339,7 +1345,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -1351,7 +1357,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -1433,7 +1439,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -1831,7 +1837,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -1849,6 +1855,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -1862,6 +1869,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -1885,7 +1893,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -1988,7 +1996,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -2000,7 +2008,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -2082,7 +2090,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -2367,7 +2375,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 43,
+            "lineNumber": 44,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -2379,7 +2387,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -2397,6 +2405,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -3025,6 +3034,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -3050,7 +3060,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -3062,7 +3072,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -3178,7 +3188,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -3196,6 +3206,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -3824,6 +3835,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -3849,7 +3861,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -3861,7 +3873,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -3974,7 +3986,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -3992,6 +4004,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -4620,6 +4633,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -4645,7 +4659,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -4657,7 +4671,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -4853,7 +4867,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -4871,6 +4885,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": undefined,
             "onChange": [Function],
@@ -5499,6 +5514,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": undefined,
             "onChange": [Function],
@@ -5522,7 +5538,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -5625,7 +5641,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -5637,7 +5653,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -5719,7 +5735,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -5851,7 +5867,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -5869,6 +5885,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": undefined,
             "onChange": [Function],
@@ -6497,6 +6514,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": undefined,
             "onChange": [Function],
@@ -6520,7 +6538,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -6623,7 +6641,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -6635,7 +6653,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -6717,7 +6735,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -6885,7 +6903,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -6903,6 +6921,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -6916,6 +6935,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -6939,7 +6959,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -7042,7 +7062,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -7054,7 +7074,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7136,7 +7156,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7268,7 +7288,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -7286,6 +7306,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -7299,6 +7320,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -7322,7 +7344,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -7425,7 +7447,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -7437,7 +7459,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7519,7 +7541,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7825,7 +7847,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -7843,6 +7865,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -7856,6 +7879,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -7879,7 +7903,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7982,7 +8006,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -7994,7 +8018,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -8076,7 +8100,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -8474,7 +8498,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -8492,6 +8516,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -8505,6 +8530,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -8528,7 +8554,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -8631,7 +8657,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -8643,7 +8669,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -8725,7 +8751,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -9112,6 +9138,7 @@ ReactWrapper {
           "props": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": undefined,
             "onChange": [Function],
@@ -9213,7 +9240,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -9231,6 +9258,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -9244,6 +9272,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -9267,7 +9296,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -9370,7 +9399,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -9382,7 +9411,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -9464,7 +9493,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -9596,7 +9625,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -9614,6 +9643,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -9627,6 +9657,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -9650,7 +9681,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -9753,7 +9784,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -9765,7 +9796,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -9847,7 +9878,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -10153,7 +10184,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -10171,6 +10202,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -10184,6 +10216,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -10207,7 +10240,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -10310,7 +10343,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -10322,7 +10355,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -10404,7 +10437,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -10802,7 +10835,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -10820,6 +10853,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -10833,6 +10867,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -10856,7 +10891,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -10959,7 +10994,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -10971,7 +11006,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -11053,7 +11088,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -11338,7 +11373,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -11350,7 +11385,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -11368,6 +11403,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -11996,6 +12032,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -12021,7 +12058,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -12033,7 +12070,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -12149,7 +12186,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -12167,6 +12204,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -12795,6 +12833,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -12820,7 +12859,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -12832,7 +12871,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -12945,7 +12984,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -12963,6 +13002,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -13591,6 +13631,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -13616,7 +13657,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -13628,7 +13669,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -13824,7 +13865,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -13842,6 +13883,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -14470,6 +14512,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -14493,7 +14536,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -14596,7 +14639,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -14608,7 +14651,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -14690,7 +14733,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -14822,7 +14865,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -14840,6 +14883,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -15468,6 +15512,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -15491,7 +15536,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -15594,7 +15639,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -15606,7 +15651,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -15688,7 +15733,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -15856,7 +15901,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -15874,6 +15919,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -15887,6 +15933,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -15910,7 +15957,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -16013,7 +16060,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -16025,7 +16072,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16107,7 +16154,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16239,7 +16286,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -16257,6 +16304,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -16270,6 +16318,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": undefined,
                 "onChange": [Function],
@@ -16293,7 +16342,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -16396,7 +16445,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -16408,7 +16457,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16490,7 +16539,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16796,7 +16845,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -16814,6 +16863,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -16827,6 +16877,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -16850,7 +16901,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16953,7 +17004,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -16965,7 +17016,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -17047,7 +17098,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -17445,7 +17496,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -17463,6 +17514,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -17476,6 +17528,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": undefined,
                   "onChange": [Function],
@@ -17499,7 +17552,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -17602,7 +17655,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -17614,7 +17667,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -17696,7 +17749,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -18083,6 +18136,7 @@ ReactWrapper {
             "props": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": undefined,
               "onChange": [Function],
@@ -18231,7 +18285,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -18249,6 +18303,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -18262,6 +18317,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -18285,7 +18341,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -18392,7 +18448,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -18404,7 +18460,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -18486,7 +18542,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -18622,7 +18678,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -18640,6 +18696,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -18653,6 +18710,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -18676,7 +18734,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -18783,7 +18841,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -18795,7 +18853,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -18877,7 +18935,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -19187,7 +19245,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -19205,6 +19263,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -19218,6 +19277,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -19241,7 +19301,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -19348,7 +19408,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -19360,7 +19420,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -19442,7 +19502,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -19844,7 +19904,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -19862,6 +19922,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -19875,6 +19936,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -19898,7 +19960,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -20005,7 +20067,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -20017,7 +20079,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -20099,7 +20161,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -20388,7 +20450,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 43,
+            "lineNumber": 44,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -20400,7 +20462,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -20418,6 +20480,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -21046,6 +21109,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -21071,7 +21135,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -21083,7 +21147,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -21199,7 +21263,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -21217,6 +21281,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -21845,6 +21910,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -21870,7 +21936,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -21882,7 +21948,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -21995,7 +22061,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -22013,6 +22079,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -22641,6 +22708,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -22666,7 +22734,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -22678,7 +22746,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -22878,7 +22946,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -22896,6 +22964,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -23524,6 +23593,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -23547,7 +23617,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -23654,7 +23724,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -23666,7 +23736,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -23748,7 +23818,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -23884,7 +23954,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -23902,6 +23972,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -24530,6 +24601,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -24553,7 +24625,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -24660,7 +24732,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -24672,7 +24744,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -24754,7 +24826,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -24926,7 +24998,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -24944,6 +25016,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -24957,6 +25030,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -24980,7 +25054,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -25087,7 +25161,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -25099,7 +25173,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -25181,7 +25255,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -25317,7 +25391,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -25335,6 +25409,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -25348,6 +25423,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -25371,7 +25447,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -25478,7 +25554,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -25490,7 +25566,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -25572,7 +25648,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -25882,7 +25958,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -25900,6 +25976,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -25913,6 +25990,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -25936,7 +26014,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -26043,7 +26121,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -26055,7 +26133,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -26137,7 +26215,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -26539,7 +26617,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -26557,6 +26635,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -26570,6 +26649,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -26593,7 +26673,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -26700,7 +26780,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -26712,7 +26792,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -26794,7 +26874,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -27187,6 +27267,7 @@ ReactWrapper {
           "props": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -27288,7 +27369,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -27306,6 +27387,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -27319,6 +27401,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -27342,7 +27425,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -27449,7 +27532,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -27461,7 +27544,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -27543,7 +27626,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -27679,7 +27762,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -27697,6 +27780,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -27710,6 +27794,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -27733,7 +27818,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -27840,7 +27925,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -27852,7 +27937,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -27934,7 +28019,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -28244,7 +28329,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -28262,6 +28347,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -28275,6 +28361,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -28298,7 +28385,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -28405,7 +28492,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -28417,7 +28504,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -28499,7 +28586,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -28901,7 +28988,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -28919,6 +29006,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -28932,6 +29020,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -28955,7 +29044,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -29062,7 +29151,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -29074,7 +29163,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -29156,7 +29245,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -29445,7 +29534,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -29457,7 +29546,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -29475,6 +29564,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -30103,6 +30193,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -30128,7 +30219,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -30140,7 +30231,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -30256,7 +30347,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -30274,6 +30365,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -30902,6 +30994,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -30927,7 +31020,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -30939,7 +31032,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -31052,7 +31145,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -31070,6 +31163,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -31698,6 +31792,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -31723,7 +31818,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -31735,7 +31830,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -31935,7 +32030,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -31953,6 +32048,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -32581,6 +32677,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -32604,7 +32701,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -32711,7 +32808,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -32723,7 +32820,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -32805,7 +32902,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -32941,7 +33038,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -32959,6 +33056,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -33587,6 +33685,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -33610,7 +33709,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -33717,7 +33816,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -33729,7 +33828,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -33811,7 +33910,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -33983,7 +34082,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -34001,6 +34100,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -34014,6 +34114,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -34037,7 +34138,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -34144,7 +34245,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -34156,7 +34257,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -34238,7 +34339,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -34374,7 +34475,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -34392,6 +34493,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -34405,6 +34507,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -34428,7 +34531,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -34535,7 +34638,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -34547,7 +34650,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -34629,7 +34732,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -34939,7 +35042,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -34957,6 +35060,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -34970,6 +35074,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -34993,7 +35098,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -35100,7 +35205,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -35112,7 +35217,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -35194,7 +35299,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -35596,7 +35701,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -35614,6 +35719,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -35627,6 +35733,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -35650,7 +35757,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -35757,7 +35864,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -35769,7 +35876,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -35851,7 +35958,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -36244,6 +36351,7 @@ ReactWrapper {
             "props": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -36392,7 +36500,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -36410,6 +36518,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -36423,6 +36532,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -36446,7 +36556,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -36553,7 +36663,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -36565,7 +36675,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -36647,7 +36757,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -36783,7 +36893,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -36801,6 +36911,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -36814,6 +36925,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -36837,7 +36949,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -36944,7 +37056,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -36956,7 +37068,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -37038,7 +37150,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -37348,7 +37460,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -37366,6 +37478,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -37379,6 +37492,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -37402,7 +37516,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -37509,7 +37623,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -37521,7 +37635,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -37603,7 +37717,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -38005,7 +38119,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -38023,6 +38137,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -38036,6 +38151,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -38059,7 +38175,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -38166,7 +38282,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -38178,7 +38294,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -38260,7 +38376,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -38549,7 +38665,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 43,
+            "lineNumber": 44,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -38561,7 +38677,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -38579,6 +38695,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -39207,6 +39324,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -39232,7 +39350,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -39244,7 +39362,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -39360,7 +39478,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -39378,6 +39496,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -40006,6 +40125,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -40031,7 +40151,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -40043,7 +40163,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -40156,7 +40276,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -40174,6 +40294,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -40802,6 +40923,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -40827,7 +40949,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -40839,7 +40961,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -41039,7 +41161,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -41057,6 +41179,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -41685,6 +41808,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -41708,7 +41832,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -41815,7 +41939,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -41827,7 +41951,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -41909,7 +42033,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -42045,7 +42169,7 @@ ReactWrapper {
           "_debugOwner": [Circular],
           "_debugSource": Object {
             "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-            "lineNumber": 47,
+            "lineNumber": 48,
           },
           "actualDuration": 0,
           "actualStartTime": -1,
@@ -42063,6 +42187,7 @@ ReactWrapper {
           "memoizedProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -42691,6 +42816,7 @@ ReactWrapper {
           "pendingProps": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -42714,7 +42840,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -42821,7 +42947,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 62,
+              "lineNumber": 68,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -42833,7 +42959,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 63,
+                "lineNumber": 69,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -42915,7 +43041,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -43087,7 +43213,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -43105,6 +43231,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -43118,6 +43245,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -43141,7 +43269,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -43248,7 +43376,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -43260,7 +43388,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -43342,7 +43470,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -43478,7 +43606,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -43496,6 +43624,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -43509,6 +43638,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -43532,7 +43662,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -43639,7 +43769,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -43651,7 +43781,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -43733,7 +43863,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -44043,7 +44173,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -44061,6 +44191,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -44074,6 +44205,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -44097,7 +44229,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -44204,7 +44336,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -44216,7 +44348,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -44298,7 +44430,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -44700,7 +44832,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -44718,6 +44850,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -44731,6 +44864,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -44754,7 +44888,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -44861,7 +44995,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -44873,7 +45007,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -44955,7 +45089,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -45348,6 +45482,7 @@ ReactWrapper {
           "props": Object {
             "className": "input",
             "id": "testInputId",
+            "max": undefined,
             "name": "testInput",
             "onBlur": [Function],
             "onChange": [Function],
@@ -45449,7 +45584,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -45467,6 +45602,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -45480,6 +45616,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -45503,7 +45640,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -45610,7 +45747,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -45622,7 +45759,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -45704,7 +45841,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -45840,7 +45977,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -45858,6 +45995,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -45871,6 +46009,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -45894,7 +46033,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -46001,7 +46140,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -46013,7 +46152,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -46095,7 +46234,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -46405,7 +46544,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -46423,6 +46562,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -46436,6 +46576,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -46459,7 +46600,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -46566,7 +46707,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -46578,7 +46719,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -46660,7 +46801,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -47062,7 +47203,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -47080,6 +47221,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -47093,6 +47235,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -47116,7 +47259,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -47223,7 +47366,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -47235,7 +47378,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -47317,7 +47460,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -47606,7 +47749,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 43,
+              "lineNumber": 44,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -47618,7 +47761,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -47636,6 +47779,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -48264,6 +48408,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -48289,7 +48434,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -48301,7 +48446,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -48417,7 +48562,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -48435,6 +48580,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -49063,6 +49209,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -49088,7 +49235,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -49100,7 +49247,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -49213,7 +49360,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -49231,6 +49378,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -49859,6 +50007,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -49884,7 +50033,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -49896,7 +50045,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -50096,7 +50245,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -50114,6 +50263,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -50742,6 +50892,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -50765,7 +50916,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -50872,7 +51023,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -50884,7 +51035,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -50966,7 +51117,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -51102,7 +51253,7 @@ ReactWrapper {
             "_debugOwner": [Circular],
             "_debugSource": Object {
               "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-              "lineNumber": 47,
+              "lineNumber": 48,
             },
             "actualDuration": 0,
             "actualStartTime": -1,
@@ -51120,6 +51271,7 @@ ReactWrapper {
             "memoizedProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -51748,6 +51900,7 @@ ReactWrapper {
             "pendingProps": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],
@@ -51771,7 +51924,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 43,
+                "lineNumber": 44,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -51878,7 +52031,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 62,
+                "lineNumber": 68,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -51890,7 +52043,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 63,
+                  "lineNumber": 69,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -51972,7 +52125,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -52144,7 +52297,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -52162,6 +52315,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -52175,6 +52329,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -52198,7 +52353,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -52305,7 +52460,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -52317,7 +52472,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -52399,7 +52554,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -52535,7 +52690,7 @@ ReactWrapper {
               "_debugOwner": [Circular],
               "_debugSource": Object {
                 "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                "lineNumber": 47,
+                "lineNumber": 48,
               },
               "actualDuration": 0,
               "actualStartTime": -1,
@@ -52553,6 +52708,7 @@ ReactWrapper {
               "memoizedProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -52566,6 +52722,7 @@ ReactWrapper {
               "pendingProps": Object {
                 "className": "input",
                 "id": "testInputId",
+                "max": undefined,
                 "name": "testInput",
                 "onBlur": [Function],
                 "onChange": [Function],
@@ -52589,7 +52746,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 43,
+                  "lineNumber": 44,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -52696,7 +52853,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 62,
+                  "lineNumber": 68,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -52708,7 +52865,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 63,
+                    "lineNumber": 69,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -52790,7 +52947,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -53100,7 +53257,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -53118,6 +53275,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -53131,6 +53289,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -53154,7 +53313,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -53261,7 +53420,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -53273,7 +53432,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -53355,7 +53514,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -53757,7 +53916,7 @@ ReactWrapper {
                 "_debugOwner": [Circular],
                 "_debugSource": Object {
                   "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                  "lineNumber": 47,
+                  "lineNumber": 48,
                 },
                 "actualDuration": 0,
                 "actualStartTime": -1,
@@ -53775,6 +53934,7 @@ ReactWrapper {
                 "memoizedProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -53788,6 +53948,7 @@ ReactWrapper {
                 "pendingProps": Object {
                   "className": "input",
                   "id": "testInputId",
+                  "max": undefined,
                   "name": "testInput",
                   "onBlur": [Function],
                   "onChange": [Function],
@@ -53811,7 +53972,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 43,
+                    "lineNumber": 44,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -53918,7 +54079,7 @@ ReactWrapper {
                   "_debugOwner": [Circular],
                   "_debugSource": Object {
                     "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                    "lineNumber": 62,
+                    "lineNumber": 68,
                   },
                   "actualDuration": 0,
                   "actualStartTime": -1,
@@ -53930,7 +54091,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 63,
+                      "lineNumber": 69,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -54012,7 +54173,7 @@ ReactWrapper {
                     "_debugOwner": [Circular],
                     "_debugSource": Object {
                       "fileName": "/home/vananos/html/react-course/neighbors/src/components/common/Input/Input.js",
-                      "lineNumber": 43,
+                      "lineNumber": 44,
                     },
                     "actualDuration": 0,
                     "actualStartTime": -1,
@@ -54405,6 +54566,7 @@ ReactWrapper {
             "props": Object {
               "className": "input",
               "id": "testInputId",
+              "max": undefined,
               "name": "testInput",
               "onBlur": [Function],
               "onChange": [Function],

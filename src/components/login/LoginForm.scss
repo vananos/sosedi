@@ -1,14 +1,16 @@
 .login-form {
-    position: relative;
-    background-color: rgba(255, 255, 255, 1);
     padding: 1.5em;
 
     &-wrapper {
+        position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        height: calc(100vh - 130px);
+        width: 250px;
+        margin: auto;
+        padding-top: 0.8rem;
+        padding-bottom: 2rem;
+        background-color: rgba(255, 255, 255, 1);
     }
 
     &-link {
@@ -25,9 +27,9 @@
 
     &-submit {
         position: absolute;
-        bottom: -5px;
-        right: -5px;
+        bottom: -15px;
+        right: -10px;
         width: auto;
-        padding: 10px;
+        padding: 15px 35px;
     }
 }

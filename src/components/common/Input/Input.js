@@ -14,12 +14,14 @@ export default class Input extends Component {
   }
 
   handleChange = e => {
+    if (this.state.changeHandler) {
+      const shouldContinue = this.state.changeHandler(e, this);
+      if (!shouldContinue) return;
+    }
     const newValue = e.target.value;
     this.setState({
       value: newValue
     });
-
-    this.state.changeHandler && this.state.changeHandler(e);
   };
 
   render() {
@@ -29,7 +31,9 @@ export default class Input extends Component {
       id,
       label,
       info,
+      max,
       className,
+      pattern,
       error: { error: errorMsg, value: wrongValue } = {}
     } = this.props;
 
@@ -52,8 +56,13 @@ export default class Input extends Component {
           id={id}
           value={currentValue}
           onChange={this.handleChange}
+          max={max}
           onFocus={
-            isDateInput ? _ => (this.inputRef.current.type = "date") : undefined
+            isDateInput
+              ? _ =>
+                  (this.inputRef.current.type = "date") &&
+                  this.inputRef.current.focus()
+              : undefined
           }
           onBlur={
             isDateInput ? _ => (this.inputRef.current.type = "text") : undefined

@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import Input from "../common/Input/Input";
 import Button from "../common/Button/Button";
 import {
-  registrationFormValidator,
+  Validators,
   validateFormData,
   extractFormData
 } from "../../utils/utils";
@@ -25,10 +25,7 @@ export default class LoginForm extends Component {
     e.preventDefault();
     const loginInfo = extractFormData(e.target);
 
-    const validationResult = validateFormData(
-      loginInfo,
-      registrationFormValidator
-    );
+    const validationResult = validateFormData(loginInfo, Validators);
 
     if (validationResult.hasErrors()) {
       this.setState({
@@ -59,8 +56,6 @@ export default class LoginForm extends Component {
       .execute()
       .finally(() => this.setState({ inProgress: false }));
   };
-
-
 
   render() {
     const { fieldErrors, formError, inProgress } = this.state;
@@ -95,7 +90,7 @@ export default class LoginForm extends Component {
             disabled={inProgress}
             progress={inProgress}
           >
-            Вход
+            Начать
           </Button>
         </form>
       </div>

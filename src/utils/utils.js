@@ -10,7 +10,7 @@ const emailValidator = formValues => {
 export const passwordError =
   "Пароль должен быть от 6 до 25 символов, включать в себя прописные, строчные буквы, цифры и спецсмиволы";
 
-export const registrationFormValidator = {
+export const Validators = {
   name: formValues => {
     const name = formValues.name;
     if (!name || name.length < 2 || name.length > 15) {
@@ -38,6 +38,13 @@ export const registrationFormValidator = {
     if (passwordConfirmation !== formValues.password) {
       return "Потверждение пароля должно совпадать с паролем";
     }
+  },
+
+  birthday: formValues => {
+    const birthday = formValues.birthday;
+    if(!birthday || birthday === "") {
+      return "Необходимо указать дату рождения";
+    }
   }
 };
 
@@ -59,7 +66,7 @@ export const validateFormData = (formDataObject, validator) => {
   }
 
   return {
-    hasErrors : () => !!Object.entries(errors).length,
+    hasErrors: () => !!Object.entries(errors).length,
     errors
   };
 };

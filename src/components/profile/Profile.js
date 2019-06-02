@@ -4,7 +4,11 @@ import Input from "../common/Input/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button/Button";
 import Checkbox from "../common/Checkbox/Checkbox";
-import { extractFormData } from "../../utils/utils";
+import {
+  extractFormData,
+  validateFormData,
+  Validators
+} from "../../utils/utils";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 import Modal from "../common/Modal/Modal";
 import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
@@ -91,7 +95,20 @@ export default class Profile extends Component {
   };
 
   handleSubmit = e => {
+    e.preventDefault();
+
     const rawFormData = extractFormData(e.target);
+    const validationResult = validateFormData(rawFormData, Validators);
+
+    if (validationResult.hasErrors()) {
+      this.setState({
+        errors: validationResult.errors
+      });
+      NotificationManager.notify("Пожалуйста, проверьте заполнение формы", {
+        type: "error"
+      });
+      return;
+    }
 
     const serialaizedProfileData = this.serializeProfileFormData(rawFormData);
 
@@ -112,7 +129,6 @@ export default class Profile extends Component {
         );
       })
       .finally(() => this.setState({ inProgress: false }));
-    e.preventDefault();
   };
 
   serializeProfileFormData = rawFormData => {
@@ -141,18 +157,51 @@ export default class Profile extends Component {
     });
   };
 
+  maskPhone = (event, input) => {
+    const newValue = event.target.value;
+    let result;
+
+    if (newValue.length < input.state.value.length) {
+      result = newValue;
+    } else {
+      const maxPhoneLength = 11;
+      const maskedValue = "+# (###) ### ## ##";
+      const digits = [];
+      let i = 0;
+      for (let c of newValue) {
+        if (c >= "0" && c <= "9") {
+          digits.push(c);
+          i++;
+        }
+        if (i >= maxPhoneLength) break;
+      }
+      if(!digits.length) {
+        return;
+      }
+      result = maskedValue.replace(/#/g, _ => digits.shift() || " ").trim();
+      if(result[result.length -1] === ")" ) {
+        result = result.replace(")", "");
+      }
+    }
+    input.setState({ value: result.trim() });
+    return false;
+  };
+
   render() {
     const {
-      userId,
-      name,
-      surname,
-      birthday,
-      phone,
-      avatar,
-      description,
-      inProgress,
-      interests
-    } = this.state.userInfo;
+      userInfo: {
+        userId,
+        name,
+        surname,
+        birthday,
+        phone,
+        avatar,
+        description,
+        inProgress,
+        interests
+      },
+      errors = {}
+    } = this.state;
 
     if (!userId) {
       return null;
@@ -203,12 +252,14 @@ export default class Profile extends Component {
             label="Имя"
             value={name}
             name="name"
+            error={errors.name}
             className="profile-data-input"
           />
           <Input
             label="Фамилия"
             value={surname}
             name="surname"
+            error={errors.surname}
             className="profile-data-input"
           />
           <Input
@@ -216,12 +267,17 @@ export default class Profile extends Component {
             value={birthday}
             type="date"
             name="birthday"
+            error={errors.birthday}
             className="profile-data-input"
+            max={new Date().toISOString().split("T")[0]}
           />
           <Input
             label="Телефон"
             value={phone}
             name="phone"
+            onChange={this.maskPhone}
+            type="tel"
+            error={errors.phone}
             className="profile-data-input"
           />
           <div className="profile-about-itself-input">

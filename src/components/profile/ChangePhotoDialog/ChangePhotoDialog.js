@@ -15,7 +15,7 @@ export default class ChangePhotoDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scaleFactor: props.scaleFactor,
+      scaleFactor: props.scaleFactor
     };
 
     this.fileInput = React.createRef();

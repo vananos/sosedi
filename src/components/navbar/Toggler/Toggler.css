@@ -1,45 +1,46 @@
 .toggler {
-    width: 50px;
-    height: 20px;
-    padding-top: 15px;
+    width: 30px;
+    height: 10px;
+    padding-top: 7px;
 }
 
 .toggler-icon::before,
 .toggler-icon::after,
 .toggler-icon {
     display: block;
-    height: 5px;
-    width: 50px;
+    height: 2px;
+    width: 30px;
     background: #367A7A;
-    transition: 0.3s ease-in-out;
 }
 
 .toggler-icon::before,
 .toggler-icon::after {
     content: "";
+    transition: 0.3s linear;
 }
 
 .toggler-icon::before {
-    transform: translateY(-10px);
+    transform: translateY(-6px);
 }
 
 .toggler-icon::after {
-    transform: translateY(5px);
+    transform: translateY(4px);
 }
 
 .toggler-icon-expanded {
-    transform: rotate(180deg);
+    visibility: hidden;
 }
 
 .toggler-icon-expanded:before,
 .toggler-icon-expanded:after {
-    width: 50%;
+    visibility: visible;
+    transform-origin: center;
 }
 
 .toggler-icon-expanded:before {
-    transform: translate(26px, -10px) rotate(45deg);
+    transform: translateY(0px) rotate(45deg);
 }
 
 .toggler-icon-expanded:after {
-    transform: translate(26px, 5px) rotate(-45deg);
+    transform: translateY(-2px) rotate(-45deg);
 }

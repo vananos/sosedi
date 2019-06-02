@@ -1,4 +1,4 @@
-export const API_HOST =  "http://localhost:8080"; //"api"; //
+export const API_HOST = "http://localhost:8080"; // "api"; //
 export const REGISTRATION_ENDPOINT = "/register";
 export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";
@@ -26,11 +26,25 @@ export default class ApiClient {
   };
 
   updateProfile = profileData =>
-    this.makePost(PROFILE_INFO, JSON.stringify(profileData));
+    this.makePost(
+      PROFILE_INFO,
+      JSON.stringify(profileData),
+      new Headers({
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      })
+    );
 
   registration = registrationData =>
     new ApiRequest(
-      this.makePost(REGISTRATION_ENDPOINT, JSON.stringify(registrationData)),
+      this.makePost(
+        REGISTRATION_ENDPOINT,
+        JSON.stringify(registrationData),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
       this.defaultApiErrorHandler
     );
 
