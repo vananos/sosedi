@@ -8,11 +8,11 @@ import RegistartionForm from "./components/registration/RegistrationForm";
 import LoginForm from "./components/login/LoginForm";
 import { ApplicationStateProvider, ApplicationContext } from "./context";
 import ApiClient from "./api";
-import Modal from "./components/common/Modal/Modal";
 import NotificationManager from "./components/common/NotificationManager/NotificationManager";
 import browserHistory from "./browserHistory";
 import "./App.css";
 import ErrorHandler from "./ErrorHandler";
+import ErrorPage from "./components/error/ErrorPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -22,7 +22,8 @@ export default class App extends Component {
   forceAuthorization = () => {
     browserHistory.push("/");
     NotificationManager.notify(
-      <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>
+      <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>,
+      { type: "error" }
     );
   };
 
@@ -74,6 +75,7 @@ export default class App extends Component {
               <Route exact path="/my-ads" component={Main} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/settings" component={Main} />
+              <Route exact path="/error" component={ErrorPage} />
             </Switch>
           </section>
         </ErrorHandler>

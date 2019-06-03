@@ -7,7 +7,8 @@ import Checkbox from "../common/Checkbox/Checkbox";
 import {
   extractFormData,
   validateFormData,
-  Validators
+  Validators,
+  PHONE_MASK
 } from "../../utils/utils";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 import Modal from "../common/Modal/Modal";
@@ -165,7 +166,7 @@ export default class Profile extends Component {
       result = newValue;
     } else {
       const maxPhoneLength = 11;
-      const maskedValue = "+# (###) ### ## ##";
+      const maskedValue = PHONE_MASK;
       const digits = [];
       let i = 0;
       for (let c of newValue) {
@@ -175,11 +176,11 @@ export default class Profile extends Component {
         }
         if (i >= maxPhoneLength) break;
       }
-      if(!digits.length) {
+      if (!digits.length) {
         return;
       }
       result = maskedValue.replace(/#/g, _ => digits.shift() || " ").trim();
-      if(result[result.length -1] === ")" ) {
+      if (result[result.length - 1] === ")") {
         result = result.replace(")", "");
       }
     }

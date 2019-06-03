@@ -30,14 +30,19 @@ export default class RegistrationForm extends Component {
     };
   }
 
+  componentDidMount() {
+    document.body.style.background = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
+  }
+
+  componentWillUnmount() {
+    document.body.style.background = "white";
+  }
+
   handleSubmit = e => {
     e.preventDefault();
     var registrationData = extractFormData(e.target);
 
-    const validationResult = validateFormData(
-      registrationData,
-      Validators
-    );
+    const validationResult = validateFormData(registrationData, Validators);
 
     if (validationResult.hasErrors()) {
       this.setState({
@@ -93,9 +98,7 @@ export default class RegistrationForm extends Component {
     const { fieldValues, fieldErrors, formError, inProgress } = this.state;
     return (
       <div className="registration-form-wrapper">
-
         <form onSubmit={this.handleSubmit}>
-          
           <TextInput
             label="Имя"
             name="name"

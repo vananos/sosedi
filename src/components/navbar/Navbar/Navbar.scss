@@ -2,13 +2,18 @@
 
 
 .nav {
-    position: relative;
-    z-index: 100000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    height: 50px;
+    background: rgba(255, 255, 255, 0.9);
 
     &-toggler {
         position: absolute;
         top: 20px;
         right: 20px;
+        
     }
 
     &-content {
@@ -17,27 +22,29 @@
         width: 100vw;
         box-sizing: border-box;
         padding: 0 15px;
-        transition: max-height 0.5s ease-in;
+        transition: max-height 0.3s ease-in;
         max-height: 0;
 
         nav {
-            padding-top: 50px;
+            padding-top: 100px;
         }
 
         &-expanded {
-            height: auto;
-            max-height: 500px;
+            height: 100vh;
+            max-height: 100vh;
         }
     }
 
+
+
     &-footer {
-        margin-top: 40px;
-        margin-bottom: 20px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         color: $grey;
-        text-align: center;
+        width: 100%;
 
         >div {
-            margin-top: 10px;
+            text-align: center;
         }
 
         &-icon {

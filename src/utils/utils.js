@@ -10,6 +10,8 @@ const emailValidator = formValues => {
 export const passwordError =
   "Пароль должен быть от 6 до 25 символов, включать в себя прописные, строчные буквы, цифры и спецсмиволы";
 
+export const PHONE_MASK = "+# (###) ### ## ##";
+
 export const Validators = {
   name: formValues => {
     const name = formValues.name;
@@ -45,7 +47,15 @@ export const Validators = {
     if(!birthday || birthday === "") {
       return "Необходимо указать дату рождения";
     }
+  },
+
+  phone: formValues => {
+    const phone = formValues.phone;
+    if(!phone || phone.length != PHONE_MASK.length) {
+      return "Неверный формат номера телефона";
+    } 
   }
+
 };
 
 export const validateFormData = (formDataObject, validator) => {

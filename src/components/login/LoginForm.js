@@ -57,10 +57,18 @@ export default class LoginForm extends Component {
       .finally(() => this.setState({ inProgress: false }));
   };
 
+  componentDidMount() {
+    document.body.style.background = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
+  }
+
+  componentWillUnmount() {
+    document.body.style.background = "white";
+  }
+
   render() {
     const { fieldErrors, formError, inProgress } = this.state;
     return (
-      <div className="login-form-wrapper" onSubmit={this.handleSubmit}>
+      <div className="login-form-wrapper blue-bg" onSubmit={this.handleSubmit}>
         <form className="login-form">
           <Input
             name="username"

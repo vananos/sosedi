@@ -9,6 +9,7 @@ import scrollIcon from "../../../assets/navbar/scroll-solid.svg";
 import headset from "../../../assets/navbar/headset-solid.svg";
 import question from "../../../assets/navbar/question-circle-solid.svg";
 import "./Navbar.scss";
+import Modal from "../../common/Modal/Modal";
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -79,30 +80,9 @@ export default class Navbar extends Component {
                 className="nav-footer-icon"
               />
             </div>
-            <div>
-              <span>Есть предложения по улучшению?</span>
-              <img
-                src={headset}
-                width="14px"
-                height="14px"
-                alt="предложения"
-                className="nav-footer-icon"
-              />
-            </div>
           </div>
         </div>
       </div>
     );
   }
 }
-
-//             <div className={`${isExpanded ? "navbar-expanded" : ""} navbar`}>
-//               <Logo className="nav-logo" />
-//             </div>
-//           </div>
-//           <div className="nav-hidding-area">
-//             <div className="nav-content">
-//             </div>
-
-//           </div>
-//         </div>
