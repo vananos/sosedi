@@ -1,4 +1,5 @@
-export const API_HOST =  "api"; // "http://localhost:8080";
+import config from "./config.js";
+export const API_GATEWAY =  config.apiGateway;
 export const REGISTRATION_ENDPOINT = "/register";
 export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";
@@ -51,7 +52,7 @@ export default class ApiClient {
   loadAvatar = formData => new ApiRequest(this.makePost(AVATAR_LOAD, formData));
 
   makePost = (url = "", data = {}, headers) =>
-    fetch(`${API_HOST}${url}`, {
+    fetch(`${API_GATEWAY}${url}`, {
       method: "POST",
       mode: "cors",
       headers,
@@ -60,7 +61,7 @@ export default class ApiClient {
     });
 
   makeGet = (url = "") =>
-    fetch(`${API_HOST}${url}`, {
+    fetch(`${API_GATEWAY}${url}`, {
       headers: new Headers({
         Accept: "application/json",
         "Content-Type": "application/json"

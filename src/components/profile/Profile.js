@@ -14,7 +14,7 @@ import NotificationManager from "../common/NotificationManager/NotificationManag
 import Modal from "../common/Modal/Modal";
 import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
 import { ApplicationContext } from "../../context";
-import { API_HOST } from "../../api";
+import { API_GATEWAY } from "../../api";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -217,7 +217,7 @@ export default class Profile extends Component {
             <div className="profile-logo-frame">
               {avatar ? (
                 <img
-                  src={`${API_HOST}/img/${avatar}`}
+                  src={`${API_GATEWAY}/img/${avatar}`}
                   width="180"
                   height="180"
                   alt={`фотография ${name}`}
