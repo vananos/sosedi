@@ -1,255 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox checkbox is checked, click -> not checked 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Checkbox
-    checked={true}
-    name="test-checkbox"
-    value="test?"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <input
-          checked={false}
-          name="test-checkbox"
-          onChange={[Function]}
-          type="checkbox"
-          value="test?"
-        />,
-        undefined,
-      ],
-      "className": "checkbox ",
-      "onClick": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "checked": false,
-          "id": undefined,
-          "name": "test-checkbox",
-          "onChange": [Function],
-          "type": "checkbox",
-          "value": "test?",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      undefined,
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
+<div
+  className="checkbox "
+  onClick={[Function]}
+  style={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <input
-            checked={false}
-            name="test-checkbox"
-            onChange={[Function]}
-            type="checkbox"
-            value="test?"
-          />,
-          undefined,
-        ],
-        "className": "checkbox ",
-        "onClick": [Function],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "checked": false,
-            "id": undefined,
-            "name": "test-checkbox",
-            "onChange": [Function],
-            "type": "checkbox",
-            "value": "test?",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        undefined,
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+      "height": 120,
+      "width": 120,
+    }
+  }
+>
+  <input
+    checked={false}
+    name="test-checkbox"
+    onChange={[Function]}
+    type="checkbox"
+    value="test?"
+  />
+</div>
 `;
 
 exports[`Checkbox checkbox is not checked, click -> checked 1`] = `
-ShallowWrapper {
-  Symbol(enzyme.__root__): [Circular],
-  Symbol(enzyme.__unrendered__): <Checkbox
-    checked={false}
-    name="test-checkbox"
-    value="test?"
-  />,
-  Symbol(enzyme.__renderer__): Object {
-    "batchedUpdates": [Function],
-    "checkPropTypes": [Function],
-    "getNode": [Function],
-    "render": [Function],
-    "simulateError": [Function],
-    "simulateEvent": [Function],
-    "unmount": [Function],
-  },
-  Symbol(enzyme.__node__): Object {
-    "instance": null,
-    "key": undefined,
-    "nodeType": "host",
-    "props": Object {
-      "children": Array [
-        <input
-          checked={true}
-          name="test-checkbox"
-          onChange={[Function]}
-          type="checkbox"
-          value="test?"
-        />,
-        undefined,
-      ],
-      "className": "checkbox checkbox-checked",
-      "onClick": [Function],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "checked": true,
-          "id": undefined,
-          "name": "test-checkbox",
-          "onChange": [Function],
-          "type": "checkbox",
-          "value": "test?",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": "input",
-      },
-      undefined,
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
+<div
+  className="checkbox checkbox-checked"
+  onClick={[Function]}
+  style={
     Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <input
-            checked={true}
-            name="test-checkbox"
-            onChange={[Function]}
-            type="checkbox"
-            value="test?"
-          />,
-          undefined,
-        ],
-        "className": "checkbox checkbox-checked",
-        "onClick": [Function],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "checked": true,
-            "id": undefined,
-            "name": "test-checkbox",
-            "onChange": [Function],
-            "type": "checkbox",
-            "value": "test?",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": "input",
-        },
-        undefined,
-      ],
-      "type": "div",
-    },
-  ],
-  Symbol(enzyme.__options__): Object {
-    "adapter": ReactSixteenAdapter {
-      "options": Object {
-        "enableComponentDidUpdateOnSetState": true,
-        "legacyContextMode": "parent",
-        "lifecycles": Object {
-          "componentDidUpdate": Object {
-            "onSetState": true,
-          },
-          "getChildContext": Object {
-            "calledByRenderer": false,
-          },
-          "getDerivedStateFromError": true,
-          "getDerivedStateFromProps": Object {
-            "hasShouldComponentUpdateBug": false,
-          },
-          "getSnapshotBeforeUpdate": true,
-          "setState": Object {
-            "skipsComponentDidUpdateOnNullish": true,
-          },
-        },
-      },
-    },
-  },
-  Symbol(enzyme.__childContext__): null,
-}
+      "height": 120,
+      "width": 120,
+    }
+  }
+>
+  <input
+    checked={true}
+    name="test-checkbox"
+    onChange={[Function]}
+    type="checkbox"
+    value="test?"
+  />
+</div>
 `;

@@ -28,7 +28,10 @@ describe("Input, ", () => {
 
   it("when focused -> label is on top", () => {
     const inputWrapper = mount(<Input {...defaultInputProps()} />);
-    inputWrapper.find("input").first().simulate("focus");
+    inputWrapper
+      .find("input")
+      .first()
+      .simulate("focus");
 
     expect(inputWrapper).toMatchSnapshot();
   });
