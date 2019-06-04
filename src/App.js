@@ -13,6 +13,7 @@ import browserHistory from "./browserHistory";
 import "./App.css";
 import ErrorHandler from "./ErrorHandler";
 import ErrorPage from "./components/error/ErrorPage";
+import Help from "./components/help/Help";
 
 export default class App extends Component {
   constructor(props) {
@@ -75,6 +76,7 @@ export default class App extends Component {
               <Route exact path="/my-ads" component={Main} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/settings" component={Main} />
+              <Route exact path="/help" component={Help} />
               <Route exact path="/error" component={ErrorPage} />
             </Switch>
           </section>

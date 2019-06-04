@@ -1,21 +1,24 @@
-.create-ad {
+@import "../../../base.scss";
+
+.ad {
     background-color: rgb(255, 255, 255);
-    padding: 15px;
     flex-grow: 1;
-    font-size: 20px;
 
     &-header {
         padding-bottom: 15px;
     }
 
     &-toggler {
+        margin: 0 15px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+    }
 
-        >div {
-            flex-grow: 1;
-        }
+    hr {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-width: 1px;
+        border-color: $light-grey;
     }
 
     &-google-map-wrapper {
@@ -27,15 +30,48 @@
 
     &-preferences {
         display: flex;
+        width: 290px;
         justify-content: space-between;
-        font-size: 48px;
-        margin-bottom: 20px;
+        margin: 0 15px 15px 20px;
     }
-}
 
+    &-geo {
+        min-height: 150px;
+        margin: 0 15px;
+    }
 
-.geo-region-input {
-    margin: 25px 0;
+    &-age-select {
+        display: flex;
+        justify-content: space-around;
+        background: linear-gradient(to bottom, transparent 28px, rgba(234, 234, 234, 0.5) 28px, rgba(234, 234, 234, 0.5) 50px, transparent 50px);
+
+        >div {
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            margin: 0 10px;
+        }
+    }
+
+    &-rent-period {
+        text-align: center;
+
+        >div {
+            display: flex;
+            margin-top: 20px;
+            justify-content: space-around;
+
+            >div {
+                margin: 0 10px;
+                width: 140px;
+            }
+        }
+        &-input {
+            height: 30px;
+        }
+    }
 }
 
 .map-expanded {

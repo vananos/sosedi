@@ -1,4 +1,4 @@
-export const API_HOST = "http://localhost:8080"; // "api"; //
+export const API_HOST =  "api"; // "http://localhost:8080";
 export const REGISTRATION_ENDPOINT = "/register";
 export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";

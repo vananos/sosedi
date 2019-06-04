@@ -15,7 +15,7 @@ const Button = props => {
 
   const colorClass = `btn-${color}`;
   const progressClass = progress ? "btn-blink" : "";
-  const disabledClass = disabled ? "btn-disabled" : "";
+  const disabledClass = disabled || color === "disabled" ? "btn-disabled" : "";
   return (
     <button
       className={`btn ${colorClass} ${className} ${progressClass} ${disabledClass}`}
@@ -40,7 +40,7 @@ Button.propTypes = {
   className: PropTypes.string,
   disable: PropTypes.bool,
   progress: PropTypes.bool,
-  color: PropTypes.oneOf(["green", "yellow"]),
+  color: PropTypes.oneOf(["green", "yellow", "disabled"]),
   onClick: PropTypes.func,
   style: PropTypes.object
 };

@@ -24,6 +24,10 @@ export default class Input extends Component {
     });
   };
 
+  setValue = value => {
+    this.setState(value);
+  };
+
   render() {
     const {
       type,

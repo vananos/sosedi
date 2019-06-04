@@ -1,0 +1,32 @@
+@import "../../../base.scss";
+
+.number-input {
+    display: inline-block;
+    cursor: pointer;
+    
+    &-up,
+    &-down {
+        display: block;
+        text-align: center;
+    }
+
+    &-down {
+        transform: rotate(180deg);
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid $grey;
+        outline: none;
+        text-align: center;
+        background: transparent;
+
+        &:focus {
+            border-color: $brown;
+        }
+    }
+}
+
+.arrow:active {
+    fill: $turquoise;
+}

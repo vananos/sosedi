@@ -1,15 +1,12 @@
 import React, { Component } from "react";
 import Toggler from "../Toggler/Toggler";
 import NavItem from "../NavItem/NavItem";
-import Logo from "../../common/Logo/Logo";
 import cogsIcon from "../../../assets/navbar/cogs-solid.svg";
-import commentIcon from "../../../assets/navbar/comment-solid.svg";
 import userIcon from "../../../assets/navbar/user-solid.svg";
 import scrollIcon from "../../../assets/navbar/scroll-solid.svg";
-import headset from "../../../assets/navbar/headset-solid.svg";
+import browserHistory from "../../../browserHistory";
 import question from "../../../assets/navbar/question-circle-solid.svg";
 import "./Navbar.scss";
-import Modal from "../../common/Modal/Modal";
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -48,13 +45,6 @@ export default class Navbar extends Component {
               Мое объявление
             </NavItem>
             <NavItem
-              href="/messages"
-              onClick={this.toggleNavbar}
-              icon={commentIcon}
-            >
-              Сообщения
-            </NavItem>
-            <NavItem
               href="/profile"
               onClick={this.toggleNavbar}
               icon={userIcon}
@@ -70,7 +60,12 @@ export default class Navbar extends Component {
             </NavItem>
           </nav>
           <div className="nav-footer">
-            <div>
+            <div
+              onClick={_ => {
+                browserHistory.push("/help");
+                this.toggleNavbar();
+              }}
+            >
               <span>Нужна помощь?</span>
               <img
                 src={question}
