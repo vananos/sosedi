@@ -31,7 +31,7 @@ export default class NumberInput extends Component {
     return ((min && value > min) || true) && ((max && value < max) || true);
   };
 
-  changeValue = step => {
+  startChangeValue = step => {
     this.state.interval = setInterval(() => {
       const newValue = this.state.value + step;
       if (this.inMinMaxRange(newValue)) {
@@ -40,7 +40,7 @@ export default class NumberInput extends Component {
     }, 200);
   };
 
-  clearValue = () => {
+  stopValueChange = () => {
     const { interval } = this.state;
     if (interval) {
       clearInterval(interval);
@@ -54,8 +54,8 @@ export default class NumberInput extends Component {
       <div className="number-input">
         <span
           className="number-input-up"
-          onMouseDown={_ => this.changeValue(+1)}
-          onMouseUp={_ => this.clearValue()}
+          onMouseDown={_ => this.startChangeValue(+1)}
+          onMouseUp={_ => this.stopValueChange()}
         >
           <Arrow />
         </span>
@@ -70,8 +70,8 @@ export default class NumberInput extends Component {
         />
         <span
           className="number-input-down"
-          onMouseDown={_ => this.changeValue(-1)}
-          onMouseUp={_ => this.clearValue()}
+          onMouseDown={_ => this.startChangeValue(-1)}
+          onMouseUp={_ => this.stopValueChange()}
         >
           <Arrow />
         </span>

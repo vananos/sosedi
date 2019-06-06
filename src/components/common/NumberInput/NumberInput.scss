@@ -2,16 +2,21 @@
 
 .number-input {
     display: inline-block;
-    cursor: pointer;
-    
+
     &-up,
     &-down {
         display: block;
         text-align: center;
+        cursor: pointer;
+    }
+
+    &-up {
+        margin-bottom: 50px;
+        transform: scale(4);
     }
 
     &-down {
-        transform: rotate(180deg);
+        transform: rotate(180deg) scale(4);
     }
 
     input {
