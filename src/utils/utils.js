@@ -38,7 +38,7 @@ export const Validators = {
   passwordConfirmation: formValues => {
     const passwordConfirmation = formValues.passwordConfirmation;
     if (passwordConfirmation !== formValues.password) {
-      return "Потверждение пароля должно совпадать с паролем";
+      return "Подтверждение пароля должно совпадать с паролем";
     }
   },
 
