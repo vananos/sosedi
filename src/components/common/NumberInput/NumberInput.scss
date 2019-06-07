@@ -2,16 +2,29 @@
 
 .number-input {
     display: inline-block;
-    cursor: pointer;
-    
+    text-align: center;
+
     &-up,
     &-down {
-        display: block;
+        display: inline-block;
         text-align: center;
+        cursor: pointer;
+    }
+
+    &-up {
+        margin-left: 15px;
+        transform: rotate(90deg);
     }
 
     &-down {
-        transform: rotate(180deg);
+        margin-right: 15px;
+        transform: rotate(-90deg);
+    }
+
+    label {
+        font-size: 20px;
+        display: inline-block;
+        transform: translateY(-7px);
     }
 
     input {
@@ -20,9 +33,17 @@
         outline: none;
         text-align: center;
         background: transparent;
+        display: inline-block;
+        margin-bottom: 10px;
 
         &:focus {
             border-color: $brown;
+        }
+
+        &::-webkit-inner-spin-button,
+        &::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
         }
     }
 }

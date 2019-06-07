@@ -43,16 +43,8 @@
     &-age-select {
         display: flex;
         justify-content: space-around;
-        background: linear-gradient(to bottom, transparent 28px, rgba(234, 234, 234, 0.5) 28px, rgba(234, 234, 234, 0.5) 50px, transparent 50px);
-
-        >div {
-            display: flex;
-            align-items: center;
-        }
-
-        label {
-            margin: 0 10px;
-        }
+        padding-top: 5px;
+        background: linear-gradient(to bottom, transparent 2px, rgba(234, 234, 234, 0.5) 2px, rgba(234, 234, 234, 0.5) 30px, transparent 30px);
     }
 
     &-rent-period {

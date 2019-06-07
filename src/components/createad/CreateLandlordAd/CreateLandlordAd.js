@@ -87,14 +87,8 @@ export default class CreateLandlordAd extends Component {
         <hr />
         <label className="hint">Человека какого возраста ты ищешь?</label>
         <div className="ad-age-select">
-          <div>
-            <label>min</label>
-            <NumberInput name="age-min" />
-          </div>
-          <div>
-            <NumberInput name="age-max" />
-            <label>max</label>
-          </div>
+            <NumberInput name="age-min" label="min" />
+            <NumberInput name="age-max" label="max" />
         </div>
         <hr />
         <div className="ad-rent-period">

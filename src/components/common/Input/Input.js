@@ -37,7 +37,6 @@ export default class Input extends Component {
       info,
       max,
       className,
-      pattern,
       error: { error: errorMsg, value: wrongValue } = {}
     } = this.props;
 

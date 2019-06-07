@@ -13,30 +13,20 @@ export default class NumberInput extends Component {
 
   handleChange = e => {
     const newValue = +e.target.value;
+    this.setState({
+      value: newValue
+    });
+  };
 
-    if (!isNaN(+newValue)) {
-      if (!this.inMinMaxRange(newValue)) {
-        return;
-      }
-
-      this.setState({
-        value: newValue
-      });
+  startChangeValue = step => {
+    if (this.state.interval) {
+      clearInterval(this.state.interval);
     }
-  };
 
-  inMinMaxRange = value => {
-    const { min, max } = this.props;
+    this.setState({ value: this.state.value + step });
 
-    return ((min && value > min) || true) && ((max && value < max) || true);
-  };
-
-  changeValue = step => {
     this.state.interval = setInterval(() => {
-      const newValue = this.state.value + step;
-      if (this.inMinMaxRange(newValue)) {
-        this.setState({ value: newValue });
-      }
+      this.setState({ value: this.state.value + step });
     }, 200);
   };
 
@@ -48,19 +38,12 @@ export default class NumberInput extends Component {
   };
 
   render() {
-    const { min, max, name, width } = this.props;
+    const { min, max, name, width, label } = this.props;
     const { value } = this.state;
     return (
       <div className="number-input">
-        <span
-          className="number-input-up"
-          onMouseDown={_ => this.changeValue(+1)}
-          onMouseUp={_ => this.clearValue()}
-        >
-          <Arrow />
-        </span>
         <input
-          type="text"
+          type="number"
           onChange={this.handleChange}
           name={name}
           value={value}
@@ -68,13 +51,23 @@ export default class NumberInput extends Component {
           max={max}
           style={{ width: width }}
         />
-        <span
-          className="number-input-down"
-          onMouseDown={_ => this.changeValue(-1)}
-          onMouseUp={_ => this.clearValue()}
-        >
-          <Arrow />
-        </span>
+        <div>
+          <Arrow
+            className="number-input-down"
+            onMouseDown={_ => this.startChangeValue(-1)}
+            onMouseUp={_ => this.stopValueChange()}
+            onTouchStart={_ => this.startChangeValue(-1)}
+            onTouchEnd={_ => this.stopValueChange()}
+          />
+          <label>{label}</label>
+          <Arrow
+            className="number-input-up"
+            onMouseDown={_ => this.startChangeValue(+1)}
+            onMouseUp={_ => this.stopValueChange()}
+            onTouchStart={_ => this.startChangeValue(+1)}
+            onTouchEnd={_ => this.stopValueChange()}
+          />
+        </div>
       </div>
     );
   }
@@ -90,5 +83,6 @@ NumberInput.propTypes = {
   max: PropTypes.number,
   name: PropTypes.string.isRequired,
   value: PropTypes.number,
-  width: PropTypes.number
+  width: PropTypes.number,
+  label: PropTypes.string.isRequired
 };
