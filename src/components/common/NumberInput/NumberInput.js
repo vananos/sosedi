@@ -13,9 +13,11 @@ export default class NumberInput extends Component {
 
   handleChange = e => {
     const newValue = +e.target.value;
-    this.setState({
-      value: newValue
-    });
+    if (this.isValidValue(newValue)) {
+      this.setState({
+        value: newValue
+      });
+    }
   };
 
   startChangeValue = step => {
@@ -23,14 +25,22 @@ export default class NumberInput extends Component {
       clearInterval(this.state.interval);
     }
 
-    this.setState({ value: this.state.value + step });
-
-    this.state.interval = setInterval(() => {
+    const changeValue = () =>
+      this.isValidValue(this.state.value + step) &&
       this.setState({ value: this.state.value + step });
-    }, 200);
+
+    changeValue();
+
+    this.state.interval = setInterval(changeValue, 200);
   };
 
-  clearValue = () => {
+  isValidValue = value => {
+    const { min, max } = this.props;
+
+    return ((min && value > +min) || !min) && ((max && value < +max) || !max);
+  };
+
+  stopValueChange = () => {
     const { interval } = this.state;
     if (interval) {
       clearInterval(interval);
@@ -79,8 +89,8 @@ NumberInput.defaultProps = {
 };
 
 NumberInput.propTypes = {
-  min: PropTypes.number,
-  max: PropTypes.number,
+  min: PropTypes.string,
+  max: PropTypes.string,
   name: PropTypes.string.isRequired,
   value: PropTypes.number,
   width: PropTypes.number,

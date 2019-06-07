@@ -30,8 +30,8 @@ export default class Checkbox extends Component {
           id={id}
           name={name}
           value={value}
-          checked={checked}
           onChange={() => {}}
+          checked={checked}
         />
         {children}
       </div>
