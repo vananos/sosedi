@@ -2,27 +2,31 @@ import React, { Component } from "react";
 import Button from "../../common/Button/Button";
 import TextInput from "../../common/Input/Input";
 import GoogleMapReact from "google-map-react";
-import Checkmark from "../../navbar/Checkmark/Checkmark";
 import Checkbox from "../../common/Checkbox/Checkbox";
 import Thumbler from "../../common/Thumbler/Thumbler";
 import NumberInput from "../../common/NumberInput/NumberInput";
 import pawIcon from "../../../assets/ad/paw-solid.svg";
 import smokingIcon from "../../../assets/ad/smoking-solid.svg";
 import femaleIcon from "../../../assets/ad/female-solid.svg";
+import LocationSearchInput from "../LocationSearchInput/LocationSearchInput";
 import maleIcon from "../../../assets/ad/male-solid.svg";
 import SelectableItem from "../SelectableItem/SelectableItem";
+import Expandable from "../Expandable/Expandable";
 import "./CreateAd.scss";
 
 export default class CreateAd extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeTab: props.activeTab || "renter"
+      activeTab: props.activeTab || "renter",
+      mapExpanded: false
     };
   }
 
   render() {
     const isLandlord = this.state.activeTab === "landlord";
+    const center = { lat: 59.95, lng: 30.33 };
+
     return (
       <div className="ad">
         <div>
@@ -44,6 +48,13 @@ export default class CreateAd extends Component {
           </div>
           <hr />
           <form>
+            <input
+              type="checkbox"
+              name="landlord"
+              hidden
+              checked={isLandlord}
+              readOnly
+            />
             <div className="ad-geo">
               <TextInput
                 value={this.state.geoSuggestion}
@@ -52,29 +63,18 @@ export default class CreateAd extends Component {
                 ref={this.geoInputRef}
                 className="ad-geo-region-input"
               />
-              <div className="map-expander" onClick={this.toggleMap}>
-                Выбрать на карте
-                <div
-                  className={
-                    this.state.isMapExpanded ? "expander-expanded" : ""
-                  }
-                >
-                  <Checkmark />
+              <Expandable message="Выбрать на карте">
+                <div style={{ height: "300px", width: "280px" }}>
+                  <GoogleMapReact
+                    bootstrapURLKeys={{
+                      key: "AIzaSyCgOW9IW958ZfF3AtgpXToUJjUBGz9MnGU"
+                    }}
+                    defaultCenter={center}
+                    defaultZoom={11}
+                  />
                 </div>
-              </div>
-              <div
-                className={`ad-google-map-wrapper ${
-                  this.state.isMapExpanded ? "map-expanded" : ""
-                }`}
-              >
-                <GoogleMapReact
-                  bootstrapURLKeys={{
-                    key: "AIzaSyCgOW9IW958ZfF3AtgpXToUJjUBGz9MnGU"
-                  }}
-                  defaultCenter={this.state.center}
-                  defaultZoom={this.state.zoom}
-                />
-              </div>
+              </Expandable>
+              <LocationSearchInput/>
             </div>
             <hr />
             <div className="ad-preferences">
@@ -107,9 +107,9 @@ export default class CreateAd extends Component {
               <NumberInput name="age-max" label="max" min="0" max="100" />
             </div>
             <hr />
-            <div style={{textAlign: "center"}}>
-              <label className="hint">Подселю{isLandlord ? "" : "сь"} в:</label>
-              <div style={{display: "inline-block", textAlign: "left"}}>
+            <div>
+              <span className="hint">Подселю{isLandlord ? "" : "сь"} в:</span>
+              <div style={{ display: "inline-block", textAlign: "left" }}>
                 <SelectableItem name="room" className="ad-room-type">
                   комнату
                 </SelectableItem>
@@ -130,9 +130,30 @@ export default class CreateAd extends Component {
                 </SelectableItem>
               </div>
             </div>
-            <span className="hint">
-              Хочу {isLandlord ? "получать" : "платьить"} за аренду
-            </span>
+            <hr />
+
+            <Expandable message="Дополнительные удобства">
+              <div className="add-conv">
+                <SelectableItem name="">Стиральная машина</SelectableItem>
+                <SelectableItem name="">Холодильник</SelectableItem>
+                <SelectableItem name="">Телевизор</SelectableItem>
+                <SelectableItem name="">Интернет</SelectableItem>
+                <SelectableItem name="">Посудомоечная машина</SelectableItem>
+                <SelectableItem name="">Балкон</SelectableItem>
+              </div>
+            </Expandable>
+            <hr />
+            <div>
+              <span className="hint">
+                Хочу {isLandlord ? "получать" : "платить"} за аренду
+              </span>
+              <div className="ad-price">
+                <NumberInput name="price" label="тыс. ₽" />
+              </div>
+            </div>
+            <hr />
+            <span className="hint">Дополнительные комментарии</span>
+            <textarea name="description" className="ad-add-info" />
             <Button>Сохранить</Button>
           </form>
         </div>

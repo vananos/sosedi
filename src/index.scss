@@ -149,3 +149,24 @@ input {
 #root {
   min-height: 100%;
 }
+
+.checkmark {
+  display: inline-block;
+}
+
+.checkmark:before,
+.checkmark:after {
+  display: inline-block;
+  content: "";
+  height: 2px;
+  width: 10px;
+  background-color: rgb(175, 175, 175);
+}
+
+.checkmark:before {
+  transform: translate(10px, -5px) rotate(30deg);
+}
+
+.checkmark:after {
+  transform: translate(8px, -5px) rotate(-30deg);
+}

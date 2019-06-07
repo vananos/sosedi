@@ -32,7 +32,7 @@
         display: flex;
         width: 290px;
         justify-content: space-between;
-        margin: 0 15px 15px 20px;
+        margin: 0 auto;
     }
 
     &-geo {
@@ -47,49 +47,31 @@
         background: linear-gradient(to bottom, transparent 2px, rgba(234, 234, 234, 0.5) 2px, rgba(234, 234, 234, 0.5) 30px, transparent 30px);
     }
 
-    &-rent-period {
-        text-align: center;
-
-        >div {
-            display: flex;
-            margin-top: 20px;
-            justify-content: space-around;
-
-            >div {
-                margin: 0 10px;
-                width: 140px;
-            }
-        }
-        &-input {
-            height: 30px;
-        }
-    }
-
     &-room-type {
         margin-bottom: 10px;
+        margin-left: 20px;
     }
-}
 
-.map-expanded {
-    display: block;
-}
-
-.map-expander {
-    margin: 20px 0;
-    text-align: center;
-    font-size: 0.5em;
-    cursor: pointer;
-    vertical-align: text-bottom;
-
-    >div {
-        display: inline-block;
-        margin-left: 10px;
-        transition: 0.3s linear;
+    .add-conv {
+        width: 100%;
+        margin-left: 20px;
+        box-sizing: border-box;
+        >div {
+            margin-bottom: 10px;
+        }
     }
-}
 
-.expander-expanded {
-    transform: rotate(90deg) translateX(-5px);
+    &-price {
+        text-align: center;
+    }
+
+    &-add-info {
+        display: block;
+        margin: 10px auto;
+        padding: 0;
+        width: 90vw;
+        height: 90px;
+    }
 }
 
 .hint {
