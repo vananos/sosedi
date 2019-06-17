@@ -14,6 +14,7 @@ import "./App.css";
 import ErrorHandler from "./ErrorHandler";
 import ErrorPage from "./components/error/ErrorPage";
 import Help from "./components/help/Help";
+import EmailConfirmationPage from "./components/emailconfirmation/EmailConfirmationPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -70,6 +71,11 @@ export default class App extends Component {
           <section className="main-content">
             <Switch>
               <Route exact path="/" component={LoginForm} />
+              <Route
+                exact
+                path="/confirmhandler"
+                component={EmailConfirmationPage}
+              />
               <Route exact path="/registration" component={RegistartionForm} />
               <Route exact path="/create-ad" component={CreateAd} />
               <Route exact path="/messages" component={Main} />
