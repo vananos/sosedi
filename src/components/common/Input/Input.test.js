@@ -48,24 +48,4 @@ describe("Input, ", () => {
 
     expect(inputWrapper).toMatchSnapshot();
   });
-
-  it("when type is date -> type should be text when unfocused", () => {
-    const inputProps = defaultInputProps();
-    inputProps.type = "date";
-    const inputWrapper = mount(<Input {...inputProps} />);
-
-    expect(inputWrapper).toMatchSnapshot();
-  });
-
-  it("when type is date -> type should be date when focused", () => {
-    const inputProps = defaultInputProps();
-    inputProps.type = "date";
-    const inputWrapper = mount(<Input {...inputProps} />);
-    inputWrapper
-      .find("input")
-      .first()
-      .simulate("focus");
-
-    expect(inputWrapper).toMatchSnapshot();
-  });
 });

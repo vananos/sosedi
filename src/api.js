@@ -1,9 +1,10 @@
 import config from "./config.js";
-export const API_GATEWAY =  config.apiGateway;
+export const API_GATEWAY = config.apiGateway;
 export const REGISTRATION_ENDPOINT = "/register";
 export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";
 export const AVATAR_LOAD = "/photo";
+export const AD = "/ad";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -22,7 +23,8 @@ export default class ApiClient {
         new Headers({
           "Content-Type": "application/x-www-form-urlencoded"
         })
-      )
+      ),
+      this.defaultApiErrorHandler
     );
   };
 
@@ -49,7 +51,33 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
-  loadAvatar = formData => new ApiRequest(this.makePost(AVATAR_LOAD, formData));
+  loadAvatar = formData =>
+    new ApiRequest(
+      this.makePost(AVATAR_LOAD, formData),
+      this.defaultApiErrorHandler
+    );
+
+  getUserAd = userId =>
+    new ApiRequest(
+      this.makeGet(`${AD}?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
+  getProfileInfo = userId =>
+    new ApiRequest(this.makeGet(`${PROFILE_INFO}?userid=${userId}`));
+
+  updateProfileInfo = profileInfo =>
+    new ApiRequest(
+      this.makePost(
+        AD,
+        JSON.stringify(profileInfo),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
 
   makePost = (url = "", data = {}, headers) =>
     fetch(`${API_GATEWAY}${url}`, {
@@ -68,15 +96,15 @@ export default class ApiClient {
       }),
       credentials: "include",
       mode: "cors"
-    }).then(response => {
-      if (!response.ok) {
-        this.defaultApiErrorHandler(response);
-      }
-      return response.json();
     });
 }
 
 export class ApiRequest {
+  onBadRequestHandler = _ => true;
+  wrongCredentialsHandler = _ => true;
+  successHandler = _ => true;
+  notFoundHandler = _ => true;
+
   constructor(fetch, defaultApiErrorHandler) {
     this.fetch = fetch;
     this.defaultApiErrorHandler = defaultApiErrorHandler;
@@ -97,6 +125,11 @@ export class ApiRequest {
     return this;
   };
 
+  ifNotFound = notFoundHandler => {
+    this.notFoundHandler = notFoundHandler;
+    return this;
+  };
+
   execute = () => {
     return this.fetch
       .then(response => {
@@ -107,7 +140,7 @@ export class ApiRequest {
       })
       .then(this.successHandler)
       .catch(async e => {
-        console.log(e);
+        console.log(e)
         if (e.status) {
           switch (e.status) {
             case 400:
@@ -118,6 +151,11 @@ export class ApiRequest {
               break;
             case 401:
               if (!this.wrongCredentialsHandler()) {
+                return;
+              }
+              break;
+            case 404:
+              if (!this.notFoundHandler()) {
                 return;
               }
           }

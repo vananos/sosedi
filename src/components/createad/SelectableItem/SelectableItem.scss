@@ -2,7 +2,7 @@
 
 .selectable-item {
     padding-left: 20px;
-    
+
     .checkbox {
         display: none;
 
@@ -23,15 +23,35 @@
             position: absolute;
             bottom: 2px;
             left: -22px;
-            transition: 0.3s ease-in;
+
         }
 
         &:checked~label::before {
-            transform: rotate(-45deg) translate(2px, -6px);
-            border-bottom-color: $brown;
-            border-left-color: $brown;
-            border-top: none;
-            border-right: none;
+            animation: checkbox-animation 0.3s linear forwards;
+        }
+
+        @keyframes checkbox-animation {
+            from {
+                width: 14px
+            }
+
+            25% {
+                width: 0;
+                left: -14px;
+            }
+
+            75% {
+                left: -14px;
+                height: 0;
+                width: 0;
+            }
+
+            to {
+                transform: translateY(-5px) rotate(45deg);
+                border-top: none;
+                border-left: none;
+                border-color: $brown;
+            }
         }
 
         &:checked~label {

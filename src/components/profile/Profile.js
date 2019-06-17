@@ -64,8 +64,8 @@ export default class Profile extends Component {
     Modal.showSpinner();
 
     this.context.api
-      .makeGet(`/profile?userid=${this.context.getUserId()}`)
-      .then(response => {
+      .getProfileInfo(this.context.getUserId())
+      .ifSuccess(response => {
         const { data: userInfo } = response;
 
         this.setState(
@@ -79,6 +79,7 @@ export default class Profile extends Component {
           }
         );
       })
+      .execute()
       .finally(() => this.state.userInfo.isNewUser || Modal.hide());
   }
 
@@ -90,7 +91,7 @@ export default class Profile extends Component {
           Давай заполним анкету, что бы мы смогли подобрать тебе подходящего
           соседа.
         </span>
-        <Button>Приступить</Button>
+        <Button style={{ marginTop: "25px" }}>Приступить</Button>
       </div>
     );
   };

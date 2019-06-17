@@ -5,6 +5,12 @@ exports[`Thumbler,  click on no -> thumbler should be in \`no\` state 1`] = `
   className="thumbler"
   onClick={[Function]}
 >
+  <input
+    hidden={true}
+    readOnly={true}
+    type="text"
+    value="no"
+  />
   <div
     className="no-btn no"
     onClick={[Function]}
@@ -28,6 +34,12 @@ exports[`Thumbler,  click on yes -> thumbler should be in \`yes\` state 1`] = `
   className="thumbler"
   onClick={[Function]}
 >
+  <input
+    hidden={true}
+    readOnly={true}
+    type="text"
+    value="yes"
+  />
   <div
     className="no-btn "
     onClick={[Function]}
@@ -51,6 +63,12 @@ exports[`Thumbler,  default state 1`] = `
   className="thumbler"
   onClick={[Function]}
 >
+  <input
+    hidden={true}
+    readOnly={true}
+    type="text"
+    value="default"
+  />
   <div
     className="no-btn "
     onClick={[Function]}

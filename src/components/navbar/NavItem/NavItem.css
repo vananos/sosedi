@@ -16,7 +16,8 @@
 
 .proceed {
     position: absolute;
-    right: 0px;
+    top: 35px;
+    right: 30px;
 }
 
 .nav-link-active {

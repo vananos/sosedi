@@ -11,6 +11,8 @@ export default class NumberInput extends Component {
     };
   }
 
+  getValue = () => +this.state.value;
+
   handleChange = e => {
     const newValue = +e.target.value;
     if (this.isValidValue(newValue)) {
@@ -31,13 +33,21 @@ export default class NumberInput extends Component {
 
     changeValue();
 
-    this.state.interval = setInterval(changeValue, 200);
+    this.state.interval = setInterval(changeValue, 100);
   };
 
   isValidValue = value => {
     const { min, max } = this.props;
 
-    return ((min && value > +min) || !min) && ((max && value < +max) || !max);
+    const customValidationResult = this.props.customValueValidator
+      ? this.props.customValueValidator(value)
+      : true;
+
+    return (
+      customValidationResult &&
+      ((min && value > +min) || !min) &&
+      ((max && value < +max) || !max)
+    );
   };
 
   stopValueChange = () => {
@@ -52,16 +62,7 @@ export default class NumberInput extends Component {
     const { value } = this.state;
     return (
       <div className="number-input">
-        <input
-          type="number"
-          onChange={this.handleChange}
-          name={name}
-          value={value}
-          min={min}
-          max={max}
-          style={{ width: width }}
-        />
-        <div>
+        <div className="input-wrapper">
           <Arrow
             className="number-input-down"
             onMouseDown={_ => this.startChangeValue(-1)}
@@ -69,7 +70,15 @@ export default class NumberInput extends Component {
             onTouchStart={_ => this.startChangeValue(-1)}
             onTouchEnd={_ => this.stopValueChange()}
           />
-          <label>{label}</label>
+          <input
+            type="number"
+            onChange={this.handleChange}
+            name={name}
+            value={value}
+            min={min}
+            max={max}
+            style={{ width: width }}
+          />
           <Arrow
             className="number-input-up"
             onMouseDown={_ => this.startChangeValue(+1)}
@@ -78,13 +87,14 @@ export default class NumberInput extends Component {
             onTouchEnd={_ => this.stopValueChange()}
           />
         </div>
+        <label>{label}</label>
       </div>
     );
   }
 }
 
 NumberInput.defaultProps = {
-  width: 20,
+  width: 30,
   value: 0
 };
 

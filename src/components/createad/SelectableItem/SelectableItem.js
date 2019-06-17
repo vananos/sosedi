@@ -5,19 +5,22 @@ import PropTypes from "prop-types";
 export default class SelectableItem extends Component {
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
-      checked: props.checked
+      checked: props.checked,
+      changed: false
     };
   }
 
   render() {
     const { name, id, children, className = "" } = this.props;
-    const { checked } = this.state;
-
+    const { checked, changed } = this.state;
     return (
       <div
         className={`selectable-item ${className}`}
-        onClick={_ => this.setState({ checked: !this.state.checked })}
+        onClick={_ =>
+          this.setState({ checked: !this.state.checked, changed: true })
+        }
       >
         <input
           type="checkbox"
@@ -27,7 +30,11 @@ export default class SelectableItem extends Component {
           checked={checked}
           onChange={() => {}}
         />
-        <label>{children}</label>
+        {checked ? (
+          <label className="checked">{children}</label>
+        ) : (
+          <label className="unchecked">{children}</label>
+        )}
       </div>
     );
   }

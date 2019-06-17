@@ -13,14 +13,6 @@
         display: flex;
     }
 
-    hr {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-width: 1px;
-        border-color: $light-grey;
-    }
-
     &-google-map-wrapper {
         display: none;
         width: 100%;
@@ -28,9 +20,19 @@
         margin-top: 15px;
     }
 
+    .gender-preferences {
+        display: flex;
+        justify-content: center;
+
+        >div {
+            margin: 0 10px;
+        }
+    }
+
     &-preferences {
         display: flex;
         width: 290px;
+        margin-bottom: 20px;
         justify-content: space-between;
         margin: 0 auto;
     }
@@ -41,10 +43,12 @@
     }
 
     &-age-select {
-        display: flex;
-        justify-content: space-around;
-        padding-top: 5px;
-        background: linear-gradient(to bottom, transparent 2px, rgba(234, 234, 234, 0.5) 2px, rgba(234, 234, 234, 0.5) 30px, transparent 30px);
+        margin-top: -10px;
+    }
+
+    &-room-type-select {
+        display: inline-block;
+        text-align: left;
     }
 
     &-room-type {
@@ -56,6 +60,7 @@
         width: 100%;
         margin-left: 20px;
         box-sizing: border-box;
+
         >div {
             margin-bottom: 10px;
         }
@@ -72,11 +77,13 @@
         width: 90vw;
         height: 90px;
     }
-}
 
-.hint {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    margin: 14px 0;
+    section {
+        padding: 40px 0;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }

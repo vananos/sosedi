@@ -1,12 +1,18 @@
 @import "../../../base.scss";
 
 .number-input {
-    display: inline-block;
+    display: block;
     text-align: center;
+    background: linear-gradient(to bottom, transparent 15px, rgba(234, 234, 234, 0.5) 15px, rgba(234, 234, 234, 0.5) 50px, transparent 50px);
+
+    .input-wrapper {
+        display: flex;
+        justify-content: space-around;
+    }
 
     &-up,
     &-down {
-        display: inline-block;
+        display: block;
         text-align: center;
         cursor: pointer;
     }
@@ -22,7 +28,7 @@
     }
 
     label {
-        font-size: 20px;
+        font-size: 0.8rem;
         display: inline-block;
         transform: translateY(-7px);
     }
@@ -31,6 +37,7 @@
         border: none;
         border-bottom: 1px solid $grey;
         outline: none;
+        font-size: 1.2rem;
         text-align: center;
         background: transparent;
         display: inline-block;

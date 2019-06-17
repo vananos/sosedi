@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Checkmark from "../../common/Checkmark/Checkmark";
 import "./Expandable.scss";
 import PropTypes from "prop-types";
 
@@ -25,7 +26,7 @@ export default class Expandable extends Component {
           }
         >
           <span className="message">{message}</span>
-          <span className="checkmark" />
+          {/* <Checkmark /> */}
         </div>
         <div className={expanded ? "expandable-shown" : "expandable-hidden"}>
           {children}

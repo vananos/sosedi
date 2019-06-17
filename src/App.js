@@ -37,7 +37,7 @@ export default class App extends Component {
           this.forceAuthorization();
           return;
         }
-        throw "blia";
+        browserHistory.push("/error");
       }
     }),
 
@@ -56,7 +56,7 @@ export default class App extends Component {
         return localStorage.getItem("userId");
       }
 
-      this.app.forceAuthorization();
+      this.forceAuthorization();
     }
   };
 
