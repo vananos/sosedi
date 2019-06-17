@@ -5,6 +5,7 @@ export const LOGIN_ENDPOINT = "/login";
 export const PROFILE_INFO = "/profile";
 export const AVATAR_LOAD = "/photo";
 export const AD = "/ad";
+export const FEEDBACK = "/feedback";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -79,6 +80,19 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
+  sendFeedback = feedbackData =>
+    new ApiRequest(
+      this.makePost(
+        FEEDBACK,
+        JSON.stringify(feedbackData),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
+
   makePost = (url = "", data = {}, headers) =>
     fetch(`${API_GATEWAY}${url}`, {
       method: "POST",
@@ -140,7 +154,7 @@ export class ApiRequest {
       })
       .then(this.successHandler)
       .catch(async e => {
-        console.log(e)
+        console.log(e);
         if (e.status) {
           switch (e.status) {
             case 400:
