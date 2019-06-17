@@ -8,6 +8,8 @@
     font-size: 1rem;
     border-bottom: 1px solid $light-grey;
     width: 100%;
+    -webkit-min-logical-width: 100%;
+    -webkit-appearance: none;
 
     &-wrapper {
         display: block;

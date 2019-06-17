@@ -16,10 +16,11 @@ export default class Thumbler extends Component {
   };
 
   render() {
-    const { children } = this.props;
+    const { children, name } = this.props;
     const targetState = this.state.targetState;
     return (
       <div className="thumbler" onClick={e => this.updateState(e, "default")}>
+        <input type="text" name={name} hidden value={targetState} readOnly/>
         <div
           className={`no-btn ${targetState === "no" ? "no" : ""}`}
           onClick={e => this.updateState(e, "no")}

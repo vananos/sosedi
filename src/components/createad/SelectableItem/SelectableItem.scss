@@ -1,0 +1,62 @@
+@import "../../../base.scss";
+
+.selectable-item {
+    padding-left: 20px;
+
+    .checkbox {
+        display: none;
+
+        &~label {
+            position: relative;
+            font-size: 18px;
+            color: $grey;
+            margin-left: 22px;
+            cursor: pointer;
+        }
+
+        &~label::before {
+            display: block;
+            width: 14px;
+            height: 14px;
+            border: 2px solid $grey;
+            content: "";
+            position: absolute;
+            bottom: 2px;
+            left: -22px;
+
+        }
+
+        &:checked~label::before {
+            animation: checkbox-animation 0.3s linear forwards;
+        }
+
+        @keyframes checkbox-animation {
+            from {
+                width: 14px
+            }
+
+            25% {
+                width: 0;
+                left: -14px;
+            }
+
+            75% {
+                left: -14px;
+                height: 0;
+                width: 0;
+            }
+
+            to {
+                transform: translateY(-5px) rotate(45deg);
+                border-top: none;
+                border-left: none;
+                border-color: $brown;
+            }
+        }
+
+        &:checked~label {
+            color: $brown;
+        }
+
+    }
+}

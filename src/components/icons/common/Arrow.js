@@ -14,7 +14,7 @@ const SvgArrow = props => {
 };
 
 SvgArrow.defaultProps = {
-  color: "#ababab"
+  color: "rgba(222, 170, 93, 1)"
 }
 
 export default SvgArrow;

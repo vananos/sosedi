@@ -1,0 +1,24 @@
+.checkmark {
+    display: block;
+    position: relative;
+
+
+    &:before,
+    &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        height: 2px;
+        width: 10px;
+        background-color: rgb(175, 175, 175);
+        transform-origin: right;
+    }
+
+    &:before {
+        transform: translate(10px, -5px) rotate(60deg);
+    }
+
+    &:after {
+        transform: translate(10px, -5px) rotate(-60deg);
+    }
+}

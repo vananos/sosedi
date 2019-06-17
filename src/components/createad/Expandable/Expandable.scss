@@ -1,0 +1,23 @@
+.expandable {
+
+    margin-bottom: 10px; 
+    text-align: center;
+
+    &-shown {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-hidden {
+        display: none;
+    }
+
+    .checkmark {
+        transform: translateX(10px) rotate(90deg);
+    }
+}
+
+.expanded>.checkmark {
+    transform: translateY(6px) rotate(-90deg);
+}

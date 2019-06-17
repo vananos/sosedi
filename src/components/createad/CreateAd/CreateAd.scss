@@ -13,14 +13,6 @@
         display: flex;
     }
 
-    hr {
-        border-top: none;
-        border-left: none;
-        border-right: none;
-        border-width: 1px;
-        border-color: $light-grey;
-    }
-
     &-google-map-wrapper {
         display: none;
         width: 100%;
@@ -28,11 +20,21 @@
         margin-top: 15px;
     }
 
+    .gender-preferences {
+        display: flex;
+        justify-content: center;
+
+        >div {
+            margin: 0 10px;
+        }
+    }
+
     &-preferences {
         display: flex;
         width: 290px;
+        margin-bottom: 20px;
         justify-content: space-between;
-        margin: 0 15px 15px 20px;
+        margin: 0 auto;
     }
 
     &-geo {
@@ -41,64 +43,47 @@
     }
 
     &-age-select {
-        display: flex;
-        justify-content: space-around;
-        background: linear-gradient(to bottom, transparent 28px, rgba(234, 234, 234, 0.5) 28px, rgba(234, 234, 234, 0.5) 50px, transparent 50px);
-
-        >div {
-            display: flex;
-            align-items: center;
-        }
-
-        label {
-            margin: 0 10px;
-        }
+        margin-top: -10px;
     }
 
-    &-rent-period {
-        text-align: center;
-
-        >div {
-            display: flex;
-            margin-top: 20px;
-            justify-content: space-around;
-
-            >div {
-                margin: 0 10px;
-                width: 140px;
-            }
-        }
-        &-input {
-            height: 30px;
-        }
-    }
-}
-
-.map-expanded {
-    display: block;
-}
-
-.map-expander {
-    margin: 20px 0;
-    text-align: center;
-    font-size: 0.5em;
-    cursor: pointer;
-    vertical-align: text-bottom;
-
-    >div {
+    &-room-type-select {
         display: inline-block;
-        margin-left: 10px;
-        transition: 0.3s linear;
+        text-align: left;
     }
-}
 
-.expander-expanded {
-    transform: rotate(90deg) translateX(-5px);
-}
+    &-room-type {
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
 
-.hint {
-    display: block;
-    font-size: 14px;
-    text-align: center;
-    margin: 14px 0;
+    .add-conv {
+        width: 100%;
+        margin-left: 20px;
+        box-sizing: border-box;
+
+        >div {
+            margin-bottom: 10px;
+        }
+    }
+
+    &-price {
+        text-align: center;
+    }
+
+    &-add-info {
+        display: block;
+        margin: 10px auto;
+        padding: 0;
+        width: 90vw;
+        height: 90px;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
 }

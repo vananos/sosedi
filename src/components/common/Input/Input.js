@@ -37,7 +37,6 @@ export default class Input extends Component {
       info,
       max,
       className,
-      pattern,
       error: { error: errorMsg, value: wrongValue } = {}
     } = this.props;
 
@@ -45,7 +44,7 @@ export default class Input extends Component {
 
     const mustShowError = errorMsg && this.state.value === wrongValue;
 
-    const isDateInput = type === "date";
+    // const isDateInput = type === "date";
 
     return (
       <div
@@ -54,23 +53,13 @@ export default class Input extends Component {
       >
         <input
           ref={this.inputRef}
-          type={!isDateInput ? type : "text"}
+          type={type}
           className="input"
           name={name}
           id={id}
           value={currentValue}
           onChange={this.handleChange}
           max={max}
-          onFocus={
-            isDateInput
-              ? _ =>
-                  (this.inputRef.current.type = "date") &&
-                  this.inputRef.current.focus()
-              : undefined
-          }
-          onBlur={
-            isDateInput ? _ => (this.inputRef.current.type = "text") : undefined
-          }
         />
         <div className={`label-info ${currentValue !== "" ? "filled" : ""}`}>
           <span className="label">{label}</span>
