@@ -44,18 +44,23 @@ export const Validators = {
 
   birthday: formValues => {
     const birthday = formValues.birthday;
-    if(!birthday || birthday === "") {
+    if (!birthday || birthday === "") {
       return "Необходимо указать дату рождения";
     }
   },
 
   phone: formValues => {
     const phone = formValues.phone;
-    if(!phone || phone.length != PHONE_MASK.length) {
+    if (!phone || phone.length != PHONE_MASK.length) {
       return "Неверный формат номера телефона";
-    } 
+    }
+  },
+  placeId: formValues => {
+    const placeId = formValues.placeId;
+    if (!placeId || placeId === "{}") {
+      return "Необходимо выбрать место из списка";
+    }
   }
-
 };
 
 export const validateFormData = (formDataObject, validator) => {

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import "./Checkbox.scss";
+import "./SquareCheckbox.scss";
 
 export default class Checkbox extends Component {
   constructor(props) {

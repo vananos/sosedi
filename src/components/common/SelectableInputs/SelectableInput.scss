@@ -3,6 +3,7 @@
 .selectable-item {
     padding-left: 20px;
 
+    .radio,
     .checkbox {
         display: none;
 
@@ -58,5 +59,15 @@
             color: $brown;
         }
 
+    }
+
+    .radio {
+        &~label::before {
+            border-radius: 50%;
+        }
+        
+        &:checked~label::before {
+            border-radius: 0;
+        }
     }
 }

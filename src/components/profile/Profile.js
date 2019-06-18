@@ -3,7 +3,7 @@ import "./Profile.css";
 import Input from "../common/Input/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button/Button";
-import Checkbox from "../common/Checkbox/Checkbox";
+import SquareCheckbox from "../common/SquareCheckbox/SquareCheckbox";
 import {
   extractFormData,
   validateFormData,
@@ -15,6 +15,7 @@ import Modal from "../common/Modal/Modal";
 import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
 import { ApplicationContext } from "../../context";
 import { API_GATEWAY } from "../../api";
+import Radio from "../common/SelectableInputs/Radio";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -141,7 +142,7 @@ export default class Profile extends Component {
     Object.keys(rawFormData).forEach(key => {
       if (~key.indexOf("like-")) {
         //serialize interests to list
-        serialaizedProfileData.interests.push(rawFormData[key]);
+        serialaizedProfileData.interests.push(rawFormData[key].toUpperCase());
       } else {
         serialaizedProfileData[key] = rawFormData[key];
       }
@@ -200,14 +201,17 @@ export default class Profile extends Component {
         avatar,
         description,
         inProgress,
-        interests
+        interests,
+        gender
       },
       errors = {}
     } = this.state;
-
     if (!userId) {
       return null;
     }
+
+    let effectiveGender = gender === null ? "ANY" : gender;
+
     return (
       <div className="profile">
         <div className="profile-greeting">
@@ -264,6 +268,25 @@ export default class Profile extends Component {
             error={errors.surname}
             className="profile-data-input"
           />
+          <div>
+            <label>Пол:</label>
+            {[
+              ["MALE", "Мужской"],
+              ["FEMALE", "Женский"],
+              ["ANY", "Не указан"]
+            ].map(radioData => (
+              <Radio
+                key={radioData[0]}
+                name="gender"
+                value={radioData[0]}
+                type="radio"
+                className="profile-gender-select"
+                checked={effectiveGender === radioData[0]}
+              >
+                {radioData[1]}
+              </Radio>
+            ))}
+          </div>
           <Input
             label="Дата рождения"
             value={birthday}
@@ -287,13 +310,13 @@ export default class Profile extends Component {
             <div className="profile-interests-select">
               {this.availableInterests().map(interest => (
                 <div className="profile-interest-item" key={interest.name}>
-                  <Checkbox
+                  <SquareCheckbox
                     value={interest.name}
                     name={`like-${interest.name}`}
-                    checked={interests.includes(interest.name)}
+                    checked={interests && interests.includes(interest.name)}
                   >
                     {interest.description}
-                  </Checkbox>
+                  </SquareCheckbox>
                 </div>
               ))}
             </div>

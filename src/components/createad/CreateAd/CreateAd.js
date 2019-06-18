@@ -2,19 +2,24 @@ import React, { Component } from "react";
 import Button from "../../common/Button/Button";
 import TextInput from "../../common/Input/Input";
 import GoogleMapReact from "google-map-react";
-import Checkbox from "../../common/Checkbox/Checkbox";
+import SquareCheckbox from "../../common/SquareCheckbox/SquareCheckbox";
 import Thumbler from "../../common/Thumbler/Thumbler";
 import NumberInput from "../../common/NumberInput/NumberInput";
 import pawIcon from "../../../assets/ad/paw-solid.svg";
 import smokingIcon from "../../../assets/ad/smoking-solid.svg";
 import femaleIcon from "../../../assets/ad/female-solid.svg";
 import maleIcon from "../../../assets/ad/male-solid.svg";
-import SelectableItem from "../SelectableItem/SelectableItem";
+import Checkbox from "../../common/SelectableInputs/Checkbox";
 import Expandable from "../Expandable/Expandable";
 import { ApplicationContext } from "../../../context";
-import { extractFormData } from "../../../utils/utils";
+import {
+  extractFormData,
+  validateFormData,
+  Validators
+} from "../../../utils/utils";
 import NotificationManager from "../../common/NotificationManager/NotificationManager";
 import "./CreateAd.scss";
+import LocationSearchInput from "../LocationSearchInput/LocationSearchInput";
 import Modal from "../../common/Modal/Modal";
 
 const attitudeConveter = {
@@ -35,9 +40,9 @@ export default class CreateAd extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      mapExpanded: false,
       waitServer: false,
-      empty: false
+      empty: false,
+      errors: {}
     };
 
     this.minAgeRef = React.createRef();
@@ -48,11 +53,12 @@ export default class CreateAd extends Component {
     userId: this.context.getUserId(),
     conveniences: [],
     roomType: [],
-    landlord: this.state.adInfo && this.state.adInfo.landlord,
-    male: false,
-    female: false,
+    landlord: true,
+    gender: "ANY",
     minAge: 16,
-    maxAge: 85
+    maxAge: 85,
+    rentPay: 15,
+    placeId: {}
   });
 
   componentWillMount() {
@@ -87,18 +93,32 @@ export default class CreateAd extends Component {
     e.preventDefault();
 
     const formData = extractFormData(e.target);
+    console.log(formData);
+
+    const validationResult = validateFormData(formData, Validators);
+
+    if (validationResult.hasErrors()) {
+      NotificationManager.notify("Проверьте правильность заполнения формы", {
+        type: "error"
+      });
+      console.log(validationResult.errors);
+      this.setState({ errors: validationResult.errors });
+      return;
+    }
+
     const serializedForm = this.getDefaultAdInfo();
     for (let key of Object.keys(formData)) {
       if (key.includes("male")) {
         serializedForm[key] = true;
       } else if (["animals", "smoking"].some(item => item === key)) {
-        console.log(formData[key]);
         serializedForm[key] = attitudeConveter.getFromThumblerValue(
           formData[key]
         );
       } else if (key.includes("-")) {
         const [prefix, value] = key.split("-");
         serializedForm[prefix].push(value.toUpperCase());
+      } else if (key === "placeId") {
+        serializedForm[key] = JSON.parse(formData[key]);
       } else {
         serializedForm[key] = formData[key];
       }
@@ -125,8 +145,7 @@ export default class CreateAd extends Component {
 
     const {
       placeId,
-      female,
-      male,
+      gender,
       smoking,
       animals,
       minAge,
@@ -138,7 +157,9 @@ export default class CreateAd extends Component {
       landlord
     } = this.state.adInfo;
 
-    const center = { lat: 59.95, lng: 30.33 };
+    const female = ["ANY", "FEMALE"].includes(gender);
+    const male = ["ANY", "MALE"].includes(gender);
+
     return (
       <div className="ad">
         <form onSubmit={this.handleSubmit}>
@@ -166,40 +187,31 @@ export default class CreateAd extends Component {
               >
                 Подселю
               </Button>
+              <input type="hidden" name="landlord" value={"" + landlord} />
             </div>
           </div>
           <section>
-          <div className="ad-geo">
-            <TextInput
-              value={this.state.geoSuggestion}
-              label="город"
-              name="placeId"
-              value={placeId}
-              ref={this.geoInputRef}
-              className="ad-geo-region-input"
-            />
-            <Expandable message="Выбрать на карте">
-              <div style={{ height: "300px", width: "280px" }}>
-                <GoogleMapReact
-                  bootstrapURLKeys={{
-                    key: "AIzaSyCgOW9IW958ZfF3AtgpXToUJjUBGz9MnGU"
-                  }}
-                  defaultCenter={center}
-                  defaultZoom={11}
-                />
-              </div>
-            </Expandable>
-          </div>
+            <div className="ad-geo">
+              <LocationSearchInput
+                placeId={placeId}
+                error={this.state.errors.placeId}
+              />
+            </div>
           </section>
           <section>
             <header>Соседа какого пола ты ищешь?</header>
             <div className="gender-preferences">
-            <Checkbox value="female" name="female" size={96} checked={female}>
-              <img src={femaleIcon} alt="female" width="50px" height="50px" />
-            </Checkbox>
-            <Checkbox value="male" name="male" size={96} checked={male}>
-              <img src={maleIcon} alt="male" width="50px" height="50px" />
-            </Checkbox>
+              <SquareCheckbox
+                value="female"
+                name="female"
+                size={96}
+                checked={female}
+              >
+                <img src={femaleIcon} alt="female" width="50px" height="50px" />
+              </SquareCheckbox>
+              <SquareCheckbox value="male" name="male" size={96} checked={male}>
+                <img src={maleIcon} alt="male" width="50px" height="50px" />
+              </SquareCheckbox>
             </div>
           </section>
           <section>
@@ -258,14 +270,14 @@ export default class CreateAd extends Component {
                 ["three", "3к. квартиру"],
                 ["four", "4к. квартиру"]
               ].map(type => (
-                <SelectableItem
+                <Checkbox
                   key={type[0]}
                   name={`roomType-${type[0]}`}
                   className="ad-room-type"
                   checked={roomType.includes(type[0].toUpperCase())}
                 >
                   {type[1]}
-                </SelectableItem>
+                </Checkbox>
               ))}
             </div>
           </section>
@@ -280,33 +292,34 @@ export default class CreateAd extends Component {
                 ["dishwasher", "Посудомоечная машина"],
                 ["gallery", "Балкон"]
               ].map(type => {
-                console.log(conveniences);
                 return (
-                  <SelectableItem
+                  <Checkbox
                     name={`conveniences-${type[0]}`}
                     key={type[0]}
                     checked={conveniences.includes(type[0].toUpperCase())}
                   >
                     {type[1]}
-                  </SelectableItem>
+                  </Checkbox>
                 );
               })}
             </div>
           </Expandable>
-          <div>
-            <span className="hint">
+          <section>
+            <header className="hint">
               Хочу {landlord ? "получать" : "платить"} за аренду
-            </span>
+            </header>
             <div className="ad-price">
               <NumberInput name="rentPay" value={+rentPay} label="тыс. ₽" />
             </div>
-          </div>
-          <span className="hint">Дополнительные комментарии</span>
-          <textarea
-            name="description"
-            className="ad-add-info"
-            defaultValue={description}
-          />
+          </section>
+          <section>
+            <header>Дополнительные комментарии</header>
+            <textarea
+              name="description"
+              className="ad-add-info"
+              defaultValue={description}
+            />
+          </section>
           <Button disable={waitServer} progress={waitServer}>
             Сохранить
           </Button>

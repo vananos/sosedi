@@ -14,10 +14,7 @@ export default class Input extends Component {
   }
 
   handleChange = e => {
-    if (this.state.changeHandler) {
-      const shouldContinue = this.state.changeHandler(e, this);
-      if (!shouldContinue) return;
-    }
+    this.state.changeHandler(e, this);
     const newValue = e.target.value;
     this.setState({
       value: newValue
@@ -25,7 +22,7 @@ export default class Input extends Component {
   };
 
   setValue = value => {
-    this.setState(value);
+    this.setState({ value });
   };
 
   render() {
@@ -37,15 +34,13 @@ export default class Input extends Component {
       info,
       max,
       className,
+      onBlur,
       error: { error: errorMsg, value: wrongValue } = {}
     } = this.props;
 
     const currentValue = this.state.value;
 
     const mustShowError = errorMsg && this.state.value === wrongValue;
-
-    // const isDateInput = type === "date";
-
     return (
       <div
         className={`input-wrapper ${mustShowError ? "error" : ""} ${className}`}
@@ -59,6 +54,7 @@ export default class Input extends Component {
           id={id}
           value={currentValue}
           onChange={this.handleChange}
+          onBlur={onBlur}
           max={max}
         />
         <div className={`label-info ${currentValue !== "" ? "filled" : ""}`}>
@@ -75,16 +71,19 @@ export default class Input extends Component {
 
 Input.defaultProps = {
   type: "text",
-  className: ""
+  className: "",
+  onChange: () => {}
 };
 
 Input.propTypes = {
   type: PropTypes.string,
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
   value: PropTypes.string,
   id: PropTypes.string,
   label: PropTypes.string.isRequired,
   info: PropTypes.node,
   className: PropTypes.string,
-  error: PropTypes.object
+  error: PropTypes.object,
+  onChange: PropTypes.func,
+  onBlur: PropTypes.func
 };

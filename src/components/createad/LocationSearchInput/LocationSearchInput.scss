@@ -1,0 +1,16 @@
+@import "../../../base.scss";
+
+.autocomplete-dropdown-container {
+    position: absolute;
+    color: $grey;
+    padding-bottom: 25px;
+    background: white;
+
+    .suggestion-item--active {
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .suggestion-item {
+        margin: 5px 0;
+    }
+}
