@@ -82,6 +82,7 @@ export default class CreateAd extends Component {
         Modal.showPopup(
           <span>
             Давай заполним объявление, что бы мы могли найти тебе соседа
+            <Button style={{ marginTop: "25px" }}>Приступить</Button>
           </span>
         );
       })
@@ -93,7 +94,6 @@ export default class CreateAd extends Component {
     e.preventDefault();
 
     const formData = extractFormData(e.target);
-    console.log(formData);
 
     const validationResult = validateFormData(formData, Validators);
 
@@ -101,7 +101,6 @@ export default class CreateAd extends Component {
       NotificationManager.notify("Проверьте правильность заполнения формы", {
         type: "error"
       });
-      console.log(validationResult.errors);
       this.setState({ errors: validationResult.errors });
       return;
     }
@@ -242,9 +241,6 @@ export default class CreateAd extends Component {
                 max="100"
                 value={+minAge}
                 ref={this.minAgeRef}
-                customValueValidator={value =>
-                  value < this.maxAgeRef.current.getValue()
-                }
               />
               <NumberInput
                 name="maxAge"
@@ -253,9 +249,6 @@ export default class CreateAd extends Component {
                 max="100"
                 ref={this.maxAgeRef}
                 value={+maxAge}
-                customValueValidator={value =>
-                  value > this.minAgeRef.current.getValue()
-                }
               />
             </div>
           </section>

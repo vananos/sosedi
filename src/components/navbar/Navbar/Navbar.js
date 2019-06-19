@@ -38,6 +38,13 @@ export default class Navbar extends Component {
         >
           <nav>
             <NavItem
+              href="/matching"
+              onClick={this.toggleNavbar}
+              icon={scrollIcon}
+            >
+              Поиск соседа
+            </NavItem>
+            <NavItem
               href="/create-ad"
               onClick={this.toggleNavbar}
               icon={scrollIcon}

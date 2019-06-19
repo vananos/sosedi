@@ -6,6 +6,7 @@ export const PROFILE_INFO = "/profile";
 export const AVATAR_LOAD = "/photo";
 export const AD = "/ad";
 export const FEEDBACK = "/feedback";
+export const MATCHES = "/matches";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -90,6 +91,12 @@ export default class ApiClient {
           "Content-Type": "application/json"
         })
       ),
+      this.defaultApiErrorHandler
+    );
+
+  getMatches = userId =>
+    new ApiRequest(
+      this.makeGet(`${MATCHES}?userid=${userId}`),
       this.defaultApiErrorHandler
     );
 

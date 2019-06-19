@@ -1,6 +1,6 @@
 import { shallow } from "enzyme";
 import React from "react";
-import Checkbox from "./Checkbox";
+import SquareCheckbox from "./SquareCheckbox";
 
 describe("Checkbox", () => {
   const checkboxProps = () => ({
@@ -9,7 +9,7 @@ describe("Checkbox", () => {
   });
 
   it("checkbox is not checked, click -> checked", () => {
-    const checkboxWrapper = shallow(<Checkbox {...checkboxProps()} />);
+    const checkboxWrapper = shallow(<SquareCheckbox {...checkboxProps()} />);
     checkboxWrapper
       .find("div")
       .first()
@@ -20,7 +20,7 @@ describe("Checkbox", () => {
 
   it("checkbox is checked, click -> not checked", () => {
     const checkboxWrapper = shallow(
-      <Checkbox {...checkboxProps()} checked={true} />
+      <SquareCheckbox {...checkboxProps()} checked={true} />
     );
     
     checkboxWrapper

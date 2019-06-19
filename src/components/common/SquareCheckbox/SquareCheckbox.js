@@ -17,13 +17,13 @@ export default class Checkbox extends Component {
   };
 
   render() {
-    const { value, id, name, children, size } = this.props;
+    const { value, id, name, children, size, readOnly } = this.props;
     const { checked } = this.state;
     return (
       <div
         className={`checkbox ${checked ? "checkbox-checked" : ""}`}
-        onClick={this.changeState}
-        style={{width: size, height: size}}
+        onClick={readOnly ? undefined : this.changeState}
+        style={{ width: size, height: size }}
       >
         <input
           type="checkbox"
@@ -40,8 +40,9 @@ export default class Checkbox extends Component {
 }
 
 Checkbox.defaultProps = {
-  checked : false, 
-  size: 120
+  checked: false,
+  size: 120,
+  readOnly: false
 };
 
 Checkbox.propTypes = {
@@ -51,5 +52,6 @@ Checkbox.propTypes = {
   value: PropTypes.string,
   checked: PropTypes.bool,
   children: PropTypes.node,
-  size: PropTypes.number
+  size: PropTypes.number,
+  readOnly: PropTypes.bool
 };

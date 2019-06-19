@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./Profile.css";
+import "./Profile.scss";
 import Input from "../common/Input/Input";
 import emptyPhoto from "../../assets/profile/user-regular.svg";
 import Button from "../common/Button/Button";
@@ -186,7 +186,7 @@ export default class Profile extends Component {
         result = result.replace(")", "");
       }
     }
-    input.setState({ value: result.trim() });
+    input.setValue(result.trim());
     return false;
   };
 

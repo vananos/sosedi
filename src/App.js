@@ -10,11 +10,12 @@ import { ApplicationStateProvider, ApplicationContext } from "./context";
 import ApiClient from "./api";
 import NotificationManager from "./components/common/NotificationManager/NotificationManager";
 import browserHistory from "./browserHistory";
-import "./App.css";
+import "./App.scss";
 import ErrorHandler from "./ErrorHandler";
 import ErrorPage from "./components/error/ErrorPage";
 import Help from "./components/help/Help";
 import EmailConfirmationPage from "./components/emailconfirmation/EmailConfirmationPage";
+import MatchingPage from "./components/matching/MatchingPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -83,6 +84,7 @@ export default class App extends Component {
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/settings" component={Main} />
               <Route exact path="/help" component={Help} />
+              <Route exact path="/matching" component={MatchingPage} />
               <Route exact path="/error" component={ErrorPage} />
             </Switch>
           </section>

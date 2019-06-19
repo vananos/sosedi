@@ -1,0 +1,87 @@
+@import "../../base.scss";
+
+.match {
+    padding: 15px;
+    padding-right: 60px;
+    box-sizing: border-box;
+    width: 100%;
+
+    header {
+        display: flex;
+    }
+
+    &-avatar {
+        border-radius: 50%;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+        flex-grow: 0;
+    }
+
+    &-main-info {
+        flex-grow: 1;
+        padding-left: 15px;
+
+        h3 {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    }
+
+    &-menu {
+        position: fixed;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &-skip,
+    &-like {
+        display: block;
+        width: 60px;
+        height: 105px;
+        margin-top: 10px;
+    }
+
+    &-skip {
+        position: relative;
+        background: rgba($turquoise, .1);
+
+        .checkmark {
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            transform: scale(1.5);
+
+            &::before,
+            &::after {
+                background: $turquoise !important;
+            }
+        }
+    }
+
+    &-like {
+        background: url("../../assets/matching/heart-solid.svg") no-repeat 50% 50%;
+        background-color: rgba($brown, .1);
+    }
+
+    &-user-info {
+        clear: both;
+        margin-top: 15px;
+
+        &-aboutitself {
+            margin-top: 10px;
+            border: 1px solid $grey;
+            border-radius: 5px;
+            width: 230px;
+            min-height: 130px;
+        }
+
+        &-interests {
+            display: flex;
+            margin-top: 15px;
+            
+            >div {
+                margin-right: 10px;
+            }
+        }
+    }
+}

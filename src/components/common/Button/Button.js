@@ -12,7 +12,6 @@ const Button = props => {
     onClick,
     style
   } = props;
-
   const colorClass = `btn-${color}`;
   const progressClass = progress ? "btn-blink" : "";
   const disabledClass = disabled || color === "disabled" ? "btn-disabled" : "";

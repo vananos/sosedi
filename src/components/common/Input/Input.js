@@ -14,7 +14,10 @@ export default class Input extends Component {
   }
 
   handleChange = e => {
-    this.state.changeHandler(e, this);
+    if (this.state.changeHandler) {
+      const shouldContinue = this.state.changeHandler(e, this);
+      if (shouldContinue === false) return;
+    }
     const newValue = e.target.value;
     this.setState({
       value: newValue
@@ -22,6 +25,7 @@ export default class Input extends Component {
   };
 
   setValue = value => {
+    console.log(value);
     this.setState({ value });
   };
 
@@ -71,8 +75,7 @@ export default class Input extends Component {
 
 Input.defaultProps = {
   type: "text",
-  className: "",
-  onChange: () => {}
+  className: ""
 };
 
 Input.propTypes = {

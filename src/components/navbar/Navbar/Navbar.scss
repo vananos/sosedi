@@ -13,7 +13,7 @@
         position: absolute;
         top: 20px;
         right: 20px;
-        
+
     }
 
     &-content {
@@ -38,6 +38,7 @@
 
 
     &-footer {
+        cursor: pointer;
         margin-top: 50px;
         margin-bottom: 50px;
         color: $grey;
@@ -49,6 +50,24 @@
 
         &-icon {
             margin-left: 5px;
+        }
+    }
+
+    @media screen and (min-width: 800px) {
+        &-toggler {
+            display: none;
+        }
+
+        & {
+            width: 250px;
+            height: 100vh;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        &-content {
+            width: 250px;
+            height: 100vh;
+            max-height: 100vh;
         }
     }
 }
