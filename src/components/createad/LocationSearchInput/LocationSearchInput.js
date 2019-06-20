@@ -65,22 +65,24 @@ export default class LocationSearchInput extends React.Component {
                 className: "ad-geo-region-input"
               })}
             />
-            <div className="autocomplete-dropdown-container">
-              {loading && <div>Ищем...</div>}
-              {suggestions.map(suggestion => {
-                const className = suggestion.active
-                  ? "suggestion-item--active"
-                  : "suggestion-item";
-                return (
-                  <div
-                    {...getSuggestionItemProps(suggestion, {
-                      className
-                    })}
-                  >
-                    <span>{suggestion.description}</span>
-                  </div>
-                );
-              })}
+            <div className="dropdown-wrapper">
+              <div className="autocomplete-dropdown-container">
+                {loading && <div>Ищем...</div>}
+                {suggestions.map(suggestion => {
+                  const className = suggestion.active
+                    ? "suggestion-item--active"
+                    : "suggestion-item";
+                  return (
+                    <div
+                      {...getSuggestionItemProps(suggestion, {
+                        className
+                      })}
+                    >
+                      <span>{suggestion.description}</span>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
             {errorMsg}
           </div>

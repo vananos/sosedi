@@ -24,7 +24,11 @@
         margin-bottom: .3em;
         color: rgba(0, 0, 0, 1);
         text-decoration: none !important;
-        font-size: 0.6em;
+        // font-size: 0.8em;
+    }
+
+    &-link:first-child {
+        margin-bottom: 10px;
     }
 
     &-links {

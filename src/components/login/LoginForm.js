@@ -41,7 +41,7 @@ export default class LoginForm extends Component {
     this.context.api
       .login(loginInfo)
       .ifSuccess(response => {
-        this.context.updateUserId(response.userId);
+        this.context.updateUserInfo(response);
         if (response.isNewUser) {
           this.props.history.push("/profile");
           return;
@@ -58,7 +58,8 @@ export default class LoginForm extends Component {
   };
 
   componentDidMount() {
-    document.body.style.background = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
+    document.body.style.background =
+      "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
   }
 
   componentWillUnmount() {

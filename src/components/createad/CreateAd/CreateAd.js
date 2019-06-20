@@ -50,7 +50,7 @@ export default class CreateAd extends Component {
   }
 
   getDefaultAdInfo = () => ({
-    userId: this.context.getUserId(),
+    userId: this.context.getUserInfo().userId,
     conveniences: [],
     roomType: [],
     landlord: true,
@@ -64,7 +64,7 @@ export default class CreateAd extends Component {
   componentWillMount() {
     Modal.showSpinner();
     this.context.api
-      .getUserAd(this.context.getUserId())
+      .getUserAd(this.context.getUserInfo().userId)
       .ifSuccess(res => {
         const adInfo = res.data;
         if (!adInfo.conveniences) {
@@ -106,10 +106,11 @@ export default class CreateAd extends Component {
     }
 
     const serializedForm = this.getDefaultAdInfo();
+    
+    let genderCounter = 0;
+
     for (let key of Object.keys(formData)) {
-      if (key.includes("male")) {
-        serializedForm[key] = true;
-      } else if (["animals", "smoking"].some(item => item === key)) {
+      if (["animals", "smoking"].some(item => item === key)) {
         serializedForm[key] = attitudeConveter.getFromThumblerValue(
           formData[key]
         );
@@ -120,6 +121,9 @@ export default class CreateAd extends Component {
         serializedForm[key] = JSON.parse(formData[key]);
       } else {
         serializedForm[key] = formData[key];
+      } if(key === "male" || key === "female") {
+        genderCounter++;
+        serializedForm["gender"] = genderCounter == 2 ? "ANY" : key.toUpperCase();
       }
     }
 

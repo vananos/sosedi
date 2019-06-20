@@ -65,7 +65,7 @@ export default class Profile extends Component {
     Modal.showSpinner();
 
     this.context.api
-      .getProfileInfo(this.context.getUserId())
+      .getProfileInfo(this.context.getUserInfo().userId)
       .ifSuccess(response => {
         const { data: userInfo } = response;
 
@@ -115,7 +115,7 @@ export default class Profile extends Component {
 
     const serialaizedProfileData = this.serializeProfileFormData(rawFormData);
 
-    serialaizedProfileData.userId = this.context.getUserId();
+    serialaizedProfileData.userId = this.context.getUserInfo().userId;
 
     this.setState({ inProgress: true });
 
@@ -254,58 +254,60 @@ export default class Profile extends Component {
           </span>
         </div>
         <form onSubmit={this.handleSubmit}>
-          <Input
-            label="Имя"
-            value={name}
-            name="name"
-            error={errors.name}
-            className="profile-data-input"
-          />
-          <Input
-            label="Фамилия"
-            value={surname}
-            name="surname"
-            error={errors.surname}
-            className="profile-data-input"
-          />
-          <div>
-            <label>Пол:</label>
-            {[
-              ["MALE", "Мужской"],
-              ["FEMALE", "Женский"],
-              ["ANY", "Не указан"]
-            ].map(radioData => (
-              <Radio
-                key={radioData[0]}
-                name="gender"
-                value={radioData[0]}
-                type="radio"
-                className="profile-gender-select"
-                checked={effectiveGender === radioData[0]}
-              >
-                {radioData[1]}
-              </Radio>
-            ))}
-          </div>
-          <Input
-            label="Дата рождения"
-            value={birthday}
-            type="date"
-            name="birthday"
-            error={errors.birthday}
-            className="profile-data-input"
-            max={new Date().toISOString().split("T")[0]}
-          />
-          <Input
-            label="Телефон"
-            value={phone}
-            name="phone"
-            onChange={this.maskPhone}
-            type="tel"
-            error={errors.phone}
-            className="profile-data-input"
-          />
-          <div className="profile-about-itself-input">
+          <section>
+            <Input
+              label="Имя"
+              value={name}
+              name="name"
+              error={errors.name}
+              className="profile-data-input"
+            />
+            <Input
+              label="Фамилия"
+              value={surname}
+              name="surname"
+              error={errors.surname}
+              className="profile-data-input"
+            />
+            <div>
+              <label>Пол:</label>
+              {[
+                ["MALE", "Мужской"],
+                ["FEMALE", "Женский"],
+                ["ANY", "Не указан"]
+              ].map(radioData => (
+                <Radio
+                  key={radioData[0]}
+                  name="gender"
+                  value={radioData[0]}
+                  type="radio"
+                  className="profile-gender-select"
+                  checked={effectiveGender === radioData[0]}
+                >
+                  {radioData[1]}
+                </Radio>
+              ))}
+            </div>
+            <Input
+              label="Дата рождения"
+              value={birthday}
+              type="date"
+              name="birthday"
+              error={errors.birthday}
+              className="profile-data-input"
+              max={new Date().toISOString().split("T")[0]}
+            />
+            <Input
+              label="Телефон"
+              value={phone}
+              name="phone"
+              onChange={this.maskPhone}
+              type="tel"
+              error={errors.phone}
+              className="profile-data-input"
+            />
+          </section>
+          <section className="profile-about-itself-input">
             <span>О себе</span>
             <div className="profile-interests-select">
               {this.availableInterests().map(interest => (
@@ -313,22 +315,23 @@ export default class Profile extends Component {
                   <SquareCheckbox
                     value={interest.name}
                     name={`like-${interest.name}`}
-                    checked={interests && interests.includes(interest.name)}
+                    checked={
+                      interests &&
+                      interests.includes(interest.name.toUpperCase())
+                    }
                   >
                     {interest.description}
                   </SquareCheckbox>
                 </div>
               ))}
             </div>
-          </div>
-          <div>
             <span>Хочешь рассказать о себе больше?</span>
             <textarea
               name="description"
               className="profile-about-itself"
               defaultValue={description}
             />
-          </div>
+          </section>
           <Button progress={inProgress} disabled={inProgress}>
             сохранить
           </Button>

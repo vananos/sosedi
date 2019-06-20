@@ -61,7 +61,11 @@ export default class Input extends Component {
           onBlur={onBlur}
           max={max}
         />
-        <div className={`label-info ${currentValue !== "" ? "filled" : ""}`}>
+        <div
+          className={`label-info ${
+            currentValue !== "" || type === "date" ? "filled" : ""
+          }`}
+        >
           <span className="label">{label}</span>
           {info && (
             <img src={infoCircle} alt="info" width="10px" height="10px" />

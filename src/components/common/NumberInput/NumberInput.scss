@@ -15,6 +15,7 @@
         display: block;
         text-align: center;
         cursor: pointer;
+        margin-top: 3px;
     }
 
     &-up {
@@ -28,16 +29,15 @@
     }
 
     label {
-        font-size: 0.8rem;
         display: inline-block;
-        transform: translateY(-7px);
+        transform: translateY(+5px);
     }
 
     input {
         border: none;
         border-bottom: 1px solid $grey;
         outline: none;
-        font-size: 1.2rem;
+        // font-size: 1.2rem;
         text-align: center;
         background: transparent;
         display: inline-block;

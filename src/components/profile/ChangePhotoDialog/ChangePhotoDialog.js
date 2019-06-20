@@ -49,7 +49,7 @@ export default class ChangePhotoDialog extends Component {
 
     this.editor.getImage().toBlob(blob => {
       formData.append("file", blob);
-      formData.append("userId", this.props.context.getUserId());
+      formData.append("userId", this.props.context.getUserInfo().userId);
       this.props.context.api
         .loadAvatar(formData)
         .ifSuccess(response => {

@@ -7,7 +7,6 @@
 .nav-link:hover {
     display: block;
     text-decoration: none !important;
-    font-size: 19px;
     color: rgb(0, 0, 0);
     position: relative;
     padding: 22px 25px 22px 0;

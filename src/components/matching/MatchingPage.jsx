@@ -36,7 +36,7 @@ export default class MatchingPage extends Component {
 
   loadMatchesFromServer = () => {
     return this.context.api
-      .getMatches(this.context.getUserId())
+      .getMatches(this.context.getUserInfo().userId)
       .ifSuccess(res => {
         this.matches = [...this.matches, ...res.data];
       })

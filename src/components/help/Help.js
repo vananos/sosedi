@@ -30,6 +30,11 @@ export default class Help extends Component {
       return;
     }
 
+    if(!formData.email) {
+      formData.name = this.context.getUserInfoUnsafe().userName;
+      formData.email = this.context.getUserInfoUnsafe().email;
+    }
+
     this.setState({ inProgress: true });
     this.context.api
       .sendFeedback(formData)
@@ -47,15 +52,41 @@ export default class Help extends Component {
     const { email: emailError, name: nameError, questionError } =
       this.state.errors || {};
     const { inProgress } = this.state;
+
+    const userInfo = this.context.getUserInfoUnsafe();
+
     return (
       <div className="help-form">
-        <span>Ответим на ваши вопросы в кратчайшие сроки.</span>
+        <span>
+          {userInfo ? `${userInfo.userName}, ответим` : "Ответим"} на ваши
+          вопросы в кратчайшие сроки.
+        </span>
         <form onSubmit={this.handleSubmit}>
-          <Input name="email" label="email" value="" error={emailError} />
-          <Input name="name" label="Имя" value="" error={nameError} />
-          Сообщение:
+          {!userInfo && (
+            <React.Fragment>
+              <Input
+                className="help-form-input"
+                name="email"
+                label="email"
+                value=""
+                error={emailError}
+              />
+              <Input
+                className="help-form-input"
+                name="name"
+                label="Имя"
+                value=""
+                error={nameError}
+              />
+            </React.Fragment>
+          )}
+          <label>Сообщение:</label>
           <textarea name="question" />
-          <Button disabled={inProgress} progress={inProgress}>
+          <Button
+            className="submit"
+            disabled={inProgress}
+            progress={inProgress}
+          >
             Отправить
           </Button>
         </form>

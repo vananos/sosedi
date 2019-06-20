@@ -23,6 +23,7 @@ export default class App extends Component {
   }
 
   forceAuthorization = () => {
+    this.initialAppState.updateUserInfo(null);
     browserHistory.push("/");
     NotificationManager.notify(
       <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>,
@@ -31,7 +32,7 @@ export default class App extends Component {
   };
 
   initialAppState = {
-    userId: null,
+    userInfo: null,
     authorizationRequired: false,
     api: new ApiClient({
       apiErrorHandler: response => {
@@ -43,22 +44,29 @@ export default class App extends Component {
       }
     }),
 
-    updateUserId: userId => {
-      this.userId = userId;
+    updateUserInfo: userInfo => {
+      this.userInfo = userInfo;
       if (localStorage) {
-        localStorage.setItem("userId", userId);
+        localStorage.setItem("userInfo", JSON.stringify(userInfo));
       }
     },
 
-    getUserId: () => {
-      if (this.userId) {
-        return this.userId;
+    getUserInfo: function() {
+      const result = this.getUserInfoUnsafe();
+      if (result != null) {
+        return result;
       }
-      if (localStorage && localStorage.getItem("userId")) {
-        return localStorage.getItem("userId");
-      }
-
       this.forceAuthorization();
+    },
+
+    getUserInfoUnsafe: () => {
+      if (this.userIngo) {
+        return this.userInfo;
+      }
+      if (localStorage && localStorage.getItem("userInfo")) {
+        return JSON.parse(localStorage.getItem("userInfo"));
+      }
+      return null;
     }
   };
 
