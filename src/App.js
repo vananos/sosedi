@@ -22,14 +22,13 @@ export default class App extends Component {
     super(props);
   }
 
-  forceAuthorization = () => {
-    this.initialAppState.updateUserInfo(null);
+  forceAuthorization(state) {
     browserHistory.push("/");
     NotificationManager.notify(
       <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>,
       { type: "error" }
     );
-  };
+  }
 
   initialAppState = {
     userInfo: null,
@@ -51,14 +50,6 @@ export default class App extends Component {
       }
     },
 
-    getUserInfo: function() {
-      const result = this.getUserInfoUnsafe();
-      if (result != null) {
-        return result;
-      }
-      this.forceAuthorization();
-    },
-
     getUserInfoUnsafe: () => {
       if (this.userIngo) {
         return this.userInfo;
@@ -67,6 +58,16 @@ export default class App extends Component {
         return JSON.parse(localStorage.getItem("userInfo"));
       }
       return null;
+    },
+
+    forceAuthorization: this.forceAuthorization,
+
+    withUserInfo: function(callback) {
+      const result = this.getUserInfoUnsafe();
+      if (result != null) {
+        return callback(result);
+      }
+      this.forceAuthorization();
     }
   };
 

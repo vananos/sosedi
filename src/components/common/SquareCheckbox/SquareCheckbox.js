@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import "./SquareCheckbox.scss";
 
-export default class Checkbox extends Component {
+export default class SquareCheckbox extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      checked: props.checked
+      checked: !!props.checked
     };
   }
 
@@ -39,13 +39,14 @@ export default class Checkbox extends Component {
   }
 }
 
-Checkbox.defaultProps = {
+SquareCheckbox.defaultProps = {
   checked: false,
   size: 120,
-  readOnly: false
+  readOnly: false,
+  value: ""
 };
 
-Checkbox.propTypes = {
+SquareCheckbox.propTypes = {
   value: PropTypes.string.isRequired,
   id: PropTypes.string,
   name: PropTypes.string.isRequired,

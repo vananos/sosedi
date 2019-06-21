@@ -6,8 +6,16 @@
     box-sizing: border-box;
     width: 100%;
 
-    header {
+    &-header {
         display: flex;
+    }
+
+    section {
+        margin-bottom: 30px;
+    }
+
+    header {
+        margin-bottom: 10px;
     }
 
     &-avatar {
@@ -24,6 +32,26 @@
             font-weight: bold;
             margin-bottom: 10px;
         }
+
+        .attitude {
+            margin-top: 10px;
+
+            &-item {
+                padding: 5px;
+            }
+
+            .neutral {
+                background-color: $brown;
+            }
+
+            .bad {
+                background-color: $red;
+            }
+
+            .good {
+                background-color: $green;
+            }
+        }
     }
 
     &-menu {
@@ -39,6 +67,7 @@
         width: 60px;
         height: 105px;
         margin-top: 10px;
+        cursor: pointer;
     }
 
     &-skip {
@@ -58,30 +87,50 @@
         }
     }
 
+    &-skip:active {
+        background-color: rgba($turquoise, .5);
+    }
+
     &-like {
         background: url("../../assets/matching/heart-solid.svg") no-repeat 50% 50%;
         background-color: rgba($brown, .1);
+    }
+
+    &-like:active {
+        background-color: rgba($brown, .5);
     }
 
     &-user-info {
         clear: both;
         margin-top: 15px;
 
-        &-aboutitself {
-            margin-top: 10px;
-            border: 1px solid $grey;
-            border-radius: 5px;
-            width: 230px;
-            min-height: 130px;
-        }
-
         &-interests {
             display: flex;
             margin-top: 15px;
-            
+
             >div {
                 margin-right: 10px;
             }
+        }
+    }
+
+    &-description {
+        margin-top: 10px;
+        border: 1px solid $grey;
+        border-radius: 5px;
+        width: 230px;
+        min-height: 130px;
+    }
+
+    .rent-pay {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &-room-type {
+        span {
+            display: block;
+            margin-bottom: 5px;
         }
     }
 }

@@ -62,26 +62,28 @@ export default class Profile extends Component {
   ];
 
   componentWillMount() {
-    Modal.showSpinner();
+    this.context.withUserInfo(userInfo => {
+      Modal.showSpinner();
 
-    this.context.api
-      .getProfileInfo(this.context.getUserInfo().userId)
-      .ifSuccess(response => {
-        const { data: userInfo } = response;
+      this.context.api
+        .getProfileInfo(userInfo.userId)
+        .ifSuccess(response => {
+          const { data: userInfo } = response;
 
-        this.setState(
-          {
-            userInfo
-          },
-          () => {
-            if (userInfo.isNewUser) {
-              this.showGreetingsForNewUser(userInfo.name);
+          this.setState(
+            {
+              userInfo
+            },
+            () => {
+              if (userInfo.isNewUser) {
+                this.showGreetingsForNewUser(userInfo.name);
+              }
             }
-          }
-        );
-      })
-      .execute()
-      .finally(() => this.state.userInfo.isNewUser || Modal.hide());
+          );
+        })
+        .execute()
+        .finally(() => this.state.userInfo.isNewUser || Modal.hide());
+    });
   }
 
   showGreetingsForNewUser = name => {
@@ -115,13 +117,15 @@ export default class Profile extends Component {
 
     const serialaizedProfileData = this.serializeProfileFormData(rawFormData);
 
-    serialaizedProfileData.userId = this.context.getUserInfo().userId;
+    serialaizedProfileData.userId = this.context.withUserInfo(
+      userInfo => userInfo.userId
+    );
 
     this.setState({ inProgress: true });
 
     this.context.api
-      .updateProfile(serialaizedProfileData)
-      .then(res => {
+      .updateProfileInfo(serialaizedProfileData)
+      .ifSuccess(res => {
         NotificationManager.notify(
           <span style={{ textAlign: "center" }}>
             Данные успешно обновлены!
@@ -131,6 +135,7 @@ export default class Profile extends Component {
           }
         );
       })
+      .execute()
       .finally(() => this.setState({ inProgress: false }));
   };
 

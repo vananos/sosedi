@@ -7,6 +7,7 @@ export const AVATAR_LOAD = "/photo";
 export const AD = "/ad";
 export const FEEDBACK = "/feedback";
 export const MATCHES = "/matches";
+export const MATCH = "/match";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -29,16 +30,6 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
   };
-
-  updateProfile = profileData =>
-    this.makePost(
-      PROFILE_INFO,
-      JSON.stringify(profileData),
-      new Headers({
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      })
-    );
 
   registration = registrationData =>
     new ApiRequest(
@@ -66,7 +57,10 @@ export default class ApiClient {
     );
 
   getProfileInfo = userId =>
-    new ApiRequest(this.makeGet(`${PROFILE_INFO}?userid=${userId}`));
+    new ApiRequest(
+      this.makeGet(`${PROFILE_INFO}?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
 
   updateProfileInfo = profileInfo =>
     new ApiRequest(
@@ -97,6 +91,19 @@ export default class ApiClient {
   getMatches = userId =>
     new ApiRequest(
       this.makeGet(`${MATCHES}?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
+  updateMatch = matchUpdateRequest =>
+    new ApiRequest(
+      this.makePost(
+        MATCH,
+        JSON.stringify(matchUpdateRequest),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
       this.defaultApiErrorHandler
     );
 
@@ -161,7 +168,6 @@ export class ApiRequest {
       })
       .then(this.successHandler)
       .catch(async e => {
-        console.log(e);
         if (e.status) {
           switch (e.status) {
             case 400:

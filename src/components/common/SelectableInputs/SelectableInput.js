@@ -9,11 +9,20 @@ export default class SelectableInput extends Component {
   }
 
   render() {
-    const { name, id, children, className = "", type, checked, value } = this.props;
+    const {
+      name,
+      id,
+      children,
+      className = "",
+      type,
+      checked,
+      value,
+      readOnly
+    } = this.props;
     return (
       <div
         className={`selectable-item ${className}`}
-        onClick={_ => this.inputRef.current.click()}
+        onClick={_ => !readOnly && this.inputRef.current.click()}
       >
         <input
           type={type}
@@ -32,10 +41,12 @@ export default class SelectableInput extends Component {
 }
 
 SelectableInput.defaultProps = {
-  checked: false
+  checked: false,
+  readOnly: false
 };
 
 SelectableInput.propTypes = {
   checked: PropTypes.bool,
-  type: PropTypes.oneOf(["checkbox", "radio"]).isRequired
+  type: PropTypes.oneOf(["checkbox", "radio"]).isRequired,
+  readOnly: PropTypes.bool
 };

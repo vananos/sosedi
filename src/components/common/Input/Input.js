@@ -25,7 +25,6 @@ export default class Input extends Component {
   };
 
   setValue = value => {
-    console.log(value);
     this.setState({ value });
   };
 

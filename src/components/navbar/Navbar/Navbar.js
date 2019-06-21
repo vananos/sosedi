@@ -7,12 +7,14 @@ import scrollIcon from "../../../assets/navbar/scroll-solid.svg";
 import browserHistory from "../../../browserHistory";
 import question from "../../../assets/navbar/question-circle-solid.svg";
 import "./Navbar.scss";
+import { throws } from "assert";
 
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isExpanded: this.props.isExpanded
+      isExpanded: this.props.isExpanded,
+      color: "transparent"
     };
   }
 
@@ -22,10 +24,18 @@ export default class Navbar extends Component {
     });
   };
 
+  componentDidMount() {
+    window.addEventListener("scroll", e => {
+      this.setState({
+        color: window.scrollY >= 50 ? "rgba(255, 255, 255, 0.9)" : "transparent"
+      });
+    });
+  }
+
   render() {
     const isExpanded = this.state.isExpanded;
     return (
-      <div className="nav">
+      <div className="nav" style={{ background: this.state.color }}>
         <Toggler
           clickHandler={e => {
             this.toggleNavbar();

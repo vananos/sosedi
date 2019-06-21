@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import browserHistory from "./browserHistory";
+import Modal from "./components/common/Modal/Modal";
 
 export default class ErrorHandler extends Component {
   constructor(props) {
@@ -7,14 +9,14 @@ export default class ErrorHandler extends Component {
   }
 
   componentDidCatch(error, info) {
-      console.log('UPSSS');
-      this.setState({hasError: true});
+    this.setState({ hasError: true });
   }
 
   render() {
-      if(this.state.hasError) {
-        return <h1>Пиздец...</h1>
-      }
+    if (this.state.hasError) {
+      Modal.hide();
+      browserHistory.push("/error");
+    }
     return this.props.children;
   }
 }

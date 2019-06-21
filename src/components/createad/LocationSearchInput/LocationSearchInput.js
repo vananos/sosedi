@@ -10,7 +10,7 @@ export default class LocationSearchInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      address: props.placeId.address,
+      address: props.placeId.address || "",
       selectedGeo: JSON.stringify(props.placeId)
     };
     this.geoInputRef = React.createRef();

@@ -93,3 +93,21 @@ export const extractFormData = formData => {
   });
   return formDataObject;
 };
+
+export const roomTypeName = [
+  ["room", "комнату"],
+  ["studio", "студию"],
+  ["single", "1к. квартиру"],
+  ["double", "2к. квартиру"],
+  ["three", "3к. квартиру"],
+  ["four", "4к. квартиру"]
+];
+
+export const conveniencesName = [
+  ["washer", "Стиральная машина"],
+  ["fridge", "Холодильник"],
+  ["tv", "Телевизор"],
+  ["internet", "Интернет"],
+  ["dishwasher", "Посудомоечная машина"],
+  ["gallery", "Балкон"]
+];

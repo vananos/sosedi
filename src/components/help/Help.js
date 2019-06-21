@@ -30,9 +30,11 @@ export default class Help extends Component {
       return;
     }
 
-    if(!formData.email) {
-      formData.name = this.context.getUserInfoUnsafe().userName;
-      formData.email = this.context.getUserInfoUnsafe().email;
+    if (!formData.email) {
+      this.context.withUserInfo(userInfo => {
+        formData.name = userInfo.userName;
+        formData.email = userInfo.email;
+      });
     }
 
     this.setState({ inProgress: true });

@@ -15,12 +15,15 @@ import { ApplicationContext } from "../../../context";
 import {
   extractFormData,
   validateFormData,
-  Validators
+  Validators,
+  roomTypeName,
+  conveniencesName
 } from "../../../utils/utils";
 import NotificationManager from "../../common/NotificationManager/NotificationManager";
 import "./CreateAd.scss";
 import LocationSearchInput from "../LocationSearchInput/LocationSearchInput";
 import Modal from "../../common/Modal/Modal";
+import { userInfo } from "os";
 
 const attitudeConveter = {
   thumblerToAttitude: [["no", "BAD"], ["yes", "GOOD"], ["default", "NEUTRAL"]],
@@ -50,7 +53,7 @@ export default class CreateAd extends Component {
   }
 
   getDefaultAdInfo = () => ({
-    userId: this.context.getUserInfo().userId,
+    userId: this.context.withUserInfo(userInfo => userInfo.userId),
     conveniences: [],
     roomType: [],
     landlord: true,
@@ -62,32 +65,38 @@ export default class CreateAd extends Component {
   });
 
   componentWillMount() {
-    Modal.showSpinner();
-    this.context.api
-      .getUserAd(this.context.getUserInfo().userId)
-      .ifSuccess(res => {
-        const adInfo = res.data;
-        if (!adInfo.conveniences) {
-          adInfo.conveniences = [];
-        }
-        if (!adInfo.landlord) {
-          adInfo.landlord = this.state.landlord;
-        }
-        adInfo.animals = attitudeConveter.getFromAttitudeValue(adInfo.animals);
-        adInfo.smoking = attitudeConveter.getFromAttitudeValue(adInfo.smoking);
-        this.setState({ adInfo });
-      })
-      .ifNotFound(() => {
-        this.setState({ adInfo: this.getDefaultAdInfo(), empty: true });
-        Modal.showPopup(
-          <span>
-            Давай заполним объявление, что бы мы могли найти тебе соседа
-            <Button style={{ marginTop: "25px" }}>Приступить</Button>
-          </span>
-        );
-      })
-      .execute()
-      .finally(() => this.state.empty || Modal.hide());
+    this.context.withUserInfo(userInfo => {
+      Modal.showSpinner();
+      this.context.api
+        .getUserAd(userInfo.userId)
+        .ifSuccess(res => {
+          const adInfo = res.data;
+          if (!adInfo.conveniences) {
+            adInfo.conveniences = [];
+          }
+          if (!adInfo.landlord) {
+            adInfo.landlord = this.state.landlord;
+          }
+          adInfo.animals = attitudeConveter.getFromAttitudeValue(
+            adInfo.animals
+          );
+          adInfo.smoking = attitudeConveter.getFromAttitudeValue(
+            adInfo.smoking
+          );
+          this.setState({ adInfo });
+        })
+        .ifNotFound(() => {
+          this.setState({ adInfo: this.getDefaultAdInfo(), empty: true });
+          Modal.showPopup(
+            <span>
+              Давай заполним объявление, что бы мы могли найти тебе соседа
+              <Button style={{ marginTop: "25px" }}>Приступить</Button>
+            </span>
+          );
+        })
+        .execute()
+        .finally(() => this.state.empty || Modal.hide());
+    });
   }
 
   handleSubmit = e => {
@@ -106,7 +115,7 @@ export default class CreateAd extends Component {
     }
 
     const serializedForm = this.getDefaultAdInfo();
-    
+
     let genderCounter = 0;
 
     for (let key of Object.keys(formData)) {
@@ -121,9 +130,11 @@ export default class CreateAd extends Component {
         serializedForm[key] = JSON.parse(formData[key]);
       } else {
         serializedForm[key] = formData[key];
-      } if(key === "male" || key === "female") {
+      }
+      if (key === "male" || key === "female") {
         genderCounter++;
-        serializedForm["gender"] = genderCounter == 2 ? "ANY" : key.toUpperCase();
+        serializedForm["gender"] =
+          genderCounter == 2 ? "ANY" : key.toUpperCase();
       }
     }
 
@@ -259,14 +270,7 @@ export default class CreateAd extends Component {
           <section>
             <header>Подселю{landlord ? "" : "сь"} в:</header>
             <div className="ad-room-type-select">
-              {[
-                ["room", "комнату"],
-                ["studio", "студию"],
-                ["single", "1к. квартиру"],
-                ["double", "2к. квартиру"],
-                ["three", "3к. квартиру"],
-                ["four", "4к. квартиру"]
-              ].map(type => (
+              {roomTypeName.map(type => (
                 <Checkbox
                   key={type[0]}
                   name={`roomType-${type[0]}`}
@@ -281,14 +285,7 @@ export default class CreateAd extends Component {
 
           <Expandable message="Дополнительные удобства">
             <div className="add-conv">
-              {[
-                ["washer", "Стиральная машина"],
-                ["fridge", "Холодильник"],
-                ["tv", "Телевизор"],
-                ["internet", "Интернет"],
-                ["dishwasher", "Посудомоечная машина"],
-                ["gallery", "Балкон"]
-              ].map(type => {
+              {conveniencesName.map(type => {
                 return (
                   <Checkbox
                     name={`conveniences-${type[0]}`}
