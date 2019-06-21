@@ -64,7 +64,7 @@ export default class Profile extends Component {
   componentWillMount() {
     this.context.withUserInfo(userInfo => {
       Modal.showSpinner();
-
+      console.log(userInfo);
       this.context.api
         .getProfileInfo(userInfo.userId)
         .ifSuccess(response => {

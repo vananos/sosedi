@@ -40,8 +40,8 @@ export default class LoginForm extends Component {
 
     this.context.api
       .login(loginInfo)
-      .ifSuccess(response => {
-        this.context.updateUserInfo(response);
+      .ifSuccess(async response => {
+        this.context.updateUserInfo(await response.json());
         if (response.isNewUser) {
           this.props.history.push("/profile");
           return;

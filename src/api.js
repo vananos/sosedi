@@ -8,6 +8,8 @@ export const AD = "/ad";
 export const FEEDBACK = "/feedback";
 export const MATCHES = "/matches";
 export const MATCH = "/match";
+export const REQUEST_RESET = "/requestreset";
+export const RESET_PASSWORD = "/resetpassword";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -107,6 +109,34 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
+  requestPasswordReset = email => {
+    const reqParams = new URLSearchParams();
+    reqParams.append("email", email);
+    return new ApiRequest(
+      this.makePost(
+        REQUEST_RESET,
+        reqParams.toString(),
+        new Headers({
+          "Content-Type": "application/x-www-form-urlencoded"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
+  };
+
+  resetPassword = passwordResetRequest =>
+    new ApiRequest(
+      this.makePost(
+        RESET_PASSWORD,
+        JSON.stringify(passwordResetRequest),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
+
   makePost = (url = "", data = {}, headers) =>
     fetch(`${API_GATEWAY}${url}`, {
       method: "POST",
@@ -162,7 +192,11 @@ export class ApiRequest {
     return this.fetch
       .then(response => {
         if (response.ok) {
-          return response.json();
+          const contentType = response.headers.get("content-type");
+          if (contentType && contentType.indexOf("application/json") !== -1) {
+            return response.json();
+          }
+          return response;
         }
         throw { status: response.status, response };
       })
