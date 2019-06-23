@@ -55,7 +55,7 @@ export default class Navbar extends Component {
               Поиск соседа
             </NavItem>
             <NavItem
-              href="/create-ad"
+              href="/ad"
               onClick={this.toggleNavbar}
               icon={scrollIcon}
             >

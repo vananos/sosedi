@@ -64,7 +64,6 @@ export default class Profile extends Component {
   componentWillMount() {
     this.context.withUserInfo(userInfo => {
       Modal.showSpinner();
-      console.log(userInfo);
       this.context.api
         .getProfileInfo(userInfo.userId)
         .ifSuccess(response => {
@@ -195,6 +194,12 @@ export default class Profile extends Component {
     return false;
   };
 
+  deleteAvatarCallback = () => {
+    const newUserInfo = { ...this.state.userInfo };
+    newUserInfo.avatar = null;
+    this.setState({ userInfo: newUserInfo });
+  };
+
   render() {
     const {
       userInfo: {
@@ -216,6 +221,7 @@ export default class Profile extends Component {
     }
 
     let effectiveGender = gender === null ? "ANY" : gender;
+    const avatarUrl = `${API_GATEWAY}/img/${avatar}`;
 
     return (
       <div className="profile">
@@ -227,7 +233,7 @@ export default class Profile extends Component {
             <div className="profile-logo-frame">
               {avatar ? (
                 <img
-                  src={`${API_GATEWAY}/img/${avatar}`}
+                  src={`${avatarUrl}`}
                   width="180"
                   height="180"
                   alt={`фотография ${name}`}
@@ -250,7 +256,8 @@ export default class Profile extends Component {
                 <ChangePhotoDialog
                   context={this.context}
                   newAvatarCallback={this.newAvatarCallback}
-                  savedImage={this.state.userInfo.avatar}
+                  deleteAvatarCallback={this.deleteAvatarCallback}
+                  savedImage={avatar && avatarUrl}
                 />
               )
             }

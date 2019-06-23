@@ -9,6 +9,7 @@ import {
 } from "../../utils/utils";
 import "./LoginForm.scss";
 import { ApplicationContext } from "../../context";
+import browserHistory from "../../browserHistory";
 
 export default class LoginForm extends Component {
   static contextType = ApplicationContext;
@@ -40,11 +41,18 @@ export default class LoginForm extends Component {
 
     this.context.api
       .login(loginInfo)
-      .ifSuccess(async response => {
-        this.context.updateUserInfo(await response.json());
-        if (response.isNewUser) {
-          this.props.history.push("/profile");
-          return;
+      .ifSuccess(response => {
+        this.context.updateUserInfo(response);
+        switch (response.userStatus) {
+          case "EMAIL_CONFIRMED":
+            browserHistory.push("/profile");
+            return;
+          case "PROFILE_FILLED":
+            browserHistory.push("/ad");
+            return;
+          case "AD_FILLED":
+            browserHistory.push("/matching");
+            return;
         }
       })
       .ifWrongCredentials(() => {

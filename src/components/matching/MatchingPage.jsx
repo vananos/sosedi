@@ -9,7 +9,7 @@ import smokingIcon from "../../assets/ad/smoking-solid.svg";
 import SquareCheckbox from "../common/SquareCheckbox/SquareCheckbox";
 import Checkbox from "../common/SelectableInputs/Checkbox";
 import { roomTypeName, conveniencesName } from "../../utils/utils";
-import { throws } from "assert";
+import emptyPhoto from "../../assets/profile/user-regular.svg";
 
 export default class MatchingPage extends Component {
   static contextType = ApplicationContext;
@@ -70,6 +70,10 @@ export default class MatchingPage extends Component {
       userId: this.context.withUserInfo(userInfo => userInfo.userId)
     };
 
+    const avatarUrl = userInfo.avatar
+      ? `${API_GATEWAY}/img/${userInfo.avatar}`
+      : emptyPhoto;
+
     return (
       <div className="match">
         <div className="match-menu">
@@ -96,7 +100,7 @@ export default class MatchingPage extends Component {
         </div>
         <header className="match-header">
           <img
-            src={`${API_GATEWAY}/img/${userInfo.avatar}`}
+            src={avatarUrl}
             width="100"
             height="100"
             alt="avatar"

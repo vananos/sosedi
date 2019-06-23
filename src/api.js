@@ -10,6 +10,8 @@ export const MATCHES = "/matches";
 export const MATCH = "/match";
 export const REQUEST_RESET = "/requestreset";
 export const RESET_PASSWORD = "/resetpassword";
+export const CHANGE_PASSWORD = "/changepassword";
+export const CHANGE_NOTIFICATION_SETTINGS = "/changenotifications";
 
 export default class ApiClient {
   constructor({ apiErrorHandler }) {
@@ -58,6 +60,18 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
+  updateUserAd = userAdUpdateRequest =>
+    new ApiRequest(
+      this.makePost(
+        AD,
+        JSON.stringify(userAdUpdateRequest),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      )
+    );
+
   getProfileInfo = userId =>
     new ApiRequest(
       this.makeGet(`${PROFILE_INFO}?userid=${userId}`),
@@ -67,7 +81,7 @@ export default class ApiClient {
   updateProfileInfo = profileInfo =>
     new ApiRequest(
       this.makePost(
-        AD,
+        PROFILE_INFO,
         JSON.stringify(profileInfo),
         new Headers({
           Accept: "application/json",
@@ -137,7 +151,51 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
-  makePost = (url = "", data = {}, headers) =>
+  changePassword = changePasswordRequest =>
+    new ApiRequest(
+      this.makePost(
+        CHANGE_PASSWORD,
+        JSON.stringify(changePasswordRequest),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
+
+  updateNotificationSettings = notificationSettingsUpdateRequest =>
+    new ApiRequest(
+      this.makePost(
+        CHANGE_NOTIFICATION_SETTINGS,
+        JSON.stringify(notificationSettingsUpdateRequest),
+        new Headers({
+          Accept: "application/json",
+          "Content-Type": "application/json"
+        })
+      ),
+      this.defaultApiErrorHandler
+    );
+
+  getSettings = userId =>
+    new ApiRequest(
+      this.makeGet(`/settings?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
+  deleteAccount = userId =>
+    new ApiRequest(
+      this.makePost(`/deleteaccount?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
+  deleteAvatar = userId =>
+    new ApiRequest(
+      this.makePost(`/deleteavatar?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
+  makePost = (url = "", data, headers) =>
     fetch(`${API_GATEWAY}${url}`, {
       method: "POST",
       mode: "cors",

@@ -17,6 +17,7 @@ import Help from "./components/help/Help";
 import EmailConfirmationPage from "./components/emailconfirmation/EmailConfirmationPage";
 import MatchingPage from "./components/matching/MatchingPage";
 import PasswordResetPage from "./components/passwordreset/PasswordResetPage";
+import SettingsPage from "./components/settings/SettingsPage";
 
 export default class App extends Component {
   constructor(props) {
@@ -93,10 +94,10 @@ export default class App extends Component {
                 path="/passwordrestore"
                 component={PasswordResetPage}
               />
-              <Route exact path="/create-ad" component={CreateAd} />
+              <Route exact path="/ad" component={CreateAd} />
               <Route exact path="/messages" component={Main} />
               <Route exact path="/profile" component={Profile} />
-              <Route exact path="/settings" component={Main} />
+              <Route exact path="/settings" component={SettingsPage} />
               <Route exact path="/help" component={Help} />
               <Route exact path="/matching" component={MatchingPage} />
               <Route exact path="/error" component={ErrorPage} />

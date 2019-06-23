@@ -2,12 +2,19 @@
 
 .avatar-loader {
     &-drop-zone {
-        width: 280px;
-        height: 280px;
+        position: relative;
+        width: 250px;
+        height: 250px;
         display: flex;
-        background: $grey;
         justify-content: center;
         align-items: center;
+        background-color: $grey;
+
+        .add-photo-icon {
+            position: absolute;
+            left: 10px;
+            bottom: 10px;
+        }
     }
 
     &-scale {
@@ -53,11 +60,21 @@
 
     &-actions {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
 
         svg {
             margin: 15px;
             cursor: pointer;
         }
+
+        &-delete {
+            stroke: $grey;
+
+            &.active {
+                stroke: $red;
+            }
+        }
     }
+
+    &-delete-icon {}
 }

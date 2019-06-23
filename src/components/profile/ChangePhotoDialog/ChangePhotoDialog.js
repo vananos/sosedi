@@ -3,11 +3,11 @@ import Button from "../../common/Button/Button";
 import AvatarEditor from "react-avatar-editor";
 import PropTypes from "prop-types";
 import "./ChangePhotoDialog.scss";
-import Trash from "../../icons/avatar-loader/Trash";
 import NotificationManager from "../../common/NotificationManager/NotificationManager";
 import Dropzone from "react-dropzone";
-import FolderIcon from "../../icons/avatar-loader/Folder";
 import { ApplicationContext } from "../../../context";
+import emptyPhoto from "../../../assets/profile/user-regular.svg";
+import addPhoto from "../../../assets/profile/addphoto.svg";
 
 export default class ChangePhotoDialog extends Component {
   static contextType = ApplicationContext;
@@ -15,7 +15,8 @@ export default class ChangePhotoDialog extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      scaleFactor: props.scaleFactor
+      scaleFactor: props.scaleFactor,
+      savedImage: props.savedImage
     };
 
     this.fileInput = React.createRef();
@@ -65,18 +66,37 @@ export default class ChangePhotoDialog extends Component {
 
   setEditorRef = editor => (this.editor = editor);
 
+  deleteAvatar = () => {
+    if (this.state.savedImage) {
+      this.props.context.withUserInfo(userInfo => {
+        this.props.context.api
+          .deleteAvatar(userInfo.userId)
+          .ifSuccess(() => {
+            this.setState({ savedImage: null });
+            this.props.deleteAvatarCallback();
+          })
+          .execute();
+      });
+    } else {
+      this.setState({ selectedImage: null });
+    }
+  };
+
   render() {
-    const { scaleFactor, selectedImage } = this.state;
+    const { scaleFactor, selectedImage, savedImage } = this.state;
 
     const avatarDropZoneOrCropper = !selectedImage ? (
-      <Dropzone
-        onDrop={this.loadSelectedFile}
-        style={{ width: "280px", height: "280px" }}
-      >
+      <Dropzone onDrop={this.loadSelectedFile}>
         {({ getRootProps, getInputProps }) => {
           return (
             <div {...getRootProps()} className="avatar-loader-drop-zone">
-              <FolderIcon width={60} height={60} />
+              <img
+                src={savedImage ? savedImage : emptyPhoto}
+                width={180}
+                height={180}
+                className="profile-logo-img"
+              />
+              <img className="add-photo-icon" src={addPhoto} width={30} height={30} />
               <input {...getInputProps()} hidden />
             </div>
           );
@@ -93,12 +113,27 @@ export default class ChangePhotoDialog extends Component {
         color={[0, 0, 0, 0.5]}
         scale={scaleFactor}
         rotate={1}
+        style={{ width: "250px", height: "250px" }}
       />
     );
 
     return (
       <div onClick={e => e.stopPropagation()}>
         {avatarDropZoneOrCropper}
+        <div className="avatar-loader-actions">
+          <svg
+            className={`avatar-loader-actions-delete ${
+              savedImage || selectedImage ? "active" : ""
+            }`}
+            width="20"
+            height="20"
+            strokeWidth={2}
+            onClick={this.deleteAvatar}
+          >
+            <line x1="0" y1="0" x2="20" y2="20" />
+            <line x1="20" y1="0" x2="0" y2="20" />
+          </svg>
+        </div>
         <input
           type="range"
           min="1"
@@ -110,9 +145,6 @@ export default class ChangePhotoDialog extends Component {
           className="avatar-loader-scale"
           onChange={this.changeScale}
         />
-        <div className="avatar-loader-actions">
-          <Trash width={35} height={35} onClick={this.deleteImage} />
-        </div>
         <div>
           <Button disabled={!selectedImage} onClick={this.saveSelectedImage}>
             Сохранить
@@ -132,5 +164,6 @@ ChangePhotoDialog.propTypes = {
   scaleFactor: PropTypes.number,
   maxScaleFactor: PropTypes.number,
   savedImage: PropTypes.string,
-  newAvatarCallback: PropTypes.func
+  newAvatarCallback: PropTypes.func.isRequired,
+  deleteAvatarCallback: PropTypes.func.isRequired
 };

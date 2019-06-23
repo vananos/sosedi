@@ -141,7 +141,7 @@ export default class CreateAd extends Component {
     this.setState({ waitServer: true });
 
     this.context.api
-      .updateProfileInfo(serializedForm)
+      .updateUserAd(serializedForm)
       .ifSuccess(res =>
         NotificationManager.notify("Изменения успешно сохранены")
       )

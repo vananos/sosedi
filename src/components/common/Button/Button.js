@@ -39,7 +39,7 @@ Button.propTypes = {
   className: PropTypes.string,
   disable: PropTypes.bool,
   progress: PropTypes.bool,
-  color: PropTypes.oneOf(["green", "yellow", "disabled"]),
+  color: PropTypes.oneOf(["green", "yellow", "disabled", "red"]),
   onClick: PropTypes.func,
   style: PropTypes.object
 };

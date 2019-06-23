@@ -15,7 +15,7 @@
     align-items: center;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 800px) and (min-height: 500px) {
     .main-header {
         height: 0;
     }
@@ -33,7 +33,7 @@
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 500px) and (min-height: 500px){
     .main-content {
         min-height: 100vh;
         background: linear-gradient(to right, rgb(247, 247, 247), white, rgb(247, 247, 247)) no-repeat;

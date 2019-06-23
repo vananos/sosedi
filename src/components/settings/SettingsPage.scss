@@ -1,0 +1,20 @@
+.settings-page {
+    flex-grow: 1;
+    align-self: stretch;
+    padding: 35px;
+    padding-top: 50px;
+
+    &-submit-button {
+        margin-top: 10px;
+    }
+
+    .hint {
+        display: block;
+        font-style: italic;
+        margin-bottom: 10px; 
+    }
+
+    .notification-freq {
+        margin: 5px 0;
+    }
+}
