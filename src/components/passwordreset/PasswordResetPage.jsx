@@ -23,16 +23,7 @@ export default class PasswordResetRequestPage extends Component {
       secret
     };
   }
-
-  componentDidMount() {
-    document.body.style.background =
-      "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
-  }
-
-  componentWillUnmount() {
-    document.body.style.background = "white";
-  }
-
+  
   handleSubmit = e => {
     e.preventDefault();
     const formData = extractFormData(e.target);
@@ -56,7 +47,6 @@ export default class PasswordResetRequestPage extends Component {
       .ifSuccess(_ => {
         NotificationManager.notify(
           "На указанный вами адрес выслано письмо с информацией о восстановлении",
-          { duration: 5000 }
         );
       })
       .ifNotFound(() => {

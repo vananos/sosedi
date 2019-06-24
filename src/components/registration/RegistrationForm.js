@@ -30,14 +30,6 @@ export default class RegistrationForm extends Component {
     };
   }
 
-  componentDidMount() {
-    document.body.style.background = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
-  }
-
-  componentWillUnmount() {
-    document.body.style.background = "white";
-  }
-
   handleSubmit = e => {
     e.preventDefault();
     var registrationData = extractFormData(e.target);
@@ -82,7 +74,7 @@ export default class RegistrationForm extends Component {
               в систему.
             </div>
           </div>,
-          { duration: 5000 }
+          { duration: 10000 }
         );
         this.props.history.push("/");
       })

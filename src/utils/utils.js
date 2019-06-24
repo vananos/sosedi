@@ -31,7 +31,7 @@ export const Validators = {
 
   password: formValues => {
     const password = formValues.password;
-    if (!password || (password.length < 6 && password.length > 25)) {
+    if (!password || (password.length < 8 && password.length > 25)) {
       return passwordError;
     }
   },
@@ -111,3 +111,13 @@ export const conveniencesName = [
   ["dishwasher", "Посудомоечная машина"],
   ["gallery", "Балкон"]
 ];
+
+export const switchBackgroundAccordingPath = function(path) {
+  let color;
+  if (["/registration", "/passwordrestore", "/"].includes(path)) {
+    color = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
+  } else {
+    color = "white";
+  }
+  document.getElementById("root").style.background = color;
+};

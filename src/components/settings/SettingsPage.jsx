@@ -45,7 +45,7 @@ export default class SettingsPage extends Component {
       return;
     }
     this.setState({
-      expanded: this.state.expanded.map((_, i) => index === i)
+      expanded: this.state.expanded.map((value, i) => index === i && !value)
     });
   };
 
@@ -87,7 +87,9 @@ export default class SettingsPage extends Component {
           freq: e.target.value
         })
         .ifSuccess(_ =>
-          NotificationManager.notify("Настройки уведомлений успешно изменены")
+          NotificationManager.notify("Настройки уведомлений успешно изменены", {
+            duration: 1000
+          })
         )
         .execute();
     });

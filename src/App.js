@@ -3,7 +3,7 @@ import { Switch, Route } from "react-router-dom";
 import Main from "./components/main/Main";
 import Profile from "./components/profile/Profile";
 import Navbar from "./components/navbar/Navbar/Navbar";
-import CreateAd from "./components/createad/CreateAd/CreateAd";
+import Ad from "./components/ad/Ad/Ad";
 import RegistartionForm from "./components/registration/RegistrationForm";
 import LoginForm from "./components/login/LoginForm";
 import { ApplicationStateProvider, ApplicationContext } from "./context";
@@ -18,10 +18,14 @@ import EmailConfirmationPage from "./components/emailconfirmation/EmailConfirmat
 import MatchingPage from "./components/matching/MatchingPage";
 import PasswordResetPage from "./components/passwordreset/PasswordResetPage";
 import SettingsPage from "./components/settings/SettingsPage";
+import { switchBackgroundAccordingPath } from "./utils/utils";
 
 export default class App extends Component {
   constructor(props) {
     super(props);
+    browserHistory.listen(location => {
+      switchBackgroundAccordingPath(location.pathname);
+    });
   }
 
   forceAuthorization(state) {
@@ -94,7 +98,7 @@ export default class App extends Component {
                 path="/passwordrestore"
                 component={PasswordResetPage}
               />
-              <Route exact path="/ad" component={CreateAd} />
+              <Route exact path="/ad" component={Ad} />
               <Route exact path="/messages" component={Main} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/settings" component={SettingsPage} />

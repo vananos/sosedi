@@ -26,7 +26,7 @@ export default class Expandable extends Component {
           }
         >
           <span className="message">{message}</span>
-          {/* <Checkmark /> */}
+          <Checkmark className="expandable-checkmark"/>
         </div>
         <div className={expanded ? "expandable-shown" : "expandable-hidden"}>
           {children}

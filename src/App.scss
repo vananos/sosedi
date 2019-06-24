@@ -1,3 +1,5 @@
+@import "./base.scss";
+
 .main-header {
     height: 50px;
 }
@@ -15,13 +17,17 @@
     align-items: center;
 }
 
+.error {
+    color: $red;
+}
+
 @media screen and (min-width: 800px) and (min-height: 500px) {
     .main-header {
         height: 0;
     }
 
     .main-content {
-        margin-left: 250px;
+        margin-left: 350px;
         min-height: 100vh;
         margin-top: 0;
 
@@ -31,12 +37,19 @@
             margin: 0 auto;
         }
     }
+
+    .errorpage {
+        position: relative !important;
+    }
 }
 
-@media screen and (min-width: 500px) and (min-height: 500px){
+@media screen and (min-width: 500px) and (min-height: 500px) {
+    #root {
+        background: linear-gradient(to right, rgb(247, 247, 247), white, rgb(247, 247, 247)) no-repeat;
+    }
+
     .main-content {
         min-height: 100vh;
-        background: linear-gradient(to right, rgb(247, 247, 247), white, rgb(247, 247, 247)) no-repeat;
 
         >div {
             padding: 0 100px;
@@ -48,7 +61,6 @@
         .registration-form-wrapper,
         .login-form-wrapper {
             height: 35%;
-            margin-top: 300px;
         }
     }
 }

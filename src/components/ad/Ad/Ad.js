@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Button from "../../common/Button/Button";
-import TextInput from "../../common/Input/Input";
 import GoogleMapReact from "google-map-react";
 import SquareCheckbox from "../../common/SquareCheckbox/SquareCheckbox";
 import Thumbler from "../../common/Thumbler/Thumbler";
@@ -10,8 +9,9 @@ import smokingIcon from "../../../assets/ad/smoking-solid.svg";
 import femaleIcon from "../../../assets/ad/female-solid.svg";
 import maleIcon from "../../../assets/ad/male-solid.svg";
 import Checkbox from "../../common/SelectableInputs/Checkbox";
-import Expandable from "../Expandable/Expandable";
+import Expandable from "../../common/Expandable/Expandable";
 import { ApplicationContext } from "../../../context";
+import browserHistory from "../../../browserHistory";
 import {
   extractFormData,
   validateFormData,
@@ -20,10 +20,10 @@ import {
   conveniencesName
 } from "../../../utils/utils";
 import NotificationManager from "../../common/NotificationManager/NotificationManager";
-import "./CreateAd.scss";
+import "./Ad.scss";
 import LocationSearchInput from "../LocationSearchInput/LocationSearchInput";
 import Modal from "../../common/Modal/Modal";
-import { userInfo } from "os";
+import Textarea from "../../common/Textarea/Textarea";
 
 const attitudeConveter = {
   thumblerToAttitude: [["no", "BAD"], ["yes", "GOOD"], ["default", "NEUTRAL"]],
@@ -142,10 +142,18 @@ export default class CreateAd extends Component {
 
     this.context.api
       .updateUserAd(serializedForm)
-      .ifSuccess(res =>
-        NotificationManager.notify("Изменения успешно сохранены")
-      )
-      .ifBadRequest(r => console.log(r))
+      .ifSuccess(res => {
+        if (this.state.empty) {
+          window.scrollTo(0, 0);
+
+          NotificationManager.notify(
+            "Изменения успешно сохранены, мы уже начали искать тебе соседа."
+          );
+          browserHistory.push("/matching");
+        } else {
+          NotificationManager.notify("Изменения успешно сохранены");
+        }
+      })
       .execute()
       .finally(() => this.setState({ waitServer: false }));
   };
@@ -308,10 +316,11 @@ export default class CreateAd extends Component {
           </section>
           <section>
             <header>Дополнительные комментарии</header>
-            <textarea
+            <Textarea
               name="description"
               className="ad-add-info"
               defaultValue={description}
+              maxlen={512}
             />
           </section>
           <Button disable={waitServer} progress={waitServer}>

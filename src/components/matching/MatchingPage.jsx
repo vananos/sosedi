@@ -61,7 +61,7 @@ export default class MatchingPage extends Component {
     }
     const currentMatch = this.getNextMatch();
     if (!currentMatch) {
-      return <div>Пока совпадений нет</div>;
+      return <div style={{ textAlign: "center" }}>Пока совпадений нет</div>;
     }
 
     const { userInfo, adInfo } = currentMatch;

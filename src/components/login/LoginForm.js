@@ -65,15 +65,6 @@ export default class LoginForm extends Component {
       .finally(() => this.setState({ inProgress: false }));
   };
 
-  componentDidMount() {
-    document.body.style.background =
-      "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
-  }
-
-  componentWillUnmount() {
-    document.body.style.background = "white";
-  }
-
   render() {
     const { fieldErrors, formError, inProgress } = this.state;
     return (

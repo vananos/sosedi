@@ -10,6 +10,7 @@ import {
 import { ApplicationContext } from "../../context";
 import NotificationManager from "../common/NotificationManager/NotificationManager";
 import browserHistory from "../../browserHistory";
+import Textarea from "../common/Textarea/Textarea";
 
 export default class Help extends Component {
   static contextType = ApplicationContext;
@@ -83,7 +84,7 @@ export default class Help extends Component {
             </React.Fragment>
           )}
           <label>Сообщение:</label>
-          <textarea name="question" />
+          <Textarea name="question" maxlen={1024} defaultValue="" />
           <Button
             className="submit"
             disabled={inProgress}

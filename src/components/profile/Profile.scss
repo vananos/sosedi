@@ -4,6 +4,7 @@
 
     &-greeting {
         text-align: center;
+        font-size: 1.5rem;
         margin-bottom: 35px;
     }
 
@@ -73,5 +74,9 @@
 
     section:first-child {
         margin-bottom: 50px;
+    }
+
+    &-birthday {
+        margin-top: 30px;
     }
 }

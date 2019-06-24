@@ -16,6 +16,8 @@ import ChangePhotoDialog from "./ChangePhotoDialog/ChangePhotoDialog";
 import { ApplicationContext } from "../../context";
 import { API_GATEWAY } from "../../api";
 import Radio from "../common/SelectableInputs/Radio";
+import Textarea from "../common/Textarea/Textarea";
+import browserHistory from "../../browserHistory";
 
 export default class Profile extends Component {
   static contextType = ApplicationContext;
@@ -117,8 +119,8 @@ export default class Profile extends Component {
     const serialaizedProfileData = this.serializeProfileFormData(rawFormData);
 
     serialaizedProfileData.userId = this.context.withUserInfo(
-      userInfo => userInfo.userId
-    );
+      userInfo => userInfo
+    ).userId;
 
     this.setState({ inProgress: true });
 
@@ -133,6 +135,9 @@ export default class Profile extends Component {
             duration: 1000
           }
         );
+        if (this.state.userInfo.isNewUser) {
+          browserHistory.push("/ad");
+        }
       })
       .execute()
       .finally(() => this.setState({ inProgress: false }));
@@ -306,7 +311,7 @@ export default class Profile extends Component {
               type="date"
               name="birthday"
               error={errors.birthday}
-              className="profile-data-input"
+              className="profile-data-input profile-birthday"
               max={new Date().toISOString().split("T")[0]}
             />
             <Input
@@ -338,10 +343,11 @@ export default class Profile extends Component {
               ))}
             </div>
             <span>Хочешь рассказать о себе больше?</span>
-            <textarea
+            <Textarea
               name="description"
               className="profile-about-itself"
               defaultValue={description}
+              maxlen={512}
             />
           </section>
           <Button progress={inProgress} disabled={inProgress}>

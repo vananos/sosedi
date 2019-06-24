@@ -69,9 +69,8 @@ export default class LocationSearchInput extends React.Component {
               <div className="autocomplete-dropdown-container">
                 {loading && <div>Ищем...</div>}
                 {suggestions.map(suggestion => {
-                  const className = suggestion.active
-                    ? "suggestion-item--active"
-                    : "suggestion-item";
+                  const className =
+                    "suggestion-item " + (suggestion.active ? "active" : "");
                   return (
                     <div
                       {...getSuggestionItemProps(suggestion, {

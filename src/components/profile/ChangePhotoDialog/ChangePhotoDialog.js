@@ -16,7 +16,8 @@ export default class ChangePhotoDialog extends Component {
     super(props);
     this.state = {
       scaleFactor: props.scaleFactor,
-      savedImage: props.savedImage
+      savedImage: props.savedImage,
+      progress: false
     };
 
     this.fileInput = React.createRef();
@@ -47,7 +48,7 @@ export default class ChangePhotoDialog extends Component {
 
   saveSelectedImage = () => {
     const formData = new FormData();
-
+    this.setState({ progress: true });
     this.editor.getImage().toBlob(blob => {
       formData.append("file", blob);
       formData.append(
@@ -60,7 +61,8 @@ export default class ChangePhotoDialog extends Component {
           NotificationManager.notify("Изображение успешно загружено");
           this.props.newAvatarCallback(response.data.name);
         })
-        .execute();
+        .execute()
+        .finally(() => this.setState({ progress: false }));
     });
   };
 
@@ -83,7 +85,7 @@ export default class ChangePhotoDialog extends Component {
   };
 
   render() {
-    const { scaleFactor, selectedImage, savedImage } = this.state;
+    const { scaleFactor, selectedImage, savedImage, progress } = this.state;
 
     const avatarDropZoneOrCropper = !selectedImage ? (
       <Dropzone onDrop={this.loadSelectedFile}>
@@ -96,7 +98,12 @@ export default class ChangePhotoDialog extends Component {
                 height={180}
                 className="profile-logo-img"
               />
-              <img className="add-photo-icon" src={addPhoto} width={30} height={30} />
+              <img
+                className="add-photo-icon"
+                src={addPhoto}
+                width={30}
+                height={30}
+              />
               <input {...getInputProps()} hidden />
             </div>
           );
@@ -146,7 +153,11 @@ export default class ChangePhotoDialog extends Component {
           onChange={this.changeScale}
         />
         <div>
-          <Button disabled={!selectedImage} onClick={this.saveSelectedImage}>
+          <Button
+            disabled={!selectedImage || progress}
+            progress={progress}
+            onClick={this.saveSelectedImage}
+          >
             Сохранить
           </Button>
         </div>

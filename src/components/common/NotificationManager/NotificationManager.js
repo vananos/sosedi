@@ -13,7 +13,7 @@ export default class NotificationManager extends Component {
     NotificationManager._singletonRef = this;
   }
 
-  static notify = (msg, { duration = 3000, type = "success" } = {}) => {
+  static notify = (msg, { duration = 5000, type = "success" } = {}) => {
     const notificationData = {
       type,
       msg,
