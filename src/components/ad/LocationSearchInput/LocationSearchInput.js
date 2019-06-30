@@ -17,6 +17,11 @@ export default class LocationSearchInput extends React.Component {
   }
 
   handleChange = address => {
+    if (address === "") {
+      this.setState({
+        selectedGeo: "{}"
+      });
+    }
     this.setState({ address });
   };
 
@@ -51,11 +56,9 @@ export default class LocationSearchInput extends React.Component {
         {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
           <div>
             <input
-              type="text"
+              type="hidden"
               name="placeId"
               value={this.state.selectedGeo}
-              onChange={() => {}}
-              hidden
             />
             <Input
               ref={this.geoInputRef}

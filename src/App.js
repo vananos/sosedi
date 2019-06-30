@@ -15,10 +15,11 @@ import ErrorHandler from "./ErrorHandler";
 import ErrorPage from "./components/error/ErrorPage";
 import Help from "./components/help/Help";
 import EmailConfirmationPage from "./components/emailconfirmation/EmailConfirmationPage";
-import MatchingPage from "./components/matching/MatchingPage";
+import FindMatchingPage from "./components/matching/FindMatchingPage/FindMatchingPage";
 import PasswordResetPage from "./components/passwordreset/PasswordResetPage";
 import SettingsPage from "./components/settings/SettingsPage";
 import { switchBackgroundAccordingPath } from "./utils/utils";
+import MutualMatch from "./components/matching/mutualmatch/MutualMatch";
 
 export default class App extends Component {
   constructor(props) {
@@ -100,10 +101,11 @@ export default class App extends Component {
               />
               <Route exact path="/ad" component={Ad} />
               <Route exact path="/messages" component={Main} />
+              <Route exact path="/mutualmatch" component={MutualMatch} />
               <Route exact path="/profile" component={Profile} />
               <Route exact path="/settings" component={SettingsPage} />
               <Route exact path="/help" component={Help} />
-              <Route exact path="/matching" component={MatchingPage} />
+              <Route exact path="/matching" component={FindMatchingPage} />
               <Route exact path="/error" component={ErrorPage} />
             </Switch>
           </section>

@@ -61,6 +61,18 @@ export default class RegistrationForm extends Component {
           });
           return false;
         }
+        if (jsonResponse.errors.some(error => error.id === "password")) {
+          this.setState({
+            fieldErrors: {
+              ...this.state.fieldErrors,
+              password: {
+                error:
+                  "Пароль должен быть не менее 8 символов, содержать минимум 1 заглавную, 1 прописную, цифру и 1 специальный символ",
+                value: registrationData.password
+              }
+            }
+          });
+        }
       })
       .ifSuccess(jsonResponse => {
         NotificationManager.notify(

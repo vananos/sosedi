@@ -31,6 +31,7 @@ export const Validators = {
 
   password: formValues => {
     const password = formValues.password;
+
     if (!password || (password.length < 8 && password.length > 25)) {
       return passwordError;
     }

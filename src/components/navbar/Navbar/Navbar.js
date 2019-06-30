@@ -6,8 +6,9 @@ import userIcon from "../../../assets/navbar/user-solid.svg";
 import scrollIcon from "../../../assets/navbar/scroll-solid.svg";
 import browserHistory from "../../../browserHistory";
 import question from "../../../assets/navbar/question-circle-solid.svg";
+import searchIcon from "../../../assets/navbar/search.svg";
+import mutualMatchIcon from "../../../assets/navbar/mutual-match.svg";
 import "./Navbar.scss";
-import { throws } from "assert";
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -50,15 +51,18 @@ export default class Navbar extends Component {
             <NavItem
               href="/matching"
               onClick={this.toggleNavbar}
-              icon={scrollIcon}
+              icon={searchIcon}
             >
               Поиск соседа
             </NavItem>
             <NavItem
-              href="/ad"
+              href="/mutualmatch"
               onClick={this.toggleNavbar}
-              icon={scrollIcon}
+              icon={mutualMatchIcon}
             >
+              Взаимный интерес
+            </NavItem>
+            <NavItem href="/ad" onClick={this.toggleNavbar} icon={scrollIcon}>
               Мое объявление
             </NavItem>
             <NavItem

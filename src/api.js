@@ -69,7 +69,8 @@ export default class ApiClient {
           Accept: "application/json",
           "Content-Type": "application/json"
         })
-      )
+      ),
+      this.defaultApiErrorHandler
     );
 
   getProfileInfo = userId =>
@@ -195,6 +196,12 @@ export default class ApiClient {
       this.defaultApiErrorHandler
     );
 
+  getMutualMatches = userId =>
+    new ApiRequest(
+      this.makeGet(`/mutualmatches?userid=${userId}`),
+      this.defaultApiErrorHandler
+    );
+
   makePost = (url = "", data, headers) =>
     fetch(`${API_GATEWAY}${url}`, {
       method: "POST",
@@ -250,8 +257,7 @@ export class ApiRequest {
     return this.fetch
       .then(response => {
         if (response.ok) {
-          const contentType = response.headers.get("content-type");
-          if (contentType && contentType.indexOf("application/json") !== -1) {
+          if (isJsonResponse(response)) {
             return response.json();
           }
           return response;
@@ -263,9 +269,11 @@ export class ApiRequest {
         if (e.status) {
           switch (e.status) {
             case 400:
-              const jsonResponse = await e.response.json();
-              if (!this.onBadRequestHandler(jsonResponse)) {
-                return;
+              if (isJsonResponse(e.response)) {
+                const jsonResponse = await e.response.json();
+                if (!this.onBadRequestHandler(jsonResponse)) {
+                  return;
+                }
               }
               break;
             case 401:
@@ -283,3 +291,8 @@ export class ApiRequest {
       });
   };
 }
+
+const isJsonResponse = response => {
+  const contentType = response.headers.get("content-type");
+  return contentType && contentType.indexOf("application/json") !== -1;
+};

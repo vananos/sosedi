@@ -24,6 +24,7 @@ import "./Ad.scss";
 import LocationSearchInput from "../LocationSearchInput/LocationSearchInput";
 import Modal from "../../common/Modal/Modal";
 import Textarea from "../../common/Textarea/Textarea";
+import { connectableObservableDescriptor } from "rxjs/internal/observable/ConnectableObservable";
 
 const attitudeConveter = {
   thumblerToAttitude: [["no", "BAD"], ["yes", "GOOD"], ["default", "NEUTRAL"]],
@@ -74,7 +75,7 @@ export default class CreateAd extends Component {
           if (!adInfo.conveniences) {
             adInfo.conveniences = [];
           }
-          if (!adInfo.landlord) {
+          if (adInfo.landlord === null) {
             adInfo.landlord = this.state.landlord;
           }
           adInfo.animals = attitudeConveter.getFromAttitudeValue(
@@ -104,16 +105,6 @@ export default class CreateAd extends Component {
 
     const formData = extractFormData(e.target);
 
-    const validationResult = validateFormData(formData, Validators);
-
-    if (validationResult.hasErrors()) {
-      NotificationManager.notify("Проверьте правильность заполнения формы", {
-        type: "error"
-      });
-      this.setState({ errors: validationResult.errors });
-      return;
-    }
-
     const serializedForm = this.getDefaultAdInfo();
 
     let genderCounter = 0;
@@ -136,6 +127,24 @@ export default class CreateAd extends Component {
         serializedForm["gender"] =
           genderCounter == 2 ? "ANY" : key.toUpperCase();
       }
+    }
+
+    const validationResult = validateFormData(formData, Validators);
+    if (
+      validationResult.hasErrors() ||
+      !serializedForm["roomType"] ||
+      serializedForm["roomType"].length === 0
+    ) {
+      NotificationManager.notify("Проверьте правильность заполнения формы", {
+        type: "error"
+      });
+
+      validationResult.errors.roomType = {
+        error: "Необходимо выбрать тип размещения"
+      };
+
+      this.setState({ errors: validationResult.errors });
+      return;
     }
 
     this.setState({ waitServer: true });
@@ -289,6 +298,11 @@ export default class CreateAd extends Component {
                 </Checkbox>
               ))}
             </div>
+            {this.state.errors.roomType && (
+              <div className="error" style={{ textAlign: "center" }}>
+                {this.state.errors.roomType.error}
+              </div>
+            )}
           </section>
 
           <Expandable message="Дополнительные удобства">

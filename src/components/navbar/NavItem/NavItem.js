@@ -14,7 +14,9 @@ export default function NavItem(props) {
         activeClassName="nav-link-active"
       >
         <img src={icon} alt="icon" className="nav-icon" />
+        <span className="nav-link-description">
         {children}
+        </span>
         <Checkmark className="proceed"/>
       </NavLink>
     </div>

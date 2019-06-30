@@ -1,5 +1,12 @@
+.nav-item {
+    position: relative;
+}
+
 .nav-icon {
+    position: relative;
+    top: 5px;
     margin-right: 10px;
+
 }
 
 .nav-link,
@@ -25,4 +32,10 @@
 
 .nav-link-active .nav-icon {
     stroke: rgba(222, 170, 93, 1) !important;
+}
+
+.nav-link-description {
+    position: absolute;
+    left: 40px;
+    top: 30px;
 }

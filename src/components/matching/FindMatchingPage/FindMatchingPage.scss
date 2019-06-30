@@ -1,0 +1,104 @@
+@import "../../../base.scss";
+
+.match-item-wrapper {
+    display: inline-block;
+}
+
+.match-next-animate {
+    &>div {
+        box-shadow: 0 0 0 500vh rgba($brown, .1);
+        animation: next-animation 1s ease-in forwards;
+    }
+}
+
+@keyframes next-animation {
+    0% {
+        transform: translateX(0deg);
+    }
+
+    100% {
+        transform: translateX(-250vw);
+    }
+}
+
+.match-like-animate {
+    &>div {
+        box-shadow: 0 0 0 500vh rgba($turquoise, .1);
+        animation: like-animation 1s ease-in forwards;
+    }
+}
+
+
+@keyframes like-animation {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-250vh);
+    }
+}
+
+.match-appereance-animate {
+    animation: appereance-animation 0.75s ease-in forwards;
+}
+
+@keyframes appereance-animation {
+    0% {
+        transform: translateX(+300vw);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.match-menu {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &-skip,
+    &-like {
+        display: block;
+        width: 60px;
+        height: 105px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    &-skip {
+        position: relative;
+        background: rgba($brown, .1);
+
+        .checkmark {
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            transform: scale(1.5);
+
+            &::before,
+            &::after {
+                background: $brown !important;
+            }
+        }
+    }
+
+    &-skip:active {
+        background-color: rgba($brown, .5);
+
+        .checkmark {
+            transform: scale(1.3);
+        }
+    }
+
+    &-like {
+        background: url("../../../assets/matching/hands.svg") no-repeat 50% 50%;
+        background-color: rgba($turquoise, .1);
+    }
+
+    &-like:active {
+        background-color: rgba($turquoise, .5);
+    }
+}

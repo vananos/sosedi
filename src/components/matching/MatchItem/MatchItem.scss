@@ -1,4 +1,4 @@
-@import "../../base.scss";
+@import "../../../base.scss";
 
 .match {
     padding: 15px;
@@ -55,51 +55,6 @@
         }
     }
 
-    &-menu {
-        position: fixed;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    &-skip,
-    &-like {
-        display: block;
-        width: 60px;
-        height: 105px;
-        margin-top: 10px;
-        cursor: pointer;
-    }
-
-    &-skip {
-        position: relative;
-        background: rgba($turquoise, .1);
-
-        .checkmark {
-            position: absolute;
-            top: 60px;
-            left: 10%;
-            transform: scale(1.5);
-
-            &::before,
-            &::after {
-                background: $turquoise !important;
-            }
-        }
-    }
-
-    &-skip:active {
-        background-color: rgba($turquoise, .5);
-    }
-
-    &-like {
-        background: url("../../assets/matching/heart-solid.svg") no-repeat 50% 50%;
-        background-color: rgba($brown, .1);
-    }
-
-    &-like:active {
-        background-color: rgba($brown, .5);
-    }
 
     &-user-info {
         clear: both;
@@ -133,5 +88,10 @@
             display: block;
             margin-bottom: 5px;
         }
+    }
+
+    &-phone {
+        display: block;
+        margin: 10px 0 0 0;
     }
 }

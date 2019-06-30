@@ -7,15 +7,14 @@ export default class Input extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: props.value || "",
-      changeHandler: props.onChange
+      value: props.value || ""
     };
     this.inputRef = React.createRef();
   }
 
   handleChange = e => {
-    if (this.state.changeHandler) {
-      const shouldContinue = this.state.changeHandler(e, this);
+    if (this.props.onChange) {
+      const shouldContinue = this.props.onChange(e, this);
       if (shouldContinue === false) return;
     }
     const newValue = e.target.value;
