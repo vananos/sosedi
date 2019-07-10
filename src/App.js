@@ -20,6 +20,7 @@ import PasswordResetPage from "./components/passwordreset/PasswordResetPage";
 import SettingsPage from "./components/settings/SettingsPage";
 import { switchBackgroundAccordingPath } from "./utils/utils";
 import MutualMatch from "./components/matching/mutualmatch/MutualMatch";
+import Modal from "./components/common/Modal/Modal";
 
 export default class App extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ export default class App extends Component {
   }
 
   forceAuthorization(state) {
+    Modal.hide();
     browserHistory.push("/");
     NotificationManager.notify(
       <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>,

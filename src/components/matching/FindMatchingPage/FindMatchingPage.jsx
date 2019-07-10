@@ -19,7 +19,11 @@ export default class FindMatchingPage extends Component {
 
   componentDidMount() {
     Modal.showSpinner();
-    this.loadMatchesFromServer().finally(() => {
+    const matchesRequest = this.loadMatchesFromServer();
+    if (!matchesRequest) {
+      return;
+    }
+    matchesRequest.finally(() => {
       Modal.hide();
       this.setState({ loaded: true });
     });
