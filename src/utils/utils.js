@@ -115,7 +115,7 @@ export const conveniencesName = [
 
 export const switchBackgroundAccordingPath = function(path) {
   let color;
-  if (["/registration", "/passwordrestore", "/"].includes(path)) {
+  if (["/registration", "/passwordrestore", "/login"].includes(path)) {
     color = "linear-gradient(to right bottom, #F5FEFF, #C4EBEF)";
   } else {
     color = "white";

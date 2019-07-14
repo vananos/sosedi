@@ -31,8 +31,9 @@ export default class App extends Component {
   }
 
   forceAuthorization(state) {
+    localStorage.removeItem("userInfo");
     Modal.hide();
-    browserHistory.push("/");
+    browserHistory.push("/login");
     NotificationManager.notify(
       <span>Для работы с приложением, пожалуйста, пройдите авторизацию</span>,
       { type: "error" }
@@ -84,33 +85,41 @@ export default class App extends Component {
     return (
       <ApplicationStateProvider value={this.initialAppState}>
         <ErrorHandler>
-          <header className="main-header">
-            <Navbar />
-          </header>
-          <section className="main-content">
-            <Switch>
-              <Route exact path="/" component={LoginForm} />
-              <Route
-                exact
-                path="/confirmhandler"
-                component={EmailConfirmationPage}
-              />
-              <Route exact path="/registration" component={RegistartionForm} />
-              <Route
-                exact
-                path="/passwordrestore"
-                component={PasswordResetPage}
-              />
-              <Route exact path="/ad" component={Ad} />
-              <Route exact path="/messages" component={Main} />
-              <Route exact path="/mutualmatch" component={MutualMatch} />
-              <Route exact path="/profile" component={Profile} />
-              <Route exact path="/settings" component={SettingsPage} />
-              <Route exact path="/help" component={Help} />
-              <Route exact path="/matching" component={FindMatchingPage} />
-              <Route exact path="/error" component={ErrorPage} />
-            </Switch>
-          </section>
+          <Switch>
+            <Route exact path="/" component={Main} />
+
+            <React.Fragment>
+              <header className="main-header">
+                <Navbar />
+              </header>
+              <section className="main-content">
+                <Route exact path="/login" component={LoginForm} />
+                <Route
+                  exact
+                  path="/confirmhandler"
+                  component={EmailConfirmationPage}
+                />
+                <Route
+                  exact
+                  path="/registration"
+                  component={RegistartionForm}
+                />
+                <Route
+                  exact
+                  path="/passwordrestore"
+                  component={PasswordResetPage}
+                />
+                <Route exact path="/ad" component={Ad} />
+                <Route exact path="/messages" component={Main} />
+                <Route exact path="/mutualmatch" component={MutualMatch} />
+                <Route exact path="/profile" component={Profile} />
+                <Route exact path="/settings" component={SettingsPage} />
+                <Route exact path="/help" component={Help} />
+                <Route exact path="/matching" component={FindMatchingPage} />
+                <Route exact path="/error" component={ErrorPage} />
+              </section>
+            </React.Fragment>
+          </Switch>
         </ErrorHandler>
       </ApplicationStateProvider>
     );

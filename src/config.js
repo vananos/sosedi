@@ -1,5 +1,5 @@
 const dev = {
-  apiGateway: "http://10.1.30.42:8080"
+  apiGateway: "http://127.0.0.1:8080"
 };
 
 const prod = {

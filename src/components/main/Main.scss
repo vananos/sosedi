@@ -1,0 +1,85 @@
+@import "../../base.scss";
+
+.landing {
+    margin: auto !important;
+    margin: 0;
+    max-width: 500px;
+    color: white;
+    font-size: 1.2rem;
+    text-align: center;
+
+    &-first-slide {
+        position: relative;
+        height: 100vh;
+        background: url("../../assets/main/header_bg.svg") no-repeat center center;
+        background-size: cover;
+        padding: 25px 20px 0;
+        z-index: 10;
+
+        h2 {
+            display: block;
+            font-size: 1.6rem;
+            margin-top: 50px;
+        }
+
+        &-first-img {
+            height: 45%;
+            width: 80%;
+            margin: auto;
+            background: url("../../assets/main/first_img.svg") no-repeat center center;
+            background-size: contain;
+        }
+
+        span {
+            display: block;
+            margin-top: 20px;
+        }
+    }
+
+    &-second-slide {
+        z-index: 0;
+        margin-top: -30px;
+        background: url("../../assets/main/second_img.svg") no-repeat center center;
+        background-size: contain;
+        height: 45vh;
+    }
+
+    &-third-slide {
+        background: url("../../assets/main/third_img.svg") no-repeat center center;
+        background-size: cover;
+        margin-top: -45px;
+        height: 45vh;
+        padding: 75px 20px 0;
+    }
+
+    &-fourth-slide {
+        background: url("../../assets/main/footer_bg.svg") no-repeat center center;
+        background-size: cover;
+        height: 45vh;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        ul {
+            width: 90%;
+
+            li {
+                margin-bottom: 15px;
+            }
+        }
+    }
+
+    &-slogan {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 20px;
+        padding: 0 15px;
+        color: $turquoise;
+        font-weight: bold;
+    }
+
+    &-start {
+        margin-top: 20px;
+    }
+}
